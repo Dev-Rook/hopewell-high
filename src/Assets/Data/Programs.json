@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "Icon": "https://github.com/Dev-Rook/dailys-contruction/blob/master/src/Assets/Icons/Achitecture-Icon-1.png?raw=true",
+        "Title": "Architecture",
+        "Description": "Architecture has to do with planning and designing form, soace and ambiennce to reflect functionality"
+    },
+    {
+        "id": 2,
+        "Icon": "https://github.com/Dev-Rook/dailys-contruction/blob/master/src/Assets/Icons/Construction-Icon-1.png?raw=true",
+        "Title": "Construction",
+        "Description": "Description"
+    },
+    {
+        "id": 3,
+        "Icon": "https://github.com/Dev-Rook/dailys-contruction/blob/master/src/Assets/Icons/Consultation-Icon-1.png?raw=true",
+        "Title": "Consultation",
+        "Description": "Description"
+    },
+    {
+        "id": 4,
+        "Icon": "https://github.com/Dev-Rook/dailys-contruction/blob/master/src/Assets/Icons/Warehouse-Icon-1.png?raw=true",
+        "Title": "Hardware",
+        "Description": "Description"
+    }
+]
