@@ -6,6 +6,7 @@ import Programs from "../Page-Sections/Programs";
 import About from "../Page-Sections/About";
 import Blog from "../Page-Sections/Blog";
 import Apply from "../Page-Sections/Apply";
+import Staff from "../Page-Sections/Staff";
 
 const Landing = () => {
   return (
@@ -14,6 +15,7 @@ const Landing = () => {
       <Programs />
       <About />
       <Blog />
+      <Staff />
       <Apply />
     </div>
   )
