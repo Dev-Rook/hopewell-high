@@ -32,6 +32,10 @@ const Programs = () => {
             );
           })}
       </div>
+
+      <button className={Styles.View_More_Button}>
+        View More
+      </button>
     </div>
   );
 };
