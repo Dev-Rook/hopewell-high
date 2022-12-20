@@ -24,4 +24,21 @@
 
   height: fit-content;
   width: 100%;
+
+  .Map {
+    height: 400px;
+    width: 100%;
+    transition: .5s;
+  }
 }
+
+
+// Media Queries Start
+@media only screen and (max-width: 480px) {
+  .Section {
+    .Map {
+      height: 300px;
+    }
+  }
+}
+// Media Queries End
