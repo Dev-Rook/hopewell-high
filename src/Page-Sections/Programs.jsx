@@ -12,6 +12,17 @@ import ServiceData from "../Assets/Data/Programs.json";
 
 const Programs = () => {
   const [data, setData] = useState(ServiceData);
+  const [visible, setVisible] = useState(6);
+
+  // const morePrograms = () => {
+  //   setVisible((prev) => prev + 3)
+
+  //   if (setVisible == 8) {
+  //       window.getSelection(View_More_Button) {
+  //         d
+  //       }
+  //   }
+  // }
 
   return (
     <div className={Styles.Section}>
@@ -22,7 +33,7 @@ const Programs = () => {
 
       <div className={Styles.Content_Container}>
         {data &&
-          data.map((value) => {
+          data.slice(0, visible).map((value) => {
             return (
               <div className={Styles.Card} key={value.id}>
                 <img src={value.Icon} alt="" className={Styles.Icon} />
@@ -33,11 +44,11 @@ const Programs = () => {
           })}
       </div>
 
-      <button className={Styles.View_More_Button}>
-        View More
-      </button>
+      <Link to={"Programs"}>
+        <button className={Styles.View_More_Button}>View All</button>
+      </Link>
     </div>
   );
 };
 
-export default Programs
+export default Programs;

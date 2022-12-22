@@ -33,9 +33,9 @@ const Blog = () => {
           })}
       </div>
 
-      <button className={Styles.View_More_Button}>
-        View More
-      </button>
+      <Link className={Styles.Link} to={"Articles"}>
+        <button className={Styles.View_More_Button}>View All</button>
+      </Link>
     </div>
   );
 };

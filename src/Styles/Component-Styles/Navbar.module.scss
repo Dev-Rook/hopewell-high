@@ -53,6 +53,7 @@
     width: fit-content;
 
     .NavItem {
+      display: none;
       .Navlink {
         font-size: 13px;
         font-weight: 300;
@@ -62,8 +63,9 @@
     }
 
     .MenuIcon {
-      display: none;
+      display: flex;
       cursor: pointer;
+      z-index: 12;
     }
   }
 
@@ -86,12 +88,12 @@
     height: fit-content;
     width: 100%;
 
-    z-index: 100;
+    z-index: 11;
     transition: 0.5s;
     transition-timing-function: ease-in-out;
     transform: translateX(-100%);
 
-    display: none;
+    // display: none;
 
     ::-webkit-scrollbar {
       display: none;
@@ -196,6 +198,7 @@
           font-weight: 200;
 
           .NavItem {
+            color: white;
             display: flex;
 
             padding: 5px;
@@ -362,7 +365,7 @@
         display: none;
       }
       .MenuIcon {
-        display: block;
+        display: flex;
       }
     }
   }

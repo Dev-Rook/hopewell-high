@@ -8,6 +8,7 @@ import Blog from "../Page-Sections/Blog";
 import Apply from "../Page-Sections/Apply";
 import Staff from "../Page-Sections/Staff";
 import Map from "../Page-Sections/Map";
+import Sponsors from "../Page-Sections/Sponsors";
 
 const Landing = () => {
   return (
@@ -17,6 +18,7 @@ const Landing = () => {
       <About />
       <Blog />
       <Staff />
+      <Sponsors />
       <Apply />
       <Map />
     </div>
