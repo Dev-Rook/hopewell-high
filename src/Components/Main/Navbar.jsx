@@ -111,7 +111,7 @@ const Navbar = () => {
           <MenuIcon
             onClick={showMenu}
             className={Styles.MenuIcon}
-            sx={{ color: "#FFFFF", fontSize: 30 }}         
+            sx={{ color: "#296b6d", fontSize: 30 }}         
           />
 
           {/* <Hamburger
