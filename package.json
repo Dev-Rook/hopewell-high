@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "axios": "^1.2.1",
     "framer-motion": "^7.10.2",
+    "hamburger-react": "^2.5.0",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

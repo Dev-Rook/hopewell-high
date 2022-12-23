@@ -18,6 +18,8 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // Material UI Accordion Imports End
 
+import { Spin as Hamburger } from "hamburger-react";
+
 const NavVariants = {
   hidden: {
     y: "-100vh",
@@ -104,10 +106,17 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <MenuIcon
-            onClick={showMenu}
+          <Hamburger
+            toggled={menu}
+            toggle={setMenu}
             className={Styles.MenuIcon}
-            sx={{ color: "white", fontSize: 30 }}
+            size={30}
+            direction="right"
+            duration={0.3}
+            easing="ease-in"
+            color="white"
+            z-index={12}
+           
           />
         </ul>
 
