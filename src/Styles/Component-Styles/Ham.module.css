@@ -1,0 +1,5 @@
+.MenuIcon {
+  display: flex;
+  cursor: pointer;
+  z-index: 12;
+}
