@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
-import "../../Styles/Component-Styles/Ham.module.css"
+import "../../Styles/Component-Styles/Ham.module.css";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -20,7 +20,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // Material UI Accordion Imports End
 
 import { Spin as Hamburger } from "hamburger-react";
-
 
 const NavVariants = {
   hidden: {
@@ -41,6 +40,7 @@ const NavVariants = {
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [status, setStatus] = useState("close");
 
   const showMenu = () => {
     setMenu((prev) => !prev);
@@ -111,7 +111,7 @@ const Navbar = () => {
           <MenuIcon
             onClick={showMenu}
             className={Styles.MenuIcon}
-            sx={{ color: "#296b6d", fontSize: 30 }}         
+            sx={{ color: "#296b6d", fontSize: 30 }}
           />
 
           {/* <Hamburger
