@@ -77,7 +77,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"About"}>
+            <Link className={Styles.Navlink} to={"AboutPage"}>
               About
             </Link>
           </li>

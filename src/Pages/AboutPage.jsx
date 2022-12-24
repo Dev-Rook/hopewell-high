@@ -7,7 +7,7 @@ import AboutSection from "../Page-Sections/About";
 import Staff from "../Page-Sections/Staff";
 import Apply from "../Page-Sections/Apply";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <div className={Styles.Page}>
       {/* <PageHead /> */}
@@ -22,4 +22,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

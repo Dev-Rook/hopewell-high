@@ -7,11 +7,12 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 import Navbar from "./Components/Main/Navbar";
 
 import Landing from "./Pages/Landing";
-import About from "./Pages/About";
+import AboutPage from "./Pages/AboutPage";
 import Articles from "./Pages/Articles"
 import Staff from "./Pages/Staff"
 import Curriculums from "./Pages/Curriculums"
 import Contact from "./Pages/Contact"
+import Error from "./Pages/Error"
 
 function App() {
   const [backToTop, setBackToTop] = useState(false);
@@ -38,12 +39,13 @@ function App() {
       <BrowserRouter>
       <Navbar />
         <Routes>
-          <Route path={"/"} element={<Landing scroll={scrollUp} />} />
-          <Route path={"AboutPage"} element={<About scroll={scrollUp} />} />
+          <Route path={"/"} element={<Landing  />} />
+          <Route path={"AboutPage"} element={<AboutPage />} />
           <Route path={"Articles"} element={<Articles />} />
           <Route path={"Staff"} element={<Staff />} />
           <Route path={"Curriculums"} element={<Curriculums />} />
           <Route path={"Contact"} element={<Contact />} />
+          <Route path={"*"} element={<Error />} />
         </Routes>
       </BrowserRouter>
       

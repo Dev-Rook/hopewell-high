@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/About.module.scss";
 
-const Indroduction = (scrollUp) => {
+const Indroduction = () => {
   
   return (
     <div className={Styles.Section}>
@@ -19,7 +19,7 @@ const Indroduction = (scrollUp) => {
           </p>
 
           <Link to={"AboutPage"}>
-            <button onClick={scrollUp} className={Styles.Read_More_Button}>Read More</button>
+            <button className={Styles.Read_More_Button}>Read More</button>
           </Link>
         </div>
         <div className={Styles.Image_Container}>
