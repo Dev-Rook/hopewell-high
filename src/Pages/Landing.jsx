@@ -10,7 +10,7 @@ import Staff from "../Page-Sections/Staff";
 import Map from "../Page-Sections/Map";
 import Sponsors from "../Page-Sections/Sponsors";
 
-const Landing = () => {
+const Landing = (scrollUp) => {
   return (
     <div className={Styles.Page}>
       <Hero />
@@ -19,7 +19,7 @@ const Landing = () => {
       <Blog />
       <Staff />
       <Sponsors />
-      <Apply />
+      <Apply scroll={scrollUp} />
       <Map />
     </div>
   )

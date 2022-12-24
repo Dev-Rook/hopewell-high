@@ -38,8 +38,8 @@ function App() {
       <BrowserRouter>
       <Navbar />
         <Routes>
-          <Route path={"/"} element={<Landing />} />
-          <Route path={"About"} element={<About />} />
+          <Route path={"/"} element={<Landing scroll={scrollUp} />} />
+          <Route path={"AboutPage"} element={<About scroll={scrollUp} />} />
           <Route path={"Articles"} element={<Articles />} />
           <Route path={"Staff"} element={<Staff />} />
           <Route path={"Curriculums"} element={<Curriculums />} />

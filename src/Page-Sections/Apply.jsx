@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Apply.module.scss";
 
-const Apply = () => {
+const Apply = (scrollUp) => {
   return (
     <div className={Styles.Section}>
       <div className={Styles.Text_Box}>
@@ -15,7 +15,9 @@ const Apply = () => {
           dolorem, fugit expedita culpa laboriosam ipsa.
         </p>
 
-        <button className={Styles.Contact_Button}>Contact US</button>
+        <Link to={"Contact"}>
+          <button onClick={scrollUp} className={Styles.Contact_Button}>Contact US</button>
+        </Link>
       </div>
     </div>
   );
