@@ -15,7 +15,32 @@ const AboutPage = () => {
         <div className={Styles.Diffuser}></div>
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>
-      <AboutSection />
+
+      <div className={Styles.Section}>
+        <div className={Styles.Content_Container}>
+          <div className={Styles.About_Container}>
+            <p className={Styles.Question}>- Who We Are</p>
+            <p className={Styles.Brand}>Hopewell Highschool</p>
+            <p className={Styles.Description}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              cupiditate, <br /> repellendus quas optio porro labore, facere
+              dolor nemo non, totam saepe aliquam <br /> nulla accusamus velit
+              animi placeat! Maxime, necessitatibus dolorem.
+            </p>
+          </div>
+          <div className={Styles.Image_Container}>
+            <img
+              src={
+                "https://github.com/Dev-Rook/dailys-contruction/blob/master/src/Assets/Images/V.jpg?raw=true"
+              }
+              alt=""
+              className={Styles.Image}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* <AboutSection /> */}
       <Staff />
       <Apply />
     </div>

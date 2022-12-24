@@ -163,7 +163,7 @@ const Navbar = () => {
               <Link
                 onClick={doubleFunction}
                 className={Styles.Navlink}
-                to={"About"}
+                to={"AboutPage"}
               >
                 <li className={Styles.NavItem}>About</li>
               </Link>
