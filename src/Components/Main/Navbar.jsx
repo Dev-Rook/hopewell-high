@@ -220,7 +220,7 @@ const Navbar = () => {
                       className={Styles.Accordion_Title}
                       sx={{ color: "white" }}
                     >
-                      Code Runners - &nbsp;
+                      Mission Statement  &nbsp;
                       <a
                         className={Styles.Discord_Link}
                         target={"_blank"}
@@ -237,9 +237,11 @@ const Navbar = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography className={Styles.Code_Runners_Description}>
-                      Code Runners is a server that mainly focusses on Web
-                      Development. However there are categories for other forms
-                      of coding/programing.
+                      To create and maintain an environment conducive to the
+                      intellectual, moral, spiritual, social and cultural
+                      development of learners: Thus equipping them with skills,
+                      values and attitudes necessary for them to function at
+                      their fullest potential in society.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
