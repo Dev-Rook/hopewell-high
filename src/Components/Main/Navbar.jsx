@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
-import "../../Styles/Component-Styles/Ham.module.css";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
