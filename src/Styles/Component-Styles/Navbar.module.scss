@@ -122,7 +122,7 @@
         justify-content: space-between;
         align-items: center;
 
-        z-index: 150;
+        z-index: 13;
 
         .Menu_Left_Side {
           display: flex;
@@ -378,6 +378,27 @@
       padding: 2.5px 10px;
       .Brand {
         font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .Navbar {
+    .Navlink_Container {
+      .MenuIcon {
+        z-index: 1;
+      }
+    }
+    .Mobile_Menu {
+      z-index: 100;
+      .Content_Container {
+        width: 100%;
+        .Header {
+          .Close_Icon {
+            right: 10px;
+          }
+        }
       }
     }
   }
