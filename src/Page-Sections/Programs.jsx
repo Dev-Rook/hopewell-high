@@ -44,7 +44,7 @@ const Programs = () => {
           })}
       </div>
 
-      <Link to={"Programs"}>
+      <Link to={"Curriculums"}>
         <button className={Styles.View_More_Button}>View All</button>
       </Link>
     </div>
