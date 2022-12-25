@@ -212,7 +212,7 @@ const Navbar = () => {
                 className={Styles.Accordion}
               >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
                   aria-controls="panel1bh-content"
                   id="panel1bh-header"
                 >
@@ -237,7 +237,7 @@ const Navbar = () => {
                 className={Styles.Accordion}
               >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
                   aria-controls="panel2bh-content"
                   id="panel2bh-header"
                 >
@@ -319,7 +319,7 @@ const Navbar = () => {
                 className={Styles.Accordion}
               >
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
                   aria-controls="panel3bh-content"
                   id="panel3bh-header"
                 >
