@@ -15,7 +15,7 @@ const Apply = () => {
           dolorem, fugit expedita culpa laboriosam ipsa.
         </p>
 
-        <Link to={"Contact"}>
+        <Link to={"/Contact"}>
           <button className={Styles.Contact_Button}>Contact US</button>
         </Link>
       </div>

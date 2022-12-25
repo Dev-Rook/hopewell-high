@@ -107,6 +107,8 @@
       display: flex;
       flex-direction: column;
 
+      overflow: hidden;
+
       gap: 20px;
 
       height: 100vh;
@@ -304,7 +306,6 @@
       }
 
       .Weblink_Container {
-        background-color: #1c1d1f;
         display: flex;
         flex-direction: column;
 
@@ -312,6 +313,55 @@
         gap: 10px;
 
         justify-content: space-evenly;
+
+
+        .Accordion {
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          background-color: rgb(26, 26, 27);
+          color: white;
+
+          .Accordion_Title {
+            display: flex;
+            .Discord_Link {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: auto;
+            }
+
+            .Discord_Icon {
+              // display: flex;
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+              margin: auto;
+              width: 20px;
+            }
+          }
+
+          .Code_Runners_Description {
+            color: white;
+            font-family: "Nunito", sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 100;
+
+            display: flex;
+            flex-direction: column;
+
+            .Discord_Link {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: auto;
+            }
+
+            .Discord_Icon {
+              // display: flex;
+              margin: auto;
+              width: 20px;
+            }
+          }
+        }
 
         .Title {
           color: white;

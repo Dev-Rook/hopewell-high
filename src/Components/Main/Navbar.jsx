@@ -110,7 +110,7 @@ const Navbar = () => {
           <MenuIcon
             onClick={showMenu}
             className={Styles.MenuIcon}
-            sx={{ color: "#296b6d", fontSize: 30 }}
+            sx={{ color: "#7ab7d6", fontSize: 30 }}
           />
 
           {/* <Hamburger
@@ -200,119 +200,141 @@ const Navbar = () => {
               >
                 <li className={Styles.NavItem}>Contact</li>
               </Link>
-              <li className={Styles.Menu_NavItem}>
-                <Accordion
-                  expanded={expanded === "panel1"}
-                  onChange={handleChange("panel1")}
-                  className={Styles.Accordion}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
-                    aria-controls="panel1bh-content"
-                    id="panel1bh-header"
-                  >
-                    {/* <Typography
-                    sx={{ width: "33%", flexShrink: 0, color: "#319795" }}
-                  >
-                    Discord -
-                  </Typography> */}
-                    <Typography
-                      className={Styles.Accordion_Title}
-                      sx={{ color: "white" }}
-                    >
-                      Mission Statement  &nbsp;
-                      <a
-                        className={Styles.Discord_Link}
-                        target={"_blank"}
-                        rel={"noreferrer"}
-                        href="https://discord.gg/ce7mtCbgmG"
-                      >
-                        {/* <img
-                        src={require("../../../Assets/Icons/Discord-Logo.png")}
-                        alt=""
-                        className={Styles.Discord_Icon}
-                      /> */}
-                      </a>
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography className={Styles.Code_Runners_Description}>
-                      To create and maintain an environment conducive to the
-                      intellectual, moral, spiritual, social and cultural
-                      development of learners: Thus equipping them with skills,
-                      values and attitudes necessary for them to function at
-                      their fullest potential in society.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </li>
             </ul>
 
             <div className={Styles.Menu_Separater}></div>
 
             {/* Weblink Container Start */}
             <ul className={Styles.Weblink_Container}>
-              <h3 className={Styles.Title}>On The Web -</h3>
-              <a
-                target={"_blank"}
-                rel={"noreferrer"}
-                onClick={showMenu}
-                href="https://www.linkedin.com/in/dev-rook/"
-                className={Styles.Weblink}
+              <Accordion
+                expanded={expanded === "panel1"}
+                onChange={handleChange("panel1")}
+                className={Styles.Accordion}
               >
-                <li className={Styles.Weblink_Item}>
-                  <LinkedInIcon
-                    sx={{ fontSize: 25 }}
-                    className={Styles.Weblink_Icon}
-                  />
-                  Daniel Brown
-                </li>
-              </a>
-              <a
-                target={"_blank"}
-                rel={"noreferrer"}
-                onClick={showMenu}
-                href="https://github.com/Dev-Rook"
-                className={Styles.Weblink}
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1bh-content"
+                  id="panel1bh-header"
+                >
+                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                    Mission Statement
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography className={Styles.Code_Runners_Description}>
+                    To create and maintain an environment conducive to the
+                    intellectual, moral, spiritual, social and cultural
+                    development of learners: Thus equipping them with skills,
+                    values and attitudes necessary for them to function at their
+                    fullest potential in society.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel2"}
+                onChange={handleChange("panel2")}
+                className={Styles.Accordion}
               >
-                <li className={Styles.Weblink_Item}>
-                  <GitHubIcon
-                    sx={{ fontSize: 25 }}
-                    className={Styles.Weblink_Icon}
-                  />
-                  Dev-Rook
-                </li>
-              </a>
-              <a
-                target={"_blank"}
-                rel={"noreferrer"}
-                onClick={showMenu}
-                href="https://twitter.com/Dev_Rook"
-                className={Styles.Weblink}
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2bh-content"
+                  id="panel2bh-header"
+                >
+                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                    On The Web
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    <ul className={Styles.Weblink_Container}>
+                      <a
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                        onClick={showMenu}
+                        href="https://www.linkedin.com/in/dev-rook/"
+                        className={Styles.Weblink}
+                      >
+                        <li className={Styles.Weblink_Item}>
+                          <LinkedInIcon
+                            sx={{ fontSize: 25 }}
+                            className={Styles.Weblink_Icon}
+                          />
+                          Daniel Brown
+                        </li>
+                      </a>
+                      <a
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                        onClick={showMenu}
+                        href="https://github.com/Dev-Rook"
+                        className={Styles.Weblink}
+                      >
+                        <li className={Styles.Weblink_Item}>
+                          <GitHubIcon
+                            sx={{ fontSize: 25 }}
+                            className={Styles.Weblink_Icon}
+                          />
+                          Dev-Rook
+                        </li>
+                      </a>
+                      <a
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                        onClick={showMenu}
+                        href="https://twitter.com/Dev_Rook"
+                        className={Styles.Weblink}
+                      >
+                        <li className={Styles.Weblink_Item}>
+                          <TwitterIcon
+                            sx={{ fontSize: 25 }}
+                            className={Styles.Weblink_Icon}
+                          />
+                          Dev_Rook
+                        </li>
+                      </a>
+                      <a
+                        target={"_blank"}
+                        rel={"noreferrer"}
+                        onClick={showMenu}
+                        href="https://rxresu.me/dev.rook121/developer-resume"
+                        className={Styles.Weblink}
+                      >
+                        <li className={Styles.Weblink_Item}>
+                          <InsertLinkIcon
+                            sx={{ fontSize: 25 }}
+                            className={Styles.Weblink_Icon}
+                          />
+                          Developer Resume
+                        </li>
+                      </a>
+                    </ul>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel3"}
+                onChange={handleChange("panel3")}
+                className={Styles.Accordion}
               >
-                <li className={Styles.Weblink_Item}>
-                  <TwitterIcon
-                    sx={{ fontSize: 25 }}
-                    className={Styles.Weblink_Icon}
-                  />
-                  Dev_Rook
-                </li>
-              </a>
-              <a
-                target={"_blank"}
-                rel={"noreferrer"}
-                onClick={showMenu}
-                href="https://rxresu.me/dev.rook121/developer-resume"
-                className={Styles.Weblink}
-              >
-                <li className={Styles.Weblink_Item}>
-                  <InsertLinkIcon
-                    sx={{ fontSize: 25 }}
-                    className={Styles.Weblink_Icon}
-                  />
-                  Developer Resume
-                </li>
-              </a>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel3bh-content"
+                  id="panel3bh-header"
+                >
+                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                    Advanced settings
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
+                    Integer sit amet egestas eros, vitae egestas augue. Duis vel
+                    est augue.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
             </ul>
             {/* Weblink Container End */}
           </div>
