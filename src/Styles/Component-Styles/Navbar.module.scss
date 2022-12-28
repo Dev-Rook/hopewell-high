@@ -1,7 +1,4 @@
 .Navbar {
-  // background-color: rgba(0, 0, 0, 0.5);
-  // backdrop-filter: blur(5px);
-
   display: flex;
 
   position: fixed;
@@ -9,7 +6,7 @@
   left: 0px;
 
   padding: 5px;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
 
   height: fit-content;
@@ -40,312 +37,110 @@
     }
   }
 
-  .Navlink_Container {
+  .MenuIcon {
     display: flex;
-
-    padding: 5px;
-    gap: 30px;
-
-    justify-content: space-evenly;
-    align-items: center;
-
-    height: fit-content;
-    width: fit-content;
-
-    .NavItem {
-      display: none;
-      .Navlink {
-        font-size: 13px;
-        font-weight: 300;
-      }
-
-      // display: none;
-    }
-
-    .MenuIcon {
-      display: flex;
-      cursor: pointer;
-      z-index: 12;
-      // color: white;
-    }
+    cursor: pointer;
+    z-index: 100;
+    // color: white;
   }
 
   //   Mobile Menu Start
-
   .Mobile_Menu {
-    // background-color: rgba(0, 0, 0, 0.8);
-
     display: flex;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
 
     position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow-y: scroll;
+    top: 0;
+    right: 0;
 
-    justify-content: center;
-    align-items: left;
+    height: 100vh;
+    width: 300px;
 
-    height: fit-content;
-    width: 100%;
-
-    // z-index: 11;
+    overflow: scroll;
+    z-index: 11;
     transition: 0.5s;
-    transition-timing-function: ease-in-out;
-    transform: translateX(-100%);
+    transform: translateX(100vw);
 
-    // display: none;
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-    .Content_Container {
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-      background-color: rgba(0, 0, 0, 0.9);
-
+    .Navlink_Container {
       display: flex;
       flex-direction: column;
 
-      overflow: hidden;
+      justify-content: space-evenly;
+      align-items: flex-start;
 
+      margin-top: 40px;
+
+      padding: 5px;
       gap: 20px;
 
-      height: 100vh;
+      height: 100%;
       width: 100%;
 
-      .Header {
-        // box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+      .NavItem {
         display: flex;
 
-        padding: 5px;
-        position: relative;
-
-        justify-content: space-between;
-        align-items: center;
-
-        z-index: 13;
-
-        .Menu_Left_Side {
-          display: flex;
-
-          padding: 5px;
-          gap: 20px;
-          justify-content: space-between;
-          align-items: center;
-
-          .Logo_Container {
-            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-              rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-              rgba(0, 0, 0, 0.09) 0px 16px 8px,
-              rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            border: 2px solid #2c7a7b;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            transition: 0.5s;
-
-            .Logo {
-              box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-                rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-                rgba(0, 0, 0, 0.09) 0px 16px 8px,
-                rgba(0, 0, 0, 0.09) 0px 32px 16px;
-              height: 100%;
-              width: 100%;
-              margin: auto;
-              object-fit: cover;
-              transition: 0.5s;
-            }
-          }
-
-          .Brand {
-            color: white;
-            font-size: 20px;
-            font-weight: 300;
-            //   animation: flicker 1.5s infinite alternate;
-          }
-        }
-
-        .Close_Icon {
-          color: white;
-
-          position: absolute;
-          right: 10px;
-          cursor: pointer;
-          transition: 0.5s;
-          display: none;
-        }
-
-        .Close_Icon:hover {
-          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-        }
-      }
-
-      .Mobile_Navlink_Container {
-        background-color: #1c1d1f;
-        display: flex;
-        flex-direction: column;
-
-        gap: 10px;
-
-        justify-content: space-evenly;
+        height: fit-content;
+        width: 100%;
 
         .Navlink {
-          color: white;
-          font-family: sans-serif;
-          font-size: 18px;
-          font-weight: 200;
-
-          .NavItem {
-            color: white;
-            display: flex;
-
-            padding: 5px;
-            gap: 15px;
-
-            align-items: center;
-
-            height: 100%;
-            width: 100%;
-          }
-        }
-
-        .Menu_NavItem {
           display: flex;
-
-          padding: 5px;
-          gap: 15px;
-
-          align-items: center;
-
-          height: 100%;
           width: 100%;
 
-          color: white;
-          font-family: "Nunito", sans-serif;
-          font-size: 18px;
-          font-weight: 200;
-
-          transition: 0.5s;
-
-          .Navlink_Icon {
-            color: #e3b261;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-          }
-
-          p:hover {
-            border-bottom: 1px solid rgb(255, 122, 0);
-            // -180px 0px 0px 1px inset
-          }
-
-          .Accordion {
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-              rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-            background-color: rgb(26, 26, 27);
-            color: white;
-
-            .Accordion_Title {
-              display: flex;
-              .Discord_Link {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-              }
-
-              .Discord_Icon {
-                // display: flex;
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-                margin: auto;
-                width: 20px;
-              }
-            }
-
-            .Code_Runners_Description {
-              color: white;
-              font-family: "Nunito", sans-serif;
-              font-size: 14px;
-              font-style: italic;
-              font-weight: 100;
-
-              display: flex;
-              flex-direction: column;
-
-              .Discord_Link {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-              }
-
-              .Discord_Icon {
-                // display: flex;
-                margin: auto;
-                width: 20px;
-              }
-            }
-          }
-        }
-
-        .Menu_NavItem:hover,
-        .NavItem:hover {
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        }
-      }
-
-      .Menu_Separater {
-        border: 1px solid rgb(255, 122, 0);
-        background-color: rgb(26, 26, 27);
-        width: 100%;
-      }
-
-      .Weblink_Container {
-        display: flex;
-        flex-direction: column;
-
-        padding: 5px;
-        gap: 10px;
-
-        justify-content: space-evenly;
-
-        .Weblink {
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          background-color: #1c1d1f;
-          border-radius: 5px;
-
-          display: flex;
-
-          padding: 10px 20px;
-          gap: 30px;
-
-          justify-content: space-between;
           align-items: center;
+          gap: 05px;
 
-          height: fit-content;
-          width: 50%;
-
-          .Web_Title {
-            color: white;
-            font-size: 20px;
-            font-weight: 300;
-          }
+          font-size: 20px;
+          font-weight: 300;
         }
-        
+
+        .Navlink:is(:active) {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+
+    .Weblink_Container {
+      display: flex;
+      flex-direction: column;
+
+      padding: 5px;
+      gap: 10px;
+
+      justify-content: space-evenly;
+
+      height: fit-content;
+      width: 100%;
+
+      .Weblink {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #1c1d1f;
+        border-radius: 5px;
+
+        display: flex;
+
+        padding: 10px 20px;
+        gap: 30px;
+
+        justify-content: space-around;
+        align-items: center;
+
+        height: fit-content;
+        width: 100%;
+
+        .Web_Title {
+          color: white;
+          font-size: 20px;
+          font-weight: 300;
+        }
       }
     }
   }
+  //   Mobile Menu End
 
   .Reveal {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
-
-  //   Mobile Menu Endobile Menu End
 }
 // Navbar End
 
@@ -354,50 +149,15 @@
 }
 
 // Media Queries Start
-
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 480px) {
   .Navbar {
-    .Navlink_Container {
-      .NavItem {
-        display: none;
-      }
-      .MenuIcon {
-        display: flex;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .Navbar {
-    .Brand_Container {
-      padding: 2.5px 10px;
-      .Brand {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  .Navbar {
-    .Navlink_Container {
-      .MenuIcon {
-        z-index: 1;
-      }
+    .MenuIcon {
+      z-index: 101;
     }
     .Mobile_Menu {
-      z-index: 1000;
-      .Content_Container {
-        width: 100%;
-        .Header {
-          .Close_Icon {
-            right: 10px;
-          }
-        }
-      }
+      width: 100%;
+      z-index: 100;
     }
   }
 }
-
 // Media Queries End

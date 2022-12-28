@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
+import HomeIcon from "@mui/icons-material/Home";
+import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
+import CreditScoreIcon from "@mui/icons-material/CreditScore";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import CallIcon from "@mui/icons-material/Call";
+import InfoIcon from "@mui/icons-material/Info";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -9,14 +16,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
-// // Material UI Accordion Imports Start
-// import Accordion from "@mui/material/Accordion";
-// import AccordionDetails from "@mui/material/AccordionDetails";
-// import AccordionSummary from "@mui/material/AccordionSummary";
-// import Typography from "@mui/material/Typography";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// // Material UI Accordion Imports End
 
 import { Spin as Hamburger } from "hamburger-react";
 
@@ -43,6 +42,7 @@ const Navbar = () => {
 
   const showMenu = () => {
     setMenu((prev) => !prev);
+    console.log("Working menu");
   };
 
   const scrollUp = () => {
@@ -57,165 +57,89 @@ const Navbar = () => {
     scrollUp();
   };
 
-  // const [expanded, setExpanded] = React.useState(false);
-
-  // const handleChange = (panel) => (event, isExpanded) => {
-  //   setExpanded(isExpanded ? panel : false);
-  // };
-
   return (
     <nav className={Styles.Navbar}>
-      <nav className={Styles.Navbar}>
-        <div className={Styles.Brand_Container}>
-          <p className={Styles.Brand}></p>
-        </div>
+      <MenuIcon
+        onClick={showMenu}
+        className={Styles.MenuIcon}
+        sx={{ color: "red", fontSize: 30 }}
+      />
 
+      {/* Mobile Menu Start  */}
+      <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
         <ul className={Styles.Navlink_Container}>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"/"}>
+            <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
+              <HomeIcon sx={{ color: "White", fontSize: 25 }} />
               Home
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"AboutPage"}>
+            <Link
+              onClick={doubleFunction}
+              className={Styles.Navlink}
+              to={"AboutPage"}
+            >
+              <InfoIcon sx={{ color: "White", fontSize: 25 }} />
               About
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"Programs"}>
-              Programs
+            <Link
+              onClick={doubleFunction}
+              className={Styles.Navlink}
+              to={"Curriculums"}
+            >
+              <ListAltIcon sx={{ color: "White", fontSize: 25 }} />
+              Curriculums
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"Documents"}>
-              Docuements
+            <Link
+              onClick={doubleFunction}
+              className={Styles.Navlink}
+              to={"Documents"}
+            >
+              <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} />
+              Documents
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"Articles"}>
+            <Link onClick={showMenu} className={Styles.Navlink} to={"News"}>
+              <NewspaperIcon sx={{ color: "White", fontSize: 25 }} />
               News
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={""}>
+            <Link onClick={showMenu} className={Styles.Navlink} to={""}>
+              <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} />
               Grades
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link className={Styles.Navlink} to={"Contact"}>
+            <Link onClick={showMenu} className={Styles.Navlink} to={"Contact"}>
+              <CallIcon sx={{ color: "White", fontSize: 25 }} />
               Contact
             </Link>
           </li>
-
-          <MenuIcon
-            onClick={showMenu}
-            className={Styles.MenuIcon}
-            sx={{ color: "#7ab7d6", fontSize: 30 }}
-          />
-
-          {/* <Hamburger
-            toggled={menu}
-            toggle={setMenu}
-            className={MenuIcon}
-            size={30}
-            direction="right"
-            duration={0.3}
-            easing="ease-in"
-            color="white"          
-          /> */}
         </ul>
 
-        {/* Mobile Menu Start  */}
-
-        <div
-          // onClick={showMenu}
-          className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}
-        >
-          <div className={Styles.Content_Container}>
-            <div className={Styles.Header}>
-              <div className={Styles.Menu_Left_Side}>
-                <div className={Styles.Logo_Container}>
-                  <img
-                    src={`https://github.com/Dev-Rook/rookdev/blob/master/src/Assests/Images/Logo.png?raw=true`}
-                    className={Styles.Logo}
-                    alt=""
-                  />
-                </div>
-
-                <h3 className={Styles.Brand}>Hopewell High</h3>
-              </div>
-
-              <CloseIcon
-                sx={{ fontSize: 25 }}
-                onClick={showMenu}
-                className={Styles.Close_Icon}
-              />
-            </div>
-
-            <ul className={Styles.Mobile_Navlink_Container}>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"/"}
-              >
-                <li className={Styles.NavItem}>Home</li>
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"AboutPage"}
-              >
-                <li className={Styles.NavItem}>About</li>
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"Curriculums"}
-              >
-                <li className={Styles.NavItem}>Programs</li>
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"Documents"}
-              >
-                <li className={Styles.NavItem}>Documents</li>
-              </Link>
-
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"Articles"}
-              >
-                <li className={Styles.NavItem}>News</li>
-              </Link>
-
-              <Link onClick={doubleFunction} className={Styles.Navlink} to={""}>
-                <li className={Styles.NavItem}>Grades</li>
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"Contact"}
-              >
-                <li className={Styles.NavItem}>Contact</li>
-              </Link>
-            </ul>
-
-            <div className={Styles.Menu_Separater}></div>
-
-            <div className={Styles.Weblink_Container}>
-
-              <div className={Styles.Weblink}>
-                <TwitterIcon sx={{ color: "Blue", fontSize: 30 }} />
-                <p className={Styles.Web_Title}>Twitter</p>
-              </div>
-              
-            </div>
+        <div className={Styles.Weblink_Container}>
+          <div className={Styles.Weblink}>
+            <TwitterIcon sx={{ color: "Blue", fontSize: 30 }} />
+            <p className={Styles.Web_Title}>Twitter</p>
+          </div>
+          <div className={Styles.Weblink}>
+            <InstagramIcon sx={{ color: "purple", fontSize: 30 }} />
+            <p className={Styles.Web_Title}>Instagram</p>
+          </div>
+          <div className={Styles.Weblink}>
+            <FacebookIcon sx={{ color: "Blue", fontSize: 30 }} />
+            <p className={Styles.Web_Title}>Facebook</p>
           </div>
         </div>
-        {/* Mobile Menu End */}
-      </nav>
+      </div>
+      {/* Mobile Menu End */}
     </nav>
   );
 };
