@@ -2,20 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
-import HomeIcon from "@mui/icons-material/Home";
-import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
-import NewspaperIcon from "@mui/icons-material/Newspaper";
-import CreditScoreIcon from "@mui/icons-material/CreditScore";
-import ListAltIcon from "@mui/icons-material/ListAlt";
-import CallIcon from "@mui/icons-material/Call";
-import InfoIcon from "@mui/icons-material/Info";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 
-// import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import { Spin as Hamburger } from "hamburger-react";
 
@@ -109,7 +97,7 @@ const Navbar = () => {
       <MenuIcon
         onClick={showMenu}
         className={Styles.MenuIcon}
-        sx={{ color: "red", fontSize: 30 }}
+        sx={{ color: "red", fontSize: 40 }}
       />
 
       {/* Mobile Menu Start  */}
