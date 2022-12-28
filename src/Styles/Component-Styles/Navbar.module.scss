@@ -42,14 +42,15 @@
   .Navlink_Container {
     display: flex;
     gap: 20px;
+    padding: 5px;
     justify-content: space-evenly;
     align-items: center;
 
     .NavItem {
       .Navlink {
+        color: black;
         font-size: 15px;
-        font-weight: 200;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.96);
+        font-weight: 300;
         cursor: pointer;
       }
     }
