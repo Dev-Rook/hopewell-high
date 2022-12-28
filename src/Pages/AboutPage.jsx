@@ -5,7 +5,7 @@ import Styles from "../Styles/Page-Styles/About.module.scss";
 import PageHead from "../Components/Main/PageHead";
 import AboutSection from "../Page-Sections/About";
 import Staff from "../Page-Sections/Staff";
-import Apply from "../Page-Sections/Apply";
+import GetInTouch from "../Page-Sections/GetInTouch";
 
 const AboutPage = () => {
   return (
@@ -42,7 +42,7 @@ const AboutPage = () => {
 
       {/* <AboutSection /> */}
       <Staff />
-      <Apply />
+      <GetInTouch />
     </div>
   );
 };

@@ -1,0 +1,230 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 5px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+
+  .Text_Box {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: fit-content;
+
+    .Title {
+      font-size: 30px;
+      font-weight: 300px;
+      text-align: center;
+    }
+
+    .Text {
+      font-size: 18px;
+      font-weight: 300px;
+      text-align: center;
+    }
+
+    .Contact_Button {
+      padding: 5px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 18px;
+      font-weight: 200px;
+    }
+  }
+
+  .Social_Icon_Bar {
+    display: flex;
+
+    padding: 5px;
+    gap: 30px;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: fit-content;
+    width: fit-content;
+
+    .Social_Container {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      .SocialIcon {
+        display: flex;
+        margin: auto;
+      }
+
+      .Social_Title {
+        font-size: 15px;
+        display: none;
+      }
+    }
+  }
+
+  .Form_Container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    gap: 30px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 800px;
+
+    transition: 0.5s;
+
+    .Form {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      justify-content: space-evenly;
+      align-items: center;
+
+      height: 100%;
+      width: 100%;
+
+      .Name__Eamil {
+        border: none;
+        display: flex;
+
+        gap: 20px;
+
+        justify-content: space-between;
+        align-items: center;
+
+        height: fit-content;
+        width: 100%;
+
+        .Input {
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          padding: 5px;
+          background-color: rgba(0, 0, 0, 0.8);
+          outline: none;
+          border: none;
+          width: 50%;
+
+          color: white;
+          font-size: 18px;
+          font-weight: 300;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.96);
+        }
+      }
+
+      .Input {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.8);
+        outline: none;
+        border: none;
+        width: 100%;
+
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+
+        // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.96);
+      }
+      ::-webkit-input-placeholder {
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+
+        // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.96);
+      }
+
+      .Submit_Button {
+        border: 2px solid black;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        padding: 5px 20px;
+        margin-left: 0px;
+
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Media Queries Start
+@media only screen and (max-width: 810px) {
+  .Section {
+    .Form_Container {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Section {
+    .Form_Container {
+      .Form {
+        .Name__Eamil {
+          flex-direction: column;
+          .Input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .Section {
+    .Text_Box {
+      .Text {
+        br {
+          display: none;
+        }
+      }
+    }
+    .Social_Icon_Bar {
+      width: 100%;
+      gap: 10px ;
+
+      // .SocialIcon {
+      //   font-size: 20px;
+      // }
+
+      .Social_Title {
+        font-size: 12px;
+      }
+    }
+  }
+}
+// Media Queries End

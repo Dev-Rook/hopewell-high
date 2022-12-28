@@ -5,7 +5,7 @@ import Hero from "../Page-Sections/Hero";
 import Programs from "../Page-Sections/Programs";
 import About from "../Page-Sections/About";
 import Blog from "../Page-Sections/Blog";
-import Apply from "../Page-Sections/Apply";
+import GetInTouch from "../Page-Sections/GetInTouch";
 import Staff from "../Page-Sections/Staff";
 import Map from "../Page-Sections/Map";
 import Sponsors from "../Page-Sections/Sponsors";
@@ -19,7 +19,7 @@ const Landing = () => {
       <Blog />
       <Staff />
       <Sponsors />
-      <Apply />
+      <GetInTouch />
       <Map />
     </div>
   )

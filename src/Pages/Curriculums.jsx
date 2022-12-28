@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../Styles/Page-Styles/Curriculums.module.scss";
 
-import Apply from "../Page-Sections/Apply";
+import GetInTouch from "../Page-Sections/GetInTouch";
 import ServiceData from "../Assets/Data/Programs.json";
 
 const Curricumlums = () => {
@@ -29,7 +29,7 @@ const Curricumlums = () => {
         </div>
       </div>
 
-      <Apply />
+      <GetInTouch />
     </div>
   );
 };
