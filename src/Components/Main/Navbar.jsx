@@ -5,18 +5,18 @@ import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InsertLinkIcon from "@mui/icons-material/InsertLink";
-import GitHubIcon from "@mui/icons-material/GitHub";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
-// Material UI Accordion Imports Start
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// Material UI Accordion Imports End
+// // Material UI Accordion Imports Start
+// import Accordion from "@mui/material/Accordion";
+// import AccordionDetails from "@mui/material/AccordionDetails";
+// import AccordionSummary from "@mui/material/AccordionSummary";
+// import Typography from "@mui/material/Typography";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// // Material UI Accordion Imports End
 
 import { Spin as Hamburger } from "hamburger-react";
 
@@ -39,7 +39,7 @@ const NavVariants = {
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const [status, setStatus] = useState("close");
+  // const [status, setStatus] = useState("close");
 
   const showMenu = () => {
     setMenu((prev) => !prev);
@@ -57,11 +57,11 @@ const Navbar = () => {
     scrollUp();
   };
 
-  const [expanded, setExpanded] = React.useState(false);
+  // const [expanded, setExpanded] = React.useState(false);
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
+  // const handleChange = (panel) => (event, isExpanded) => {
+  //   setExpanded(isExpanded ? panel : false);
+  // };
 
   return (
     <nav className={Styles.Navbar}>
@@ -204,139 +204,14 @@ const Navbar = () => {
 
             <div className={Styles.Menu_Separater}></div>
 
-            {/* Weblink Container Start */}
-            <ul className={Styles.Weblink_Container}>
-              <Accordion
-                expanded={expanded === "panel1"}
-                onChange={handleChange("panel1")}
-                className={Styles.Accordion}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
-                  aria-controls="panel1bh-content"
-                  id="panel1bh-header"
-                >
-                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                    Mission Statement
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography className={Styles.Code_Runners_Description}>
-                    To create and maintain an environment conducive to the
-                    intellectual, moral, spiritual, social and cultural
-                    development of learners: Thus equipping them with skills,
-                    values and attitudes necessary for them to function at their
-                    fullest potential in society.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+            <div className={Styles.Weblink_Container}>
 
-              <Accordion
-                expanded={expanded === "panel2"}
-                onChange={handleChange("panel2")}
-                className={Styles.Accordion}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
-                  aria-controls="panel2bh-content"
-                  id="panel2bh-header"
-                >
-                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                    On The Web
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    <ul className={Styles.Weblink_Container}>
-                      <a
-                        target={"_blank"}
-                        rel={"noreferrer"}
-                        onClick={showMenu}
-                        href="https://www.linkedin.com/in/dev-rook/"
-                        className={Styles.Weblink}
-                      >
-                        <li className={Styles.Weblink_Item}>
-                          <LinkedInIcon
-                            sx={{ fontSize: 25 }}
-                            className={Styles.Weblink_Icon}
-                          />
-                          Daniel Brown
-                        </li>
-                      </a>
-                      <a
-                        target={"_blank"}
-                        rel={"noreferrer"}
-                        onClick={showMenu}
-                        href="https://github.com/Dev-Rook"
-                        className={Styles.Weblink}
-                      >
-                        <li className={Styles.Weblink_Item}>
-                          <GitHubIcon
-                            sx={{ fontSize: 25 }}
-                            className={Styles.Weblink_Icon}
-                          />
-                          Dev-Rook
-                        </li>
-                      </a>
-                      <a
-                        target={"_blank"}
-                        rel={"noreferrer"}
-                        onClick={showMenu}
-                        href="https://twitter.com/Dev_Rook"
-                        className={Styles.Weblink}
-                      >
-                        <li className={Styles.Weblink_Item}>
-                          <TwitterIcon
-                            sx={{ fontSize: 25 }}
-                            className={Styles.Weblink_Icon}
-                          />
-                          Dev_Rook
-                        </li>
-                      </a>
-                      <a
-                        target={"_blank"}
-                        rel={"noreferrer"}
-                        onClick={showMenu}
-                        href="https://rxresu.me/dev.rook121/developer-resume"
-                        className={Styles.Weblink}
-                      >
-                        <li className={Styles.Weblink_Item}>
-                          <InsertLinkIcon
-                            sx={{ fontSize: 25 }}
-                            className={Styles.Weblink_Icon}
-                          />
-                          Developer Resume
-                        </li>
-                      </a>
-                    </ul>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-
-              <Accordion
-                expanded={expanded === "panel3"}
-                onChange={handleChange("panel3")}
-                className={Styles.Accordion}
-              >
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon sx={{color: "white"}} />}
-                  aria-controls="panel3bh-content"
-                  id="panel3bh-header"
-                >
-                  <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                    Advanced settings
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-                    Integer sit amet egestas eros, vitae egestas augue. Duis vel
-                    est augue.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </ul>
-            {/* Weblink Container End */}
+              <div className={Styles.Weblink}>
+                <TwitterIcon sx={{ color: "Blue", fontSize: 30 }} />
+                <p className={Styles.Web_Title}>Twitter</p>
+              </div>
+              
+            </div>
           </div>
         </div>
         {/* Mobile Menu End */}

@@ -26,9 +26,9 @@ const Hero = () => {
         <p className={Styles.Small_Text}>Architecture / Construction</p>
         <p className={Styles.Large_Text}>Hopewell High School</p>
 
-        <Link to={"AboutPage"}>
-          <button className={Styles.Project_Button}>About Us</button>
-        </Link>
+        <button className={Styles.Project_Button}>
+          <Link to={"AboutPage"}>About Us</Link>
+        </button>
       </div>
 
       <div className={Styles.Diffuser}></div>

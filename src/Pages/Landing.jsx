@@ -14,8 +14,8 @@ const Landing = () => {
   return (
     <div className={Styles.Page}>
       <Hero />
-      <Programs />
       <About />
+      <Programs />
       <Blog />
       <Staff />
       <Sponsors />
