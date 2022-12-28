@@ -1,12 +1,15 @@
 .Navbar {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 
   position: fixed;
   top: 0px;
   left: 0px;
 
   padding: 5px;
-  justify-content: right;
+
+  justify-content: space-between;
   align-items: center;
 
   height: fit-content;
@@ -15,32 +18,47 @@
   transition: 0.3s;
   z-index: 10;
 
-  .Brand_Container {
-    // border: 2px solid black;
-    // background-color: rgba(0, 0, 0, 0.3);
-    padding: 5px 20px;
+  .Image_Container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+
+    overflow: hidden;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    height: fit-content;
-    width: fit-content;
+    height: 30px;
+    width: 30px;
 
-    transition: 0.3s;
+    .Logo {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
-    .Brand {
-      font-size: 20px;
-      font-weight: 300;
-      transition: 0.3s;
+  .Navlink_Container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .NavItem {
+      .Navlink {
+        font-size: 15px;
+        font-weight: 200;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.96);
+        cursor: pointer;
+      }
     }
   }
 
   .MenuIcon {
-    display: flex;
+    display: none;
     cursor: pointer;
-    z-index: 101;
+    z-index: 100;
     // color: white;
   }
 
@@ -48,7 +66,7 @@
   .Mobile_Menu {
     display: flex;
     flex-direction: column;
-    background-color: #1b1a22;
+    background-color: #202123;
 
     position: absolute;
     top: 0;
@@ -58,77 +76,21 @@
     width: 300px;
 
     overflow: scroll;
-    z-index: 100;
+    z-index: 11;
     transition: 0.5s;
     transform: translateX(100vw);
-
-    .Header {
-      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-      display: flex;
-
-      padding: 5px;
-      position: relative;
-
-      justify-content: space-between;
-      align-items: center;
-
-      z-index: 150;
-
-      .Menu_Left_Side {
-        display: flex;
-
-        padding: 5px;
-        gap: 20px;
-        justify-content: space-between;
-        align-items: center;
-
-        .Logo_Container {
-          box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-            rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-            rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-          border: 2px solid #2c7a7b;
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          transition: 0.5s;
-
-          .Logo {
-            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
-              rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-              rgba(0, 0, 0, 0.09) 0px 16px 8px,
-              rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            height: 100%;
-            width: 100%;
-            margin: auto;
-            object-fit: cover;
-            transition: 0.5s;
-          }
-        }
-
-        .Brand {
-          color: white;
-          font-family: sans-serif;
-          font-size: 20px;
-          font-weight: 400;
-          //   animation: flicker 1.5s infinite alternate;
-        }
-      }
-    }
 
     .Navlink_Container {
       display: flex;
       flex-direction: column;
 
       justify-content: space-evenly;
-      align-items: flex-start;
+      align-items: center;
 
+      margin-top: 40px;
 
       padding: 5px;
-      gap: 10px;
+      gap: 20px;
 
       height: 100%;
       width: 100%;
@@ -137,7 +99,7 @@
         display: flex;
 
         height: fit-content;
-        width: 100%;
+        width: fit-content;
 
         .Navlink {
           display: flex;
@@ -149,15 +111,11 @@
           font-size: 20px;
           font-weight: 300;
         }
-
-        .Navlink:is(:active) {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
       }
     }
 
     .Weblink_Container {
-      display: none;
+      display: flex;
       flex-direction: column;
 
       padding: 5px;
@@ -165,7 +123,7 @@
 
       justify-content: space-evenly;
 
-      height: 100%;
+      height: fit-content;
       width: 100%;
 
       .Weblink {
@@ -205,6 +163,16 @@
 }
 
 // Media Queries Start
+@media only screen and (max-width: 768px) {
+  .Navbar {
+    .Navlink_Container {
+      display: none;
+    }
+    .MenuIcon {
+      display: flex;
+    }
+  }
+}
 @media only screen and (max-width: 480px) {
   .Navbar {
     .MenuIcon {
