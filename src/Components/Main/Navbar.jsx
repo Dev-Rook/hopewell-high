@@ -152,7 +152,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link onClick={showMenu} className={Styles.Navlink} to={"News"}>
+            <Link onClick={doubleFunction} className={Styles.Navlink} to={"News"}>
               {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
               News
             </Link>
