@@ -67,6 +67,20 @@ const Navbar = () => {
 
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
+        <div className={Styles.Header}>
+          <div className={Styles.Menu_Left_Side}>
+            <div className={Styles.Logo_Container}>
+              <img
+                src={`https://github.com/Dev-Rook/rookdev/blob/master/src/Assests/Images/Logo.png?raw=true`}
+                className={Styles.Logo}
+                alt=""
+              />
+            </div>
+
+            <h3 className={Styles.Brand}>Hopewell High</h3>
+          </div>
+        </div>
+
         <ul className={Styles.Navlink_Container}>
           <li className={Styles.NavItem}>
             <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
@@ -126,8 +140,16 @@ const Navbar = () => {
 
         <div className={Styles.Weblink_Container}>
           <div className={Styles.Weblink}>
-            <TwitterIcon sx={{ color: "Blue", fontSize: 30 }} />
-            <p className={Styles.Web_Title}>Twitter</p>
+            <a
+              target={"_blank"}
+              rel={"noreferrer"}
+              onClick={showMenu}
+              href="https://www.linkedin.com/in/dev-rook/"
+              className={Styles.Weblink}
+            >
+              <TwitterIcon sx={{ color: "Blue", fontSize: 30 }} />
+              <p className={Styles.Web_Title}>Twitter</p>
+            </a>
           </div>
           <div className={Styles.Weblink}>
             <InstagramIcon sx={{ color: "purple", fontSize: 30 }} />
