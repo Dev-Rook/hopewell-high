@@ -159,13 +159,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link onClick={showMenu} className={Styles.Navlink} to={""}>
+            <Link onClick={doubleFunction} className={Styles.Navlink} to={""}>
               {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Grades
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link onClick={showMenu} className={Styles.Navlink} to={"Contact"}>
+            <Link onClick={doubleFunction} className={Styles.Navlink} to={"Contact"}>
               {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Contact
             </Link>
