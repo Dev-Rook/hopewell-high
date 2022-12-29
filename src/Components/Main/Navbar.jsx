@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
-
 import MenuIcon from "@mui/icons-material/Menu";
 
 import { Spin as Hamburger } from "hamburger-react";
@@ -57,37 +56,47 @@ const Navbar = () => {
 
       <ul className={Styles.Navlink_Container}>
         <li className={Styles.NavItem}>
-          <Link className={Styles.Navlink} to={"/"}>
+          <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
             {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
             Home
           </Link>
         </li>
         <li className={Styles.NavItem}>
-          <Link className={Styles.Navlink} to={"Curriculums"}>
+          <Link onClick={scrollUp} className={Styles.Navlink} to={"AboutPage"}>
+            {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            About
+          </Link>
+        </li>
+        <li className={Styles.NavItem}>
+          <Link
+            onClick={scrollUp}
+            className={Styles.Navlink}
+            to={"Curriculums"}
+          >
             {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
             Curriculums
           </Link>
         </li>
         <li className={Styles.NavItem}>
-          <Link className={Styles.Navlink} to={"Documents"}>
+          <Link onClick={scrollUp} className={Styles.Navlink} to={"Documents"}>
             {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
             Documents
           </Link>
         </li>
         <li className={Styles.NavItem}>
-          <Link className={Styles.Navlink} to={"News"}>
+          <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
             {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
             News
           </Link>
         </li>
         <li className={Styles.NavItem}>
-          <Link className={Styles.Navlink} to={""}>
+          <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
             {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
             Grades
           </Link>
         </li>
         <li className={Styles.NavItem}>
-          <Link className={Styles.Navlink} to={"Contact"}>
+          <Link onClick={scrollUp} className={Styles.Navlink} to={"Contact"}>
             {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
             Contact
           </Link>
@@ -140,7 +149,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link onClick={doubleFunction} className={Styles.Navlink} to={"News"}>
+            <Link
+              onClick={doubleFunction}
+              className={Styles.Navlink}
+              to={"News"}
+            >
               {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
               News
             </Link>

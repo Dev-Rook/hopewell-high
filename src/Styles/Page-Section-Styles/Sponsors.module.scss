@@ -50,25 +50,47 @@
       transition: 0.3s;
     }
   }
+
+  .Slider_Container {
+    .Swiper {
+      .Sponsor_Container {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        padding: 5px;
+
+        justify-content: center;
+        align-items: center;
+
+        height: fit-content;
+        width: fit-content;
+
+        .Sponsor_Image {
+          height: 100px;
+        }
+      }
+    }
+  }
 }
 
 // Media Queries Start
 @media only screen and (max-width: 996px) {
-    .Section {
-      .Section_Title_Container {
-        .Section_Title {
-          font-size: 30px;
-        }
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 30px;
       }
     }
   }
-  @media only screen and (max-width: 360px) {
-    .Section {
-      .Section_Title_Container {
-        .Section_Title {
-          font-size: 25px;
-        }
+}
+@media only screen and (max-width: 360px) {
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 25px;
       }
     }
   }
-  // Media Queries End
+}
+// Media Queries End

@@ -8,22 +8,22 @@ import ArchitectureIcon from "@mui/icons-material/Architecture";
 import HardwareIcon from "@mui/icons-material/Hardware";
 import FoundationIcon from "@mui/icons-material/Foundation";
 
-import ServiceData from "../Assets/Data/Programs.json";
+import SkillsData from "../Assets/Data/Skills.json";
 
-const Programs = () => {
-  const [data, setData] = useState(ServiceData);
+const Skills = () => {
+  const [data, setData] = useState(SkillsData);
   const [visible, setVisible] = useState(6);
 
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section_Title}>
-        <p className={Styles.Question}>- What We Offer</p>
-        <p className={Styles.Brand}>Providing The Best Accademeics</p>
+        <p className={Styles.Question}>- Trade / Skills</p>
+        <p className={Styles.Brand}>Practical Trades For Practical Industries</p>
       </div>
 
       <div className={Styles.Content_Container}>
         {data &&
-          data.slice(0, visible).map((value) => {
+          data.map((value) => {
             return (
               <div className={Styles.Card} key={value.id}>
                 <img src={value.Icon} alt="" className={Styles.Icon} />
@@ -33,12 +33,8 @@ const Programs = () => {
             );
           })}
       </div>
-
-      <Link to={"Curriculums"}>
-        <button className={Styles.View_More_Button}>View All</button>
-      </Link>
     </div>
   );
 };
 
-export default Programs;
+export default Skills;

@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Styles from "./App.module.scss";
 
-import NavigationIcon from '@mui/icons-material/Navigation';
+import NavigationIcon from "@mui/icons-material/Navigation";
 
 import Navbar from "./Components/Main/Navbar";
+import Footer from "./Components/Main/Footer";
 
 import Landing from "./Pages/Landing";
 import AboutPage from "./Pages/AboutPage";
-import Articles from "./Pages/Articles"
-import Staff from "./Pages/Staff"
-import Curriculums from "./Pages/Curriculums"
-import Contact from "./Pages/Contact"
-import Error from "./Pages/Error"
+import Articles from "./Pages/Articles";
+import Staff from "./Pages/Staff";
+import Curriculums from "./Pages/Curriculums";
+import Contact from "./Pages/Contact";
+import Error from "./Pages/Error";
 
 function App() {
   const [backToTop, setBackToTop] = useState(false);
@@ -37,23 +38,29 @@ function App() {
   return (
     <div className={Styles.App}>
       <BrowserRouter>
-      <Navbar />
+        <Navbar scroll={scrollUp} />
         <Routes>
-          <Route path={"/"} element={<Landing  />} />
+          <Route path={"/"} element={<Landing />} />
           <Route path={"AboutPage"} element={<AboutPage />} />
           <Route path={"News"} element={<Articles />} />
           <Route path={"Staff"} element={<Staff />} />
           <Route path={"Curriculums"} element={<Curriculums />} />
           <Route path={"Contact"} element={<Contact />} />
           <Route path={"*"} element={<Error />} />
+
+          {/* Dynamic Routes */}
+          {/* Dynamic Routes */}
         </Routes>
+        <Footer />
       </BrowserRouter>
-      
+
       <NavigationIcon
-          onClick={scrollUp}
-          sx={{fontSize: 30}}
-          className={`${Styles.Back_To_Top_Icon} ${backToTop? Styles.Show_Back_To_Top : ""}`}
-        />
+        onClick={scrollUp}
+        sx={{ fontSize: 30 }}
+        className={`${Styles.Back_To_Top_Icon} ${
+          backToTop ? Styles.Show_Back_To_Top : ""
+        }`}
+      />
     </div>
   );
 }

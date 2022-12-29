@@ -18,79 +18,73 @@ import "swiper/css/scrollbar";
 import SponsorData from "../Assets/Data/Sponsors.json";
 
 const Sponsors = () => {
-    const [data, setData] = useState(SponsorData);
-    return (
-      <div className={Styles.Section}>
-        <div className={Styles.Section_Title_Container}>
+  const [data, setData] = useState(SponsorData);
+  return (
+    <div className={Styles.Section}>
+      <div className={Styles.Section_Title_Container}>
         <p className={Styles.Question}>- Sponsors</p>
         <p className={Styles.Section_Title}>Our Sponsors & Trusted Partners</p>
       </div>
-  
-          <div className={Styles.Slider_Container}>
-            <Swiper
-              slidesPerView={4}
-              speed={2000}
-              spaceBetween={0}
-              modules={[Navigation, FreeMode, Mousewheel, Autoplay]}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              grabCursor={true}
-              loop
-              pagination={{
-                dynamicBullets: true,
-              }}
-              mousewheel={true}
-              className={Styles.Swiper}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                },
-                320: {
-                  slidesPerView: 1,
-                },
-                480: {
-                  slidesPerView: 2,
-                },
-                600: {
-                  slidesPerView: 3,
-                },
-                996: {
-                  slidesPerView: 3,
-                },
-                1920: {
-                  slidesPerView: 4,
-                },
-              }}
-            >
-              {data &&
-                data.map((value) => {
-                  return (
-                    <SwiperSlide key={value?.id}>
-                      <Link to={""} className={Styles.Link}>
-                        <div className={Styles.Project_Card}>
-                          <div className={Styles.Text_Container}>
-                            <p className={Styles.Title}>{value?.Title}</p>
-                            <p className={Styles.Architect}>{value?.Architect}</p>
-                          </div>
-                          <div className={Styles.Diffuser}></div>
-                          <div className={Styles.Image_Container}>
-                            <img
-                              src={value.Image}
-                              alt=""
-                              className={Styles.Image}
-                            />
-                          </div>
-                        </div>
-                      </Link>
-                    </SwiperSlide>
-                  );
-                })}
-            </Swiper>
-          </div>
-        </div>
-    );
-}
 
-export default Sponsors
+      <div className={Styles.Slider_Container}>
+        <Swiper
+          slidesPerView={4}
+          speed={2000}
+          spaceBetween={0}
+          modules={[Navigation, FreeMode, Mousewheel, Autoplay]}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          grabCursor={true}
+          loop
+          pagination={{
+            dynamicBullets: true,
+          }}
+          mousewheel={true}
+          className={Styles.Swiper}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            320: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 2,
+            },
+            600: {
+              slidesPerView: 3,
+            },
+            996: {
+              slidesPerView: 5,
+            },
+            1920: {
+              slidesPerView: 5,
+            },
+          }}
+        >
+          {data &&
+            data.map((value) => {
+              return (
+                <SwiperSlide key={value?.id}>
+                  <a href={value.Link} rel={"noreferrer"} target={"_blank"} className={Styles.Link}>
+                    <div className={Styles.Sponsor_Container}>
+                      <img
+                        src={value.Image}
+                        alt=""
+                        className={Styles.Sponsor_Image}
+                      />
+                      <p className={Styles.Sponsor_Title}>{value.Title}</p>
+                    </div>
+                  </a>
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+      </div>
+    </div>
+  );
+};
+
+export default Sponsors;
