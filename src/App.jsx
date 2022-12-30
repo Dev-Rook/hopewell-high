@@ -15,6 +15,8 @@ import Curriculums from "./Pages/Curriculums";
 import Contact from "./Pages/Contact";
 import Error from "./Pages/Error";
 
+import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
+
 function App() {
   const [backToTop, setBackToTop] = useState(false);
 
@@ -49,6 +51,7 @@ function App() {
           <Route path={"*"} element={<Error />} />
 
           {/* Dynamic Routes */}
+          <Route path={"/Curriculum/:id"} element={<SingleCurriculum />} />
           {/* Dynamic Routes */}
         </Routes>
         <Footer />

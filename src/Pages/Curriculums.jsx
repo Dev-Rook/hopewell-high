@@ -18,19 +18,19 @@ const Curricumlums = () => {
       <div className={Styles.Section}>
         <div className={Styles.Section_Title}>
           <p className={Styles.Question}>- Subjects</p>
-          <p className={Styles.Brand}>
-            Primining Scholors For Higher Academia 
-          </p>
+          <p className={Styles.Brand}>Primining Scholors For Higher Academia</p>
         </div>
         <div className={Styles.Content_Container}>
           {data &&
             data.map((value) => {
               return (
-                <div className={Styles.Card} key={value.id}>
-                  <img src={value.Icon} alt="" className={Styles.Icon} />
-                  <p className={Styles.Title}>{value.Title}</p>
-                  <p className={Styles.Description}>{value.Description}</p>
-                </div>
+                <Link to={"/Curriculum/" + value.id}>
+                  <div className={Styles.Card} key={value.id}>
+                    <img src={value.Icon} alt="" className={Styles.Icon} />
+                    <p className={Styles.Title}>{value.Title}</p>
+                    <p className={Styles.Description}>{value.Description}</p>
+                  </div>
+                </Link>
               );
             })}
         </div>
