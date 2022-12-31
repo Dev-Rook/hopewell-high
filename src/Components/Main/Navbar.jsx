@@ -25,7 +25,7 @@ const NavVariants = {
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  // const [status, setStatus] = useState("close");
+  const [isOpen, setOpen] = useState(false);
 
   const showMenu = () => {
     setMenu((prev) => !prev);
@@ -109,6 +109,16 @@ const Navbar = () => {
         sx={{ color: "red", fontSize: 40 }}
       />
 
+      {/* <Hamburger
+        onClick={showMenu}
+        className={Styles.MenuIcon}
+        toggled={isOpen}
+        toggle={setOpen}
+        size={40}
+        direction="right"
+        label="Show menu"
+      /> */}
+
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
         <ul className={Styles.Navlink_Container}>
@@ -165,7 +175,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li className={Styles.NavItem}>
-            <Link onClick={doubleFunction} className={Styles.Navlink} to={"Contact"}>
+            <Link
+              onClick={doubleFunction}
+              className={Styles.Navlink}
+              to={"Contact"}
+            >
               {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Contact
             </Link>

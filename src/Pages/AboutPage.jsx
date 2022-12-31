@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Styles from "../Styles/Page-Styles/About.module.scss";
 
 import PageHead from "../Components/Main/PageHead";
-import AboutSection from "../Page-Sections/About";
+import History from "../Page-Sections/History";
 import Staff from "../Page-Sections/Staff";
 import GetInTouch from "../Page-Sections/GetInTouch";
 
@@ -40,7 +40,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* <AboutSection /> */}
+      <History />
       <Staff />
       <GetInTouch />
     </div>
