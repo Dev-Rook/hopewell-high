@@ -13,6 +13,7 @@ import Articles from "./Pages/Articles";
 import Staff from "./Pages/Staff";
 import Curriculums from "./Pages/Curriculums";
 import Contact from "./Pages/Contact";
+import Documents from "./Pages/Documents";
 import Error from "./Pages/Error";
 
 import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
@@ -47,6 +48,7 @@ function App() {
           <Route path={"News"} element={<Articles />} />
           <Route path={"Staff"} element={<Staff />} />
           <Route path={"Curriculums"} element={<Curriculums />} />
+          <Route path={"Documents"} element={<Documents />} />
           <Route path={"Contact"} element={<Contact />} />
           <Route path={"*"} element={<Error />} />
 
