@@ -11,7 +11,6 @@ import Staff from "../Page-Sections/Staff";
 import Map from "../Page-Sections/Map";
 import Sponsors from "../Page-Sections/Sponsors";
 
-import MediumTest from "../Page-Sections/MediumTest";
 
 const Landing = () => {
   return (
@@ -21,7 +20,6 @@ const Landing = () => {
       <Offer />
       {/* <Programs /> */}
       <Blog />
-      <MediumTest />
       <Staff />
       <Sponsors />
       <GetInTouch />

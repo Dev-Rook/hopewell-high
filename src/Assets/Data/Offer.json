@@ -2,37 +2,37 @@
     {
         "id": 1,
         "Image": "",
-        "Title": "Title",
+        "Title": "Great Facilities",
         "Description": "Description"
     },
     {
         "id": 2,
         "Image": "",
-        "Title": "Title",
+        "Title": "Qualiified Educators",
         "Description": "Description"
     },
     {
         "id": 3,
         "Image": "",
-        "Title": "Title",
+        "Title": "Scientific Labs",
         "Description": "Description"
     },
     {
         "id": 4,
         "Image": "",
-        "Title": "Title",
+        "Title": "Sport & Clubs",
         "Description": "Description"
     },
     {
         "id": 5,
         "Image": "",
-        "Title": "Title",
+        "Title": "Music & Art Studios",
         "Description": "Description"
     },
     {
         "id": 6,
         "Image": "",
-        "Title": "Title",
+        "Title": "Cadet",
         "Description": "Description"
     }
 ]
