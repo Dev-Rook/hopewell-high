@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <div className={Styles.Section}>
       <div className={Styles.Content_Container}>
-        <p className={Styles.Small_Text}>Architecture / Construction</p>
+        <p className={Styles.Small_Text}>Forging Towards Excellence</p>
         <p className={Styles.Large_Text}>Hopewell High School</p>
 
         <button className={Styles.Project_Button}>

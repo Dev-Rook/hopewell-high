@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/About.module.scss";
 
 const Indroduction = () => {
-  
   return (
     <div className={Styles.Section}>
       <div className={Styles.Content_Container}>
@@ -12,10 +11,10 @@ const Indroduction = () => {
           <p className={Styles.Question}>- Who We Are</p>
           <p className={Styles.Brand}>Hopewell Highschool</p>
           <p className={Styles.Description}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            cupiditate, <br /> repellendus quas optio porro labore, facere dolor
-            nemo non, totam saepe aliquam <br /> nulla accusamus velit animi
-            placeat! Maxime, necessitatibus dolorem.
+            We strive to create and maintain an environment conducive to the intellectual,
+            moral, spiritual, social and cultural development of learners: Thus
+            equipping them with skills, values and attitudes necessary for them
+            to function at their fullest potential in society.
           </p>
 
           <Link to={"AboutPage"}>

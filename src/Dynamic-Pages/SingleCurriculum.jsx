@@ -19,7 +19,7 @@ const SingleCurriculum = () => {
         <div className={Styles.Diffuser}></div>
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>
-
+      
       <GetInTouch />
     </div>
   );
