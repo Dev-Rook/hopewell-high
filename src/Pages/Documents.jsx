@@ -24,8 +24,13 @@ const Documents = () => {
           {data &&
             data.map((value) => {
               return (
-                <a href={value.Link} target={"_blank"} rel={"noreferrer"}>
-                  <div className={Styles.Card} key={value.id}>
+                <a
+                  href={value.Link}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  key={value.id}
+                >
+                  <div className={Styles.Card}>
                     <img src={value.Icon} alt="" className={Styles.Icon} />
                     <p className={Styles.Title}>{value.Title}</p>
                     <p className={Styles.Description}>{value.Description}</p>

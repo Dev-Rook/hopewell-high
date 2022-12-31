@@ -5,6 +5,7 @@ import Styles from "../Styles/Page-Styles/Curriculums.module.scss";
 import GetInTouch from "../Page-Sections/GetInTouch";
 import ServiceData from "../Assets/Data/Programs.json";
 import Skills from "../Page-Sections/Skills";
+import Subjects from "../Page-Sections/Subjects";
 
 const Curricumlums = () => {
   const [data, setData] = useState(ServiceData);
@@ -15,27 +16,7 @@ const Curricumlums = () => {
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>
 
-      <div className={Styles.Section}>
-        <div className={Styles.Section_Title}>
-          <p className={Styles.Question}>- Subjects</p>
-          <p className={Styles.Brand}>Primining Scholors For Higher Academia</p>
-        </div>
-        <div className={Styles.Content_Container}>
-          {data &&
-            data.map((value) => {
-              return (
-                <Link to={"/Curriculum/" + value.id}>
-                  <div className={Styles.Card} key={value.id}>
-                    <img src={value.Icon} alt="" className={Styles.Icon} />
-                    <p className={Styles.Title}>{value.Title}</p>
-                    <p className={Styles.Description}>{value.Description}</p>
-                  </div>
-                </Link>
-              );
-            })}
-        </div>
-      </div>
-
+      <Subjects />
       <Skills />
       <GetInTouch />
     </div>
