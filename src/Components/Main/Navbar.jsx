@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -39,10 +40,17 @@ const Navbar = () => {
     });
   };
 
+  function handleClick(event) {
+    event.preventDefault();
+    console.info('You clicked a breadcrumb.');
+  }
+
   const doubleFunction = () => {
     showMenu();
     scrollUp();
+    handleClick();
   };
+  
 
   return (
     <nav className={Styles.Navbar}>
@@ -55,6 +63,7 @@ const Navbar = () => {
       </div>
 
       <ul className={Styles.Navlink_Container}>
+      <Breadcrumbs aria-label="breadcrumb">
         <li className={Styles.NavItem}>
           <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
             {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
@@ -101,6 +110,7 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+        </Breadcrumbs>
       </ul>
 
       <MenuIcon

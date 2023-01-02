@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/breadcrumb": "^2.1.2",
+    "@chakra-ui/react": "^2.4.6",
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -14,7 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^1.2.1",
-    "framer-motion": "^7.10.2",
+    "framer-motion": "^7.10.3",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
