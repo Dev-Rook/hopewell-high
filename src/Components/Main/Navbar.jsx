@@ -195,8 +195,6 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-
-        <div className={Styles.Weblink_Container}></div>
       </div>
       {/* Mobile Menu End */}
     </nav>
