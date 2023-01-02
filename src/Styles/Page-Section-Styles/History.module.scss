@@ -44,42 +44,8 @@
     }
   }
 
-  .Timeline {
-    width: 100%;
-    gap: 10px;
-
-    .Timeline_Item {
-      gap: 7px;
-
-      .Time_Card {
-        display: flex;
-        flex-direction: column;
-
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-
-        padding: 5px;
-        gap: 7px;
-
-        justify-content: space-between;
-        align-items: flex-start;
-
-        height: fit-content;
-        width: fit-content;
-
-        .Year {
-          font-size: 20px;
-          font-weight: 300;
-        }
-
-        .Description {
-          font-size: 16px;
-          font-weight: 200;
-          text-align: left;
-        }
-      }
-    }
+  .Timeline_Right {
+    display: none;
   }
 }
 // Media Queries Start
@@ -92,6 +58,19 @@
     }
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .Section {
+    align-items: flex-start;
+    .Timeline_Alternate {
+      display: none;
+    }
+    .Timeline_Right {
+      display: flex;
+    }
+  }
+}
+
 @media only screen and (max-width: 360px) {
   .Section {
     .Section_Title_Container {
