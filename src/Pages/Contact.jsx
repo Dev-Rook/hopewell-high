@@ -17,7 +17,7 @@ const Contact = () => {
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>
 
-      <div className={Styles.Section}>
+      {/* <div className={Styles.Section}>
         <div className={Styles.Content_Container}>
           <div className={Styles.About_Container}>
             <p className={Styles.Question}>- Who We Are</p>
@@ -39,7 +39,7 @@ const Contact = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       
 
