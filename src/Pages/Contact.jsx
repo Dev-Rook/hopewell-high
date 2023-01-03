@@ -12,6 +12,7 @@ const Contact = () => {
   return (
     <div className={Styles.Page}>
       <div className={Styles.PageHead}>
+        <div className={Styles.Page_Title}>Contact</div>
         <div className={Styles.Diffuser}></div>
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>

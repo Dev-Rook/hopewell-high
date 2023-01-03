@@ -11,14 +11,15 @@ const Documents = () => {
   return (
     <div className={Styles.Page}>
       <div className={Styles.PageHead}>
+        <div className={Styles.Page_Title}>Documents</div>
         <div className={Styles.Diffuser}></div>
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>
 
       <div className={Styles.Section}>
         <div className={Styles.Section_Title_Container}>
-          <p className={Styles.Question}>- Document</p>
-          <p className={Styles.Section_Title}>Downloadable Documents</p>
+          <p className={Styles.Question}>- Downloadable Documents</p>
+          <p className={Styles.Section_Title}>Click To Download</p>
         </div>
         <div className={Styles.Content_Container}>
           {data &&

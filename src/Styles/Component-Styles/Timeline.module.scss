@@ -1,15 +1,18 @@
 .Timeline {
+  border: 1px solid white;
   width: 100%;
-  gap: 10px;
+  gap: 0px;
 
   .Timeline_Item {
+    padding: 0px;
     gap: 7px;
+   width: 100%;
 
     .Time_Card {
       display: flex;
       flex-direction: column;
 
-      padding: 5px;
+      padding: 0px;
       gap: 7px;
 
       justify-content: space-between;
@@ -31,14 +34,3 @@
     }
   }
 }
-
-
-
-// @media only screen and (max-width: 650px) {
-//   .Timeline_Alternate {
-//     display: none;
-//   }
-//   .Timeline_Right {
-//     display: block;
-//   }
-// }

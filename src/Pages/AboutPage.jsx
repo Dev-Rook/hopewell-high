@@ -13,6 +13,7 @@ const AboutPage = () => {
     <div className={Styles.Page}>
       {/* <PageHead /> */}
       <div className={Styles.PageHead}>
+        <div className={Styles.Page_Title}>About Page</div>
         <div className={Styles.Diffuser}></div>
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>

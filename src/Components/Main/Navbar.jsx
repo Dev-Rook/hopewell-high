@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import ListGroup from "react-bootstrap/ListGroup";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
 import MenuIcon from "@mui/icons-material/Menu";
-
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info"
 import { Spin as Hamburger } from "hamburger-react";
 
 const NavVariants = {
@@ -42,7 +44,7 @@ const Navbar = () => {
 
   function handleClick(event) {
     event.preventDefault();
-    console.info('You clicked a breadcrumb.');
+    console.info("You clicked a breadcrumb.");
   }
 
   const doubleFunction = () => {
@@ -50,7 +52,6 @@ const Navbar = () => {
     scrollUp();
     handleClick();
   };
-  
 
   return (
     <nav className={Styles.Navbar}>
@@ -63,53 +64,61 @@ const Navbar = () => {
       </div>
 
       <ul className={Styles.Navlink_Container}>
-      <Breadcrumbs aria-label="breadcrumb">
-        <li className={Styles.NavItem}>
-          <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
-            {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            Home
-          </Link>
-        </li>
-        <li className={Styles.NavItem}>
-          <Link onClick={scrollUp} className={Styles.Navlink} to={"AboutPage"}>
-            {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            About
-          </Link>
-        </li>
-        <li className={Styles.NavItem}>
-          <Link
-            onClick={scrollUp}
-            className={Styles.Navlink}
-            to={"Curriculums"}
-          >
-            {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            Curriculums
-          </Link>
-        </li>
-        <li className={Styles.NavItem}>
-          <Link onClick={scrollUp} className={Styles.Navlink} to={"Documents"}>
-            {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            Documents
-          </Link>
-        </li>
-        <li className={Styles.NavItem}>
-          <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
-            {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            News
-          </Link>
-        </li>
-        <li className={Styles.NavItem}>
-          <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
-            {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            Grades
-          </Link>
-        </li>
-        <li className={Styles.NavItem}>
-          <Link onClick={scrollUp} className={Styles.Navlink} to={"Contact"}>
-            {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            Contact
-          </Link>
-        </li>
+        <Breadcrumbs aria-label="breadcrumb">
+          <li className={Styles.NavItem}>
+            <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
+              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              Home
+            </Link>
+          </li>
+          <li className={Styles.NavItem}>
+            <Link
+              onClick={scrollUp}
+              className={Styles.Navlink}
+              to={"AboutPage"}
+            >
+              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              About
+            </Link>
+          </li>
+          <li className={Styles.NavItem}>
+            <Link
+              onClick={scrollUp}
+              className={Styles.Navlink}
+              to={"Curriculums"}
+            >
+              {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              Curriculums
+            </Link>
+          </li>
+          <li className={Styles.NavItem}>
+            <Link
+              onClick={scrollUp}
+              className={Styles.Navlink}
+              to={"Documents"}
+            >
+              {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              Documents
+            </Link>
+          </li>
+          <li className={Styles.NavItem}>
+            <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
+              {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              News
+            </Link>
+          </li>
+          <li className={Styles.NavItem}>
+            <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
+              {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              Grades
+            </Link>
+          </li>
+          <li className={Styles.NavItem}>
+            <Link onClick={scrollUp} className={Styles.Navlink} to={"Contact"}>
+              {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              Contact
+            </Link>
+          </li>
         </Breadcrumbs>
       </ul>
 
@@ -131,70 +140,78 @@ const Navbar = () => {
 
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
-        <ul className={Styles.Navlink_Container}>
-          <li className={Styles.NavItem}>
-            <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
-              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Home
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={doubleFunction}
-              className={Styles.Navlink}
-              to={"AboutPage"}
-            >
-              {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              About
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={doubleFunction}
-              className={Styles.Navlink}
-              to={"Curriculums"}
-            >
-              {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Curriculums
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={doubleFunction}
-              className={Styles.Navlink}
-              to={"Documents"}
-            >
-              {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Documents
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={doubleFunction}
-              className={Styles.Navlink}
-              to={"News"}
-            >
-              {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              News
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link onClick={doubleFunction} className={Styles.Navlink} to={""}>
-              {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Grades
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={doubleFunction}
-              className={Styles.Navlink}
-              to={"Contact"}
-            >
-              {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className={Styles.Navlink_Container}>
+          <ListGroup className={Styles.ListGroup}>
+            <ListGroup.Item>
+              <Link
+                onClick={doubleFunction}
+                className={Styles.Navlink}
+                to={"/"}
+              >
+                <HomeIcon sx={{ color: "White", fontSize: 25 }} />
+                Home
+              </Link>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Link
+                onClick={doubleFunction}
+                className={Styles.Navlink}
+                to={"AboutPage"}
+              >
+                <InfoIcon sx={{ color: "White", fontSize: 25 }} />
+                About
+              </Link>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Link
+                onClick={doubleFunction}
+                className={Styles.Navlink}
+                to={"Curriculums"}
+              >
+                {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
+                Curriculums
+              </Link>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Link
+                onClick={doubleFunction}
+                className={Styles.Navlink}
+                to={"Documents"}
+              >
+                {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
+                Documents
+              </Link>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Link
+                onClick={doubleFunction}
+                className={Styles.Navlink}
+                to={"News"}
+              >
+                {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
+                News
+              </Link>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Link onClick={doubleFunction} className={Styles.Navlink} to={""}>
+                {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
+                Grades
+              </Link>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Link
+                onClick={doubleFunction}
+                className={Styles.Navlink}
+                to={"Contact"}
+              >
+                {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
+                Contact
+              </Link>
+            </ListGroup.Item>
+          </ListGroup>
+        </div>
+
+
       </div>
       {/* Mobile Menu End */}
     </nav>

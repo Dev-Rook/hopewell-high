@@ -12,6 +12,7 @@ const Articles = () => {
   return (
     <div className={Styles.Page}>
       <div className={Styles.PageHead}>
+        <div className={Styles.Page_Title}>Articles</div>
         <div className={Styles.Diffuser}></div>
         <img src={``} alt="" className={Styles.Heade_Image} />
       </div>

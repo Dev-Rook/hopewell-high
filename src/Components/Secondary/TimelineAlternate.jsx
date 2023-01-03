@@ -14,10 +14,7 @@ const TimelineAlternate = () => {
   const [position, setPosition] = useState("alternate");
   return (
     <div>
-      <Timeline
-        className={`${Styles.Timeline} ${Styles.Timeline_Alternate}`}
-        position={position}
-      >
+      <Timeline className={Styles.Timeline} position={position}>
         <TimelineItem className={Styles.Timeline_Item}>
           <TimelineSeparator>
             <TimelineDot />

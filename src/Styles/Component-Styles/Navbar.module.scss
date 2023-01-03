@@ -87,21 +87,27 @@
       flex-direction: column;
 
       justify-content: space-evenly;
-      align-items: center;
+      align-items: flex-start;
 
-      margin-top: 40px;
+      margin-top: 50px;
 
-      padding: 5px;
       gap: 20px;
 
       height: 100%;
       width: 100%;
 
+      .ListGroup {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+
       .NavItem {
         display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
         height: fit-content;
-        width: fit-content;
+        width: 100%;
 
         .Navlink {
           display: flex;
