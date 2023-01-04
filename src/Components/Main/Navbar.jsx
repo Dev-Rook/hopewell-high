@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
+import ListGroup from "react-bootstrap/ListGroup";
+
 import MenuIcon from "@mui/icons-material/Menu";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 import TreeView from "@mui/lab/TreeView";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -143,57 +149,105 @@ const Navbar = () => {
 
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
-        <div className={Styles.Navlink_Container}>
-          <TreeView
-            aria-label="file system navigator"
-            defaultCollapseIcon={<ExpandMoreIcon />}
-            defaultExpandIcon={<ChevronRightIcon />}
-            sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
+        <div className={Styles.Mobile_Menu_Header}>
+          HHS
+          <img src={``} alt="" className={Styles.Header_Image} />
+        </div>
+        {/* <div className={Styles.Navlink_Container}>
+        </div> */}
+
+        <ListGroup className={Styles.ListGroup}>
+          <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
+            {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            <ListGroup.Item>Home</ListGroup.Item>
+          </Link>
+
+          <Link
+            onClick={doubleFunction}
+            className={Styles.Navlink}
+            to={"AboutPage"}
           >
-            <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
-              <TreeItem nodeId="1" label="Home" />
-            </Link>
-            <TreeItem nodeId="2" label="Information">
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"AboutPage"}
-              >
-                <TreeItem nodeId="3" label="About" />
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"News"}
-              >
-                <TreeItem nodeId="4" label="Articles" />
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"Curriculums"}
-              >
-                <TreeItem nodeId="5" label="Curriculums" />
-              </Link>
-              <Link
-                onClick={doubleFunction}
-                className={Styles.Navlink}
-                to={"Documents"}
-              >
-                <TreeItem nodeId="6" label="Documents" />
-              </Link>
-            </TreeItem>
+            {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            <ListGroup.Item>About</ListGroup.Item>
+          </Link>
 
-            <TreeItem nodeId="7" label="Grades" />
+          <Link
+            onClick={doubleFunction}
+            className={Styles.Navlink}
+            to={"Curriculums"}
+          >
+            {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            <ListGroup.Item>Curriculums</ListGroup.Item>
+          </Link>
 
-            <Link
-              onClick={doubleFunction}
-              className={Styles.Navlink}
-              to={"Contact"}
-            >
-            <TreeItem nodeId="8" label="Contact" />
-            </Link>
-          </TreeView>
+          <Link
+            onClick={doubleFunction}
+            className={Styles.Navlink}
+            to={"Documents"}
+          >
+            {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            <ListGroup.Item>Documents</ListGroup.Item>
+          </Link>
+
+          <Link onClick={doubleFunction} className={Styles.Navlink} to={"News"}>
+            {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            <ListGroup.Item>Articles</ListGroup.Item>
+          </Link>
+
+          <a href={`Dog Water`} target={"_blank"} rel={"noreferrer"}>
+            <ListGroup.Item>Grades</ListGroup.Item>
+          </a>
+
+          <Link
+            onClick={doubleFunction}
+            className={Styles.Navlink}
+            to={"Contact"}
+          >
+            {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
+            <ListGroup.Item>Contact</ListGroup.Item>
+          </Link>
+        </ListGroup>
+
+        <div className={Styles.Social_Icon_Bar}>
+          <div className={Styles.Social_Container}>
+            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
+              <InstagramIcon
+                className={Styles.SocialIcon}
+                sx={{ color: "Black", fontSize: 20 }}
+              />
+              <p className={Styles.Social_Title}>Instagram</p>
+            </a>
+          </div>
+
+          <div className={Styles.Social_Container}>
+            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
+              <FacebookIcon
+                className={Styles.SocialIcon}
+                sx={{ color: "Black", fontSize: 20 }}
+              />
+              <p className={Styles.Social_Title}>FaceBook</p>
+            </a>
+          </div>
+
+          <div className={Styles.Social_Container}>
+            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
+              <TwitterIcon
+                className={Styles.SocialIcon}
+                sx={{ color: "Black", fontSize: 20 }}
+              />
+              <p className={Styles.Social_Title}>Twitter</p>
+            </a>
+          </div>
+
+          <div className={Styles.Social_Container}>
+            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
+              <WhatsAppIcon
+                className={Styles.SocialIcon}
+                sx={{ color: "Black", fontSize: 20 }}
+              />
+              <p className={Styles.Social_Title}>WhatsApp</p>
+            </a>
+          </div>
         </div>
       </div>
       {/* Mobile Menu End */}

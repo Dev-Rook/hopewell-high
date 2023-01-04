@@ -1,9 +1,11 @@
 import React from "react";
+import {TabTitle} from "../Utilities/TabTitle"
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Styles/Staff.module.scss";
 
 const Staff = () => {
+  TabTitle("HHS | Staff");
   return (
     <div>
       <div className={Styles.PageHead}>

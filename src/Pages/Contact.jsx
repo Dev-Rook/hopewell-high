@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {TabTitle} from "../Utilities/TabTitle"
 import { Link } from "react-router-dom";
 import Styles from "../Styles/Page-Styles/Contact.module.scss";
 
@@ -9,6 +10,7 @@ import GetInTouch from "../Page-Sections/GetInTouch"
 
 
 const Contact = () => {
+  TabTitle("HHS| Contact");
   return (
     <div className={Styles.Page}>
       <div className={Styles.PageHead}>

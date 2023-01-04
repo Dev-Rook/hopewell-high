@@ -1,9 +1,11 @@
 import React from "react";
+import {TabTitle} from "../Utilities/TabTitle"
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Styles/Error.module.scss";
 
 const Error = () => {
+  TabTitle("HHS | Error");
   return (
     <div className={Styles.Page}>
       {/* <PageHead /> */}

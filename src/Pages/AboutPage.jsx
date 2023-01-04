@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Styles from "../Styles/Page-Styles/About.module.scss";
 
+import {TabTitle} from "../Utilities/TabTitle"
+
 import PageHead from "../Components/Main/PageHead";
 import History from "../Page-Sections/History";
 import Tour from "../Page-Sections/Tour";
@@ -9,6 +11,7 @@ import Staff from "../Page-Sections/Staff";
 import GetInTouch from "../Page-Sections/GetInTouch";
 
 const AboutPage = () => {
+  TabTitle("HHS | About");
   return (
     <div className={Styles.Page}>
       {/* <PageHead /> */}

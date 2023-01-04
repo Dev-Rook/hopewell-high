@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Styles from "../Styles/Page-Styles/Landing.module.scss";
 
+import {TabTitle} from "../Utilities/TabTitle"
+
 import Hero from "../Page-Sections/Hero";
 import Offer from "../Page-Sections/Offer";
 import About from "../Page-Sections/About";
@@ -12,7 +14,8 @@ import Map from "../Page-Sections/Map";
 import Sponsors from "../Page-Sections/Sponsors";
 
 
-const Landing = () => {
+const Landing = () => { 
+  TabTitle("HHS | Home");
   return (
     <div className={Styles.Page}>
       <Hero />

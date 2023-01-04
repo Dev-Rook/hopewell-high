@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {TabTitle} from "../Utilities/TabTitle"
 import { Link } from "react-router-dom";
 import Styles from "../Styles/Page-Styles/Documents.module.scss";
 
@@ -7,6 +8,7 @@ import DocumentsData from "../Assets/Data/Documents.json";
 import GetInTouch from "../Page-Sections/GetInTouch";
 
 const Documents = () => {
+  TabTitle("HHS | Documents");
   const [data, setData] = useState(DocumentsData);
   return (
     <div className={Styles.Page}>

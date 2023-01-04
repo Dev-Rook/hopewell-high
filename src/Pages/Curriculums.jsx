@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {TabTitle} from "../Utilities/TabTitle"
 import { Link } from "react-router-dom";
 import Styles from "../Styles/Page-Styles/Curriculums.module.scss";
 
@@ -8,6 +9,7 @@ import Skills from "../Page-Sections/Skills";
 import Subjects from "../Page-Sections/Subjects";
 
 const Curricumlums = () => {
+  TabTitle("HHS | Curriculums");
   const [data, setData] = useState(ServiceData);
   return (
     <div className={Styles.Page}>
