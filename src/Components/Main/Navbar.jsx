@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import FolderIcon from "@mui/icons-material/Folder";
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import AssignmentIcon from "@mui/icons-material/Assignment";
 import ArticleIcon from "@mui/icons-material/Article";
 import GradeIcon from "@mui/icons-material/Grade";
 import CallIcon from "@mui/icons-material/Call";
@@ -155,8 +155,12 @@ const Navbar = () => {
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
         <div className={Styles.Mobile_Menu_Header}>
-          HHS
-          <img src={``} alt="" className={Styles.Header_Image} />
+          <div className={Styles.Diffuser}></div>
+          <img
+            src={`https://github.com/Dev-Rook/hopewell-high/blob/master/src/Assets/Images/DJI_0501-min-min.JPG?raw=true`}
+            alt=""
+            className={Styles.Header_Image}
+          />
         </div>
 
         <ListGroup className={Styles.ListGroup}>
