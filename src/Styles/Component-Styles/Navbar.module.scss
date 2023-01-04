@@ -81,9 +81,9 @@
     z-index: 11;
     transition: 0.5s;
     transform: translateX(100vw);
-    
+
     .Mobile_Menu_Header {
-      border: 1px solid red;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
       display: flex;
 
@@ -108,41 +108,56 @@
 
       height: 100%;
       width: 100%;
-
     }
     .ListGroup {
       border-radius: 0;
+      background-color: #202123;
       margin-top: 10px;
+
+      gap: 1px;
 
       height: 100%;
       width: 100%;
+
+      .ListGroupItem {
+        color: white;
+        background-color: #202123;
+        border: none;
+        // border: 1px solid rgba(255, 255, 255, .1);
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 10px;
+      }
     }
 
     .Social_Icon_Bar {
-      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       display: flex;
-  
+
       padding: 5px;
       gap: 30px;
-  
+
       justify-content: space-evenly;
       align-items: center;
-  
+
       height: fit-content;
       width: 100%;
-  
+
       .Social_Container {
         display: flex;
         flex-direction: column;
-  
+
         justify-content: center;
         align-items: center;
-  
+
         .SocialIcon {
           display: flex;
           margin: auto;
         }
-  
+
         .Social_Title {
           font-size: 15px;
           display: none;

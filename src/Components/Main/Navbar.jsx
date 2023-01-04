@@ -6,17 +6,22 @@ import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import FolderIcon from "@mui/icons-material/Folder";
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import ArticleIcon from "@mui/icons-material/Article";
+import GradeIcon from "@mui/icons-material/Grade";
+import CallIcon from "@mui/icons-material/Call";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-import TreeView from "@mui/lab/TreeView";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import TreeItem from "@mui/lab/TreeItem";
-
 import { Spin as Hamburger } from "hamburger-react";
+
+import Articles from "../../Pages/Articles";
 
 const NavVariants = {
   hidden: {
@@ -86,7 +91,7 @@ const Navbar = () => {
               className={Styles.Navlink}
               to={"AboutPage"}
             >
-              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
               About
             </Link>
           </li>
@@ -106,19 +111,19 @@ const Navbar = () => {
               className={Styles.Navlink}
               to={"Documents"}
             >
-              {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              {/* <FolderIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Documents
             </Link>
           </li>
           <li className={Styles.NavItem}>
             <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
-              {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
               News
             </Link>
           </li>
           <li className={Styles.NavItem}>
             <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
-              {/* <CreditScoreIcon sx={{ color: "White", fontSize: 25 }} /> */}
+              {/* <GradeIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Grades
             </Link>
           </li>
@@ -153,13 +158,13 @@ const Navbar = () => {
           HHS
           <img src={``} alt="" className={Styles.Header_Image} />
         </div>
-        {/* <div className={Styles.Navlink_Container}>
-        </div> */}
 
         <ListGroup className={Styles.ListGroup}>
           <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
-            {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            <ListGroup.Item>Home</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <HomeIcon sx={{ color: "White", fontSize: 25 }} />
+              Home
+            </ListGroup.Item>
           </Link>
 
           <Link
@@ -167,8 +172,10 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"AboutPage"}
           >
-            {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            <ListGroup.Item>About</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <InfoIcon sx={{ color: "White", fontSize: 25 }} />
+              About
+            </ListGroup.Item>
           </Link>
 
           <Link
@@ -176,8 +183,10 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"Curriculums"}
           >
-            {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            <ListGroup.Item>Curriculums</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <AssignmentIcon sx={{ color: "White", fontSize: 25 }} />
+              Curriculums
+            </ListGroup.Item>
           </Link>
 
           <Link
@@ -185,17 +194,24 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"Documents"}
           >
-            {/* <DocumentScannerIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            <ListGroup.Item>Documents</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <FolderIcon sx={{ color: "White", fontSize: 25 }} />
+              Documents
+            </ListGroup.Item>
           </Link>
 
           <Link onClick={doubleFunction} className={Styles.Navlink} to={"News"}>
-            {/* <NewspaperIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            <ListGroup.Item>Articles</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <ArticleIcon sx={{ color: "White", fontSize: 25 }} />
+              Articles
+            </ListGroup.Item>
           </Link>
 
           <a href={`Dog Water`} target={"_blank"} rel={"noreferrer"}>
-            <ListGroup.Item>Grades</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <GradeIcon sx={{ color: "White", fontSize: 25 }} />
+              Grades
+            </ListGroup.Item>
           </a>
 
           <Link
@@ -203,8 +219,10 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"Contact"}
           >
-            {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
-            <ListGroup.Item>Contact</ListGroup.Item>
+            <ListGroup.Item className={Styles.ListGroupItem}>
+              <CallIcon sx={{ color: "White", fontSize: 25 }} />
+              Contact
+            </ListGroup.Item>
           </Link>
         </ListGroup>
 
@@ -213,7 +231,7 @@ const Navbar = () => {
             <a href={`#`} target={"_blank"} rel={"noreferrer"}>
               <InstagramIcon
                 className={Styles.SocialIcon}
-                sx={{ color: "Black", fontSize: 20 }}
+                sx={{ color: "White", fontSize: 20 }}
               />
               <p className={Styles.Social_Title}>Instagram</p>
             </a>
@@ -223,7 +241,7 @@ const Navbar = () => {
             <a href={`#`} target={"_blank"} rel={"noreferrer"}>
               <FacebookIcon
                 className={Styles.SocialIcon}
-                sx={{ color: "Black", fontSize: 20 }}
+                sx={{ color: "White", fontSize: 20 }}
               />
               <p className={Styles.Social_Title}>FaceBook</p>
             </a>
@@ -233,7 +251,7 @@ const Navbar = () => {
             <a href={`#`} target={"_blank"} rel={"noreferrer"}>
               <TwitterIcon
                 className={Styles.SocialIcon}
-                sx={{ color: "Black", fontSize: 20 }}
+                sx={{ color: "White", fontSize: 20 }}
               />
               <p className={Styles.Social_Title}>Twitter</p>
             </a>
@@ -243,7 +261,7 @@ const Navbar = () => {
             <a href={`#`} target={"_blank"} rel={"noreferrer"}>
               <WhatsAppIcon
                 className={Styles.SocialIcon}
-                sx={{ color: "Black", fontSize: 20 }}
+                sx={{ color: "White", fontSize: 20 }}
               />
               <p className={Styles.Social_Title}>WhatsApp</p>
             </a>
