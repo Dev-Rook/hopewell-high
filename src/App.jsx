@@ -46,7 +46,6 @@ function App() {
     <div className={Styles.App}>
       <BrowserRouter>
         <Navbar scroll={scrollUp} />
-
         <Suspense fallback={<Fallback />}>
           <Routes>
             <Route path={"/"} element={<Landing />} />

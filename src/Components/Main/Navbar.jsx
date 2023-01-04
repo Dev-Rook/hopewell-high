@@ -79,64 +79,42 @@ const Navbar = () => {
         />
       </div>
 
-      <ul className={Styles.Navlink_Container}>
-        <Breadcrumbs aria-label="breadcrumb">
-          <li className={Styles.NavItem}>
-            <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
-              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Home
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={scrollUp}
-              className={Styles.Navlink}
-              to={"AboutPage"}
-            >
-              {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              About
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={scrollUp}
-              className={Styles.Navlink}
-              to={"Curriculums"}
-            >
-              {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Curriculums
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link
-              onClick={scrollUp}
-              className={Styles.Navlink}
-              to={"Documents"}
-            >
-              {/* <FolderIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Documents
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
-              {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              News
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
-              {/* <GradeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Grades
-            </Link>
-          </li>
-          <li className={Styles.NavItem}>
-            <Link onClick={scrollUp} className={Styles.Navlink} to={"Contact"}>
-              {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
-              Contact
-            </Link>
-          </li>
-        </Breadcrumbs>
-      </ul>
+      <Breadcrumbs className={Styles.Navlink_Container} aria-label="breadcrumb">
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
+          {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          Home
+        </Link>
+
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"AboutPage"}>
+          {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          About
+        </Link>
+
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"Curriculums"}>
+          {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          Curriculums
+        </Link>
+
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"Documents"}>
+          {/* <FolderIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          Documents
+        </Link>
+
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
+          {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          News
+        </Link>
+
+        <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
+          {/* <GradeIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          Grades
+        </Link>
+
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"Contact"}>
+          {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
+          Contact
+        </Link>
+      </Breadcrumbs>
 
       <MenuIcon
         onClick={showMenu}

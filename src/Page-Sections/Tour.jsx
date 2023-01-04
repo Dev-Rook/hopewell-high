@@ -18,8 +18,8 @@ const Tour = () => {
         {data &&
           data.map((value) => {
             return (
-              <a href={value.Link} rel={"noreferrer"} target={"_blank"}>
-                <div className={Styles.Card} key={value.id}>
+              <a href={value.Link} rel={"noreferrer"} target={"_blank"} key={value.id}>
+                <div className={Styles.Card} >
                   <div className={Styles.Preview_Container}>
                     <img
                       src={value.Preview}
