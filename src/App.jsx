@@ -6,6 +6,7 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 
 import Navbar from "./Components/Main/Navbar";
 import Footer from "./Components/Main/Footer";
+import Fallback from "./Pages/Fallback";
 
 import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
 
@@ -18,6 +19,7 @@ const Curriculums = lazy(() => import("./Pages/Curriculums"));
 const Contact = lazy(() => import("./Pages/Contact"));
 const Documents = lazy(() => import("./Pages/Documents"));
 const Error = lazy(() => import("./Pages/Error"));
+// const Fallback = lazy(() => import("./Pages/Fallback"));
 // Page Import End
 
 function App() {
@@ -45,7 +47,7 @@ function App() {
       <BrowserRouter>
         <Navbar scroll={scrollUp} />
 
-        <Suspense fallback={<h1>Loading</h1>}>
+        <Suspense fallback={<Fallback />}>
           <Routes>
             <Route path={"/"} element={<Landing />} />
             <Route path={"AboutPage"} element={<AboutPage />} />
@@ -54,6 +56,7 @@ function App() {
             <Route path={"Curriculums"} element={<Curriculums />} />
             <Route path={"Documents"} element={<Documents />} />
             <Route path={"Contact"} element={<Contact />} />
+            {/* <Route path={"Fallback"} element={<Fallback />} /> */}
             <Route path={"*"} element={<Error />} />
 
             {/* Dynamic Routes */}
