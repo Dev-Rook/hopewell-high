@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Styles from "./App.module.scss";
 
@@ -7,16 +7,18 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Navbar from "./Components/Main/Navbar";
 import Footer from "./Components/Main/Footer";
 
-import Landing from "./Pages/Landing";
-import AboutPage from "./Pages/AboutPage";
-import Articles from "./Pages/Articles";
-import Staff from "./Pages/Staff";
-import Curriculums from "./Pages/Curriculums";
-import Contact from "./Pages/Contact";
-import Documents from "./Pages/Documents";
-import Error from "./Pages/Error";
-
 import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
+
+// Page import Start
+const Landing = lazy(() => import("./Pages/Landing"));
+const AboutPage = lazy(() => import("./Pages/AboutPage"));
+const Articles = lazy(() => import("./Pages/Articles"));
+const Staff = lazy(() => import("./Pages/Staff"));
+const Curriculums = lazy(() => import("./Pages/Curriculums"));
+const Contact = lazy(() => import("./Pages/Contact"));
+const Documents = lazy(() => import("./Pages/Documents"));
+const Error = lazy(() => import("./Pages/Error"));
+// Page Import End
 
 function App() {
   const [backToTop, setBackToTop] = useState(false);
@@ -42,20 +44,23 @@ function App() {
     <div className={Styles.App}>
       <BrowserRouter>
         <Navbar scroll={scrollUp} />
-        <Routes>
-          <Route path={"/"} element={<Landing />} />
-          <Route path={"AboutPage"} element={<AboutPage />} />
-          <Route path={"News"} element={<Articles />} />
-          <Route path={"Staff"} element={<Staff />} />
-          <Route path={"Curriculums"} element={<Curriculums />} />
-          <Route path={"Documents"} element={<Documents />} />
-          <Route path={"Contact"} element={<Contact />} />
-          <Route path={"*"} element={<Error />} />
 
-          {/* Dynamic Routes */}
-          <Route path={"/Curriculum/:id"} element={<SingleCurriculum />} />
-          {/* Dynamic Routes */}
-        </Routes>
+        <Suspense fallback={<h1>Loading</h1>}>
+          <Routes>
+            <Route path={"/"} element={<Landing />} />
+            <Route path={"AboutPage"} element={<AboutPage />} />
+            <Route path={"News"} element={<Articles />} />
+            <Route path={"Staff"} element={<Staff />} />
+            <Route path={"Curriculums"} element={<Curriculums />} />
+            <Route path={"Documents"} element={<Documents />} />
+            <Route path={"Contact"} element={<Contact />} />
+            <Route path={"*"} element={<Error />} />
+
+            {/* Dynamic Routes */}
+            <Route path={"/Curriculum/:id"} element={<SingleCurriculum />} />
+            {/* Dynamic Routes */}
+          </Routes>
+        </Suspense>
         <Footer />
       </BrowserRouter>
 
