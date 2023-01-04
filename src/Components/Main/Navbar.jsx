@@ -6,6 +6,8 @@ import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 import ListGroup from "react-bootstrap/ListGroup";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -139,7 +141,7 @@ const Navbar = () => {
       <MenuIcon
         onClick={showMenu}
         className={Styles.MenuIcon}
-        sx={{ color: "red", fontSize: 40 }}
+        sx={{ color: "black", fontSize: 40 }}
       />
 
       {/* <Hamburger
@@ -155,6 +157,11 @@ const Navbar = () => {
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
         <div className={Styles.Mobile_Menu_Header}>
+          <CloseIcon
+            onClick={showMenu}
+            className={Styles.CloseIcon}
+            sx={{ color: "white", fontSize: 40 }}
+          />
           <div className={Styles.Diffuser}></div>
           <img
             src={`https://github.com/Dev-Rook/hopewell-high/blob/master/src/Assets/Images/DJI_0501-min-min.JPG?raw=true`}
