@@ -137,6 +137,19 @@
     }
   }
 }
+@media only screen and (max-width: 480px) {
+  .Section {
+    .Content_Container {
+      grid-template-columns: 1fr 1fr;
+      .Card {
+        height: 200px;
+        .Title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 360px) {
   .Section {
     .Section_Title {

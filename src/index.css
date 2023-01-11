@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  /* color: black; */
+
 }
 
 a {
@@ -34,6 +34,8 @@ ul {
 }
 
 body {
+  color: black;
   background-color: white;
+  /* background-color: #2e152f; */
   scroll-behavior: smooth;
 }

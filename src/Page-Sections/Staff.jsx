@@ -26,7 +26,9 @@ const Staff = () => {
           <p className={Styles.Small_Text}>Management / Staff</p>
           <p className={Styles.Large_Text}>HHS Gate Keepers</p>
 
-          <button className={Styles.Staff_Button}>View All</button>
+          <Link to={"Staff"}>
+            <button className={Styles.Staff_Button}>View All</button>
+          </Link>
         </div>
 
         <div className={Styles.Slider_Container}>

@@ -209,7 +209,7 @@ const Navbar = () => {
             to={"Contact"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <CallIcon sx={{ color: "White", fontSize: 25 }} />
+              <CallIcon sx={{ color: "white", fontSize: 25 }} />
               Contact
             </ListGroup.Item>
           </Link>

@@ -5,7 +5,7 @@ import Styles from "./App.module.scss";
 import NavigationIcon from "@mui/icons-material/Navigation";
 
 import Navbar from "./Components/Main/Navbar";
-import Footer from "./Components/Main/Footer";
+// import Footer from "./Components/Main/Footer";
 import Fallback from "./Pages/Fallback";
 
 import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
@@ -63,7 +63,7 @@ function App() {
             {/* Dynamic Routes */}
           </Routes>
         </Suspense>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
 
       <NavigationIcon
