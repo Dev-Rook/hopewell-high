@@ -10,7 +10,7 @@ const Offer = () => {
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section_Title_Container}>
-        <p className={Styles.Question}>- Sponsors</p>
+        <p className={Styles.Question}>- Services</p>
         <p className={Styles.Section_Title}>What We Offer</p>
       </div>
 

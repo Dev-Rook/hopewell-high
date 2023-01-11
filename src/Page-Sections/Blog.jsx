@@ -11,8 +11,8 @@ const Blog = () => {
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section_Title_Container}>
-        <p className={Styles.Question}>- Blog</p>
-        <p className={Styles.Section_Title}>Some Of Our Latest News</p>
+        <p className={Styles.Question}>- Updates</p>
+        <p className={Styles.Section_Title}>latest School Updates</p>
       </div>
       <div className={Styles.Content_Container}>
         {data &&

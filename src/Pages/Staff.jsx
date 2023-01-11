@@ -33,8 +33,8 @@ const Staff = () => {
                   </div>
                   <div className={Styles.Information_Container}>
                     <p className={Styles.Title}>{value.Title}</p>
-                    <p className={Styles.Gender}>{value.Gender}</p>
-                    <p className={Styles.Bio}>{value.slice(0, 30).Bio}</p>
+                    {/* <p className={Styles.Gender}>{value.Gender}</p> */}
+                    <p className={Styles.Bio}>{value.Bio}</p>
                   </div>
                 </div>
               </Link>
