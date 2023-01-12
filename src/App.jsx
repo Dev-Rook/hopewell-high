@@ -6,9 +6,12 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 
 import Navbar from "./Components/Main/Navbar";
 // import Footer from "./Components/Main/Footer";
+import GetInTouch from "./Page-Sections/GetInTouch";
 import Fallback from "./Pages/Fallback";
 
 import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
+import SingleStaff from "./Dynamic-Pages/SingleStaff";
+import SingleUpdate from "./Dynamic-Pages/SingleUpdate";
 
 // Page import Start
 const Landing = lazy(() => import("./Pages/Landing"));
@@ -47,10 +50,10 @@ function App() {
       <BrowserRouter>
         <Navbar scroll={scrollUp} />
         <Suspense fallback={<Fallback />}>
-          <Routes>
+          <Routes>  
             <Route path={"/"} element={<Landing />} />
             <Route path={"AboutPage"} element={<AboutPage />} />
-            <Route path={"News"} element={<Articles />} />
+            <Route path={"Updates"} element={<Articles />} />
             <Route path={"Staff"} element={<Staff />} />
             <Route path={"Curriculums"} element={<Curriculums />} />
             <Route path={"Documents"} element={<Documents />} />
@@ -60,10 +63,12 @@ function App() {
 
             {/* Dynamic Routes */}
             <Route path={"/Curriculum/:id"} element={<SingleCurriculum />} />
+            <Route path={"/Staff/:id"} element={<SingleStaff />} />
+            <Route path={"/Update/:id"} element={<SingleUpdate />} />
             {/* Dynamic Routes */}
           </Routes>
         </Suspense>
-        {/* <Footer /> */}
+        <GetInTouch />
       </BrowserRouter>
 
       <NavigationIcon

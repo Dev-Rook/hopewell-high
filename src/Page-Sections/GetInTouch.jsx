@@ -16,7 +16,7 @@ const GetInTouch = () => {
 
         <p className={Styles.Text}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex nemo
-          delectus hic non recusandae officiis <br /> magni at cumque, est saepe
+          delectus hic non recusandae officiis magni at cumque, est saepe
           dolorem, fugit expedita culpa laboriosam ipsa.
         </p>
 
@@ -67,7 +67,7 @@ const GetInTouch = () => {
         </div>
       </div>
 
-      <div className={Styles.Form_Container}>
+      {/* <div className={Styles.Form_Container}>
         <form action="" className={Styles.Form}>
           <fieldset className={Styles.Name__Eamil}>
             <input
@@ -103,7 +103,7 @@ const GetInTouch = () => {
             Submit
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

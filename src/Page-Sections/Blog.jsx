@@ -18,6 +18,7 @@ const Blog = () => {
         {data &&
           data.map((value) => {
             return (
+              <Link to={"/Update/" + value.id} >
               <div className={Styles.Blog_Card} key={value.id}>
                 <div className={Styles.Image_Container}>
                   <p className={Styles.Category}>{value.Category}</p>
@@ -29,11 +30,12 @@ const Blog = () => {
                   <p className={Styles.Description}>{value.Description}</p>
                 </div>
               </div>
+              </Link>
             );
           })}
       </div>
 
-      <Link className={Styles.Link} to={"Articles"}>
+      <Link className={Styles.Link} to={"Updates"}>
         <button className={Styles.View_More_Button}>View All</button>
       </Link>
     </div>

@@ -21,7 +21,6 @@ const Curricumlums = () => {
 
       <Subjects />
       <Skills />
-      <GetInTouch />
     </div>
   );
 };

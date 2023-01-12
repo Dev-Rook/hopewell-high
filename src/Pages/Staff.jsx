@@ -42,8 +42,6 @@ const Staff = () => {
           })}
         </div>
       </div>
-
-      <GetInTouch />
     </div>
   );
 };

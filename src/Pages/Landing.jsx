@@ -25,8 +25,6 @@ const Landing = () => {
       <Blog />
       <Staff />
       <Sponsors />
-      <GetInTouch />
-      <Map />
     </div>
   )
 }

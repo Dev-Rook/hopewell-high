@@ -39,9 +39,6 @@ const Articles = () => {
             })}
         </div>
       </div>
-
-      {/* <Blog /> */}
-      <GetInTouch />
     </div>
   );
 };

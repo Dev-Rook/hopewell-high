@@ -43,8 +43,6 @@ const Documents = () => {
             })}
         </div>
       </div>
-
-      <GetInTouch />
     </div>
   );
 };
