@@ -55,51 +55,76 @@
     height: 100%;
     width: 100%;
 
-    .Card {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      background-color: #292b2f;
-      border-radius: 5px;
-
+    .Blog_Card {
       display: flex;
       flex-direction: column;
 
-      padding: 20px;
-      gap: 10px;
+      padding: 0px;
+      gap: 0px;
 
-      justify-content: center;
-      align-items: left;
-
-      margin: auto;
-
-      position: relative;
-      cursor: pointer;
-
-      height: 250px;
+      height: fit-content;
       width: 100%;
 
-      transition: 0.3s;
+      .Image_Container {
+        height: 200px;
+        width: 100%;
 
-      .Image {
-        height: 55px;
-        width: 55px;
+        display: flex;
+
+        position: relative;
+
+        .Category {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 5px;
+
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        .Image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
       }
 
-      .Title {
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-      }
+      .Information_Box {
+        display: flex;
+        flex-direction: column;
 
-      .Description {
-        color: white;
-        font-size: 14px;
-        font-weight: 100;
+        padding: 5px;
+        gap: 10px;
+
+        height: fit-content;
+        width: 100%;
       }
     }
+  }
 
-    .Card:is(:hover, :focus) {
-      transform: translateY(-5px);
-    }
+  .View_More_Button {
+    padding: 5px 20px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    height: fit-content;
+    width: fit-content;
+
+    margin: auto;
+    margin-top: 20px;
+
+    font-size: 18px;
   }
 }
 
@@ -113,19 +138,33 @@
     }
   }
 }
+
 @media only screen and (max-width: 700px) {
   .Section {
     .Content_Container {
       grid-template-columns: 1fr 1fr;
-      .Card {
-        height: 200px;
+      .Blog_Card {
+        .Image_Container {
+          height: 150px;
+          .Name {
+            padding: 5px;
+            font-size: 14px;
+          }
+        }
+
+        .Information_Container {
+          // .Bio {
+          //   font-size: 16;
+          // }
+        }
         .Title {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
     }
   }
 }
+
 @media only screen and (max-width: 360px) {
   .Section {
     .Section_Title_Container {

@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // import "swiper/css/effect-fade ";
 
-import StaffData from "../Assets/Data/Blog.json";
+import StaffData from "../Data/Staff.json";
 
 const Staff = () => {
   const [data, setData] = useState(StaffData);
@@ -30,6 +30,8 @@ const Staff = () => {
             <button className={Styles.Staff_Button}>View All</button>
           </Link>
         </div>
+
+        <div className={Styles.Diffuser}></div>
 
         <div className={Styles.Slider_Container}>
           <Swiper

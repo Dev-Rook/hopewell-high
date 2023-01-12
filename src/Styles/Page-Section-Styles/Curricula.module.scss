@@ -1,4 +1,12 @@
 .Section {
+  //   background: rgb(23, 26, 32);
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(23, 26, 32, 1) 0%,
+  //     rgba(36, 54, 55, 0.773546918767507) 82%,
+  //     rgba(36, 54, 55, 1) 100%
+  //   );
+
   display: flex;
   flex-direction: column;
 
@@ -17,7 +25,7 @@
   height: fit-content;
   width: 100%;
 
-  .Section_Title_Container {
+  .Section_Title {
     display: flex;
     flex-direction: column;
 
@@ -36,7 +44,7 @@
       transition: 0.3s;
     }
 
-    .Section_Title {
+    .Brand {
       font-size: 50px;
       font-weight: 100;
       font-style: bold;
@@ -63,7 +71,7 @@
       display: flex;
       flex-direction: column;
 
-      padding: 20px;
+      padding: 30px;
       gap: 10px;
 
       justify-content: center;
@@ -79,7 +87,7 @@
 
       transition: 0.3s;
 
-      .Image {
+      .Icon {
         height: 55px;
         width: 55px;
       }
@@ -92,7 +100,7 @@
 
       .Description {
         color: white;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 100;
       }
     }
@@ -101,19 +109,36 @@
       transform: translateY(-5px);
     }
   }
+
+  .View_More_Button {
+    padding: 5px 20px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    height: fit-content;
+    width: fit-content;
+
+    margin: auto;
+    margin-top: 20px;
+
+    font-size: 18px;
+  }
 }
 
 // Media Queries Start
 @media only screen and (max-width: 996px) {
   .Section {
-    .Section_Title_Container {
-      .Section_Title {
+    .Section_Title {
+      .Brand {
         font-size: 30px;
       }
     }
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
   .Section {
     .Content_Container {
       grid-template-columns: 1fr 1fr;
@@ -128,9 +153,9 @@
 }
 @media only screen and (max-width: 360px) {
   .Section {
-    .Section_Title_Container {
-      .Section_Title {
-        font-size: 30px;
+    .Section_Title {
+      .Brand {
+        font-size: 25px;
       }
     }
   }

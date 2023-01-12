@@ -25,6 +25,7 @@
     gap: 10px;
 
     justify-content: center;
+    align-items: center;
 
     height: fit-content;
     width: 100%;
@@ -102,16 +103,12 @@
     }
   }
 }
-// @media only screen and (max-width: 700px) {
-//   .Section {
-//     .Content_Container {
-//       grid-template-columns: 1fr 1fr;
-//       .Card {
-//         height: 200px;
-//         .Title {
-//           font-size: 12px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 360px) {
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 30px;
+      }
+    }
+  }
+}

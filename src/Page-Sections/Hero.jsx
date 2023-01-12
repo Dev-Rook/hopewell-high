@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // import "swiper/css/effect-fade ";
 
-import HeroData from "../Assets/Data/Hero.json";
+import HeroData from "../Data/Hero.json";
 
 const Hero = () => {
   const [data, setData] = useState(HeroData);
@@ -27,7 +27,7 @@ const Hero = () => {
         <p className={Styles.Large_Text}>Hopewell High School</p>
 
         <button className={Styles.Project_Button}>
-          <Link to={"AboutPage"}>About Us</Link>
+          <Link to={"About"}>About Us</Link>
         </button>
       </div>
 

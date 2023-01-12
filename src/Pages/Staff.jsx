@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { TabTitle } from "../Utilities/TabTitle";
 import Styles from "../Styles/Page-Styles/Staff.module.scss";
 
-import StaffData from "../Assets/Data/Staff.json";
+import StaffData from "../Data/Staff.json";
 
-import GetInTouch from "../Page-Sections/GetInTouch";
+import PageHead from "../Components/Secondary/PageHead";
+
 
 const Staff = () => {
   TabTitle("HHS | Staff");
@@ -13,11 +14,7 @@ const Staff = () => {
 
   return (
     <div className={Styles.Page}>
-      <div className={Styles.PageHead}>
-        <div className={Styles.Page_Title}>Staff</div>
-        <div className={Styles.Diffuser}></div>
-        <img src={``} alt="" className={Styles.Heade_Image} />
-      </div>
+        <PageHead Title={"Staff"} />
 
       <div className={Styles.Staff_Card_Section}>
         <div className={Styles.Content_Container}>
@@ -33,7 +30,6 @@ const Staff = () => {
                   </div>
                   <div className={Styles.Information_Container}>
                     <p className={Styles.Title}>{value.Title}</p>
-                    {/* <p className={Styles.Gender}>{value.Gender}</p> */}
                     <p className={Styles.Bio}>{value.Bio}</p>
                   </div>
                 </div>

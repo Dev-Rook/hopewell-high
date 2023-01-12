@@ -21,9 +21,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-import { Spin as Hamburger } from "hamburger-react";
+// import { Spin as Hamburger } from "hamburger-react";
 
-import Articles from "../../Pages/Articles";
 
 const NavVariants = {
   hidden: {
@@ -85,12 +84,12 @@ const Navbar = () => {
           Home
         </Link>
 
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"AboutPage"}>
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"About"}>
           {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
           About
         </Link>
 
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"Curriculums"}>
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"Curricula"}>
           {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
           Curriculums
         </Link>
@@ -100,9 +99,9 @@ const Navbar = () => {
           Documents
         </Link>
 
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"News"}>
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"Updates"}>
           {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          News
+          Updates
         </Link>
 
         <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
@@ -159,7 +158,7 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"AboutPage"}
+            to={"About"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
               <InfoIcon sx={{ color: "White", fontSize: 25 }} />
@@ -170,7 +169,7 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Curriculums"}
+            to={"Curricula"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
               <AssignmentIcon sx={{ color: "White", fontSize: 25 }} />
@@ -189,10 +188,10 @@ const Navbar = () => {
             </ListGroup.Item>
           </Link>
 
-          <Link onClick={doubleFunction} className={Styles.Navlink} to={"News"}>
+          <Link onClick={doubleFunction} className={Styles.Navlink} to={"Updates"}>
             <ListGroup.Item className={Styles.ListGroupItem}>
               <ArticleIcon sx={{ color: "White", fontSize: 25 }} />
-              Articles
+              Updates
             </ListGroup.Item>
           </Link>
 

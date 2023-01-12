@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Styles from "../Styles/Page-Section-Styles/Programs.module.scss";
+import Styles from "../Styles/Page-Section-Styles/Curricula.module.scss";
 
-import SubjectData from "../Assets/Data/Subjects.json";
+import SubjectData from "../Data/Subjects.json";
 
 const Subjects = () => {
   const [data, setData] = useState(SubjectData);
@@ -13,7 +13,7 @@ const Subjects = () => {
     <div className={Styles.Section}>
       <div className={Styles.Section_Title}>
         <p className={Styles.Question}>- Subjects</p>
-        <p className={Styles.Brand}>Primining Scholors For Higher Academia</p>
+        <p className={Styles.Brand}>Priming Scholors For Higher Academia</p>
       </div>
 
       <div className={Styles.Content_Container}>

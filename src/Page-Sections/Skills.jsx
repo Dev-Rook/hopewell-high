@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Styles from "../Styles/Page-Section-Styles/Programs.module.scss";
+import Styles from "../Styles/Page-Section-Styles/Curricula.module.scss";
 
-import SkillsData from "../Assets/Data/Skills.json";
+import SkillsData from "../Data/Skills.json";
 
 const Skills = () => {
   const [data, setData] = useState(SkillsData);

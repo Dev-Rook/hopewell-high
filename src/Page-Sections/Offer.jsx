@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Offer.module.scss";
 
-import Offerdata from "../Assets/Data/Offer.json";
+import Offerdata from "../Data/Offer.json";
 
 const Offer = () => {
   const [data, setData] = useState(Offerdata);

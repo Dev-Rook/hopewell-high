@@ -1,26 +1,28 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Styles from "../../Styles/Component-Styles/Timeline.module.scss";
 
-
 // MUI Imports Start
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
 // MUI Imports End
 
 const TimelineRight = () => {
   const [position, setPosition] = useState("alternate");
   return (
     <div>
-      <Timeline className={`${Styles.Timeline} ${Styles.Timeline_Right}`} sx={{
-        [`& .${timelineItemClasses.root}:before`]: {
-          flex: 0,
-          padding: 0,
-        },
-      }}>
+      <Timeline
+        className={`${Styles.Timeline} ${Styles.Timeline_Right}`}
+        sx={{
+          [`& .${timelineItemClasses.root}:before`]: {
+            flex: 0,
+            padding: 0,
+          },
+        }}
+      >
         <TimelineItem className={Styles.Timeline_Item}>
           <TimelineSeparator>
             <TimelineDot />

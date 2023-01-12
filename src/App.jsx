@@ -5,22 +5,16 @@ import Styles from "./App.module.scss";
 import NavigationIcon from "@mui/icons-material/Navigation";
 
 import Navbar from "./Components/Main/Navbar";
-// import Footer from "./Components/Main/Footer";
-import GetInTouch from "./Page-Sections/GetInTouch";
-import Fallback from "./Pages/Fallback";
-
-import SingleCurriculum from "./Dynamic-Pages/SingleCurriculum";
-import SingleStaff from "./Dynamic-Pages/SingleStaff";
-import SingleUpdate from "./Dynamic-Pages/SingleUpdate";
+import Footer from "./Components/Main/Footer";
+import Fallback from "./Components/Main/Fallback";
 
 // Page import Start
-const Landing = lazy(() => import("./Pages/Landing"));
-const AboutPage = lazy(() => import("./Pages/AboutPage"));
-const Articles = lazy(() => import("./Pages/Articles"));
-const Staff = lazy(() => import("./Pages/Staff"));
-const Curriculums = lazy(() => import("./Pages/Curriculums"));
-const Contact = lazy(() => import("./Pages/Contact"));
+const Home = lazy(() => import("./Pages/Home"));
+const About = lazy(() => import("./Pages/About"));
 const Documents = lazy(() => import("./Pages/Documents"));
+const Curricula = lazy(() => import("./Pages/Curricula"));
+const Updates = lazy(() => import("./Pages/Updates"));
+const Staff = lazy(() => import("./Pages/Staff"));
 const Error = lazy(() => import("./Pages/Error"));
 // const Fallback = lazy(() => import("./Pages/Fallback"));
 // Page Import End
@@ -50,25 +44,17 @@ function App() {
       <BrowserRouter>
         <Navbar scroll={scrollUp} />
         <Suspense fallback={<Fallback />}>
-          <Routes>  
-            <Route path={"/"} element={<Landing />} />
-            <Route path={"AboutPage"} element={<AboutPage />} />
-            <Route path={"Updates"} element={<Articles />} />
-            <Route path={"Staff"} element={<Staff />} />
-            <Route path={"Curriculums"} element={<Curriculums />} />
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"About"} element={<About />} />
+            <Route path={"Curricula"} element={<Curricula />} />
             <Route path={"Documents"} element={<Documents />} />
-            <Route path={"Contact"} element={<Contact />} />
-            {/* <Route path={"Fallback"} element={<Fallback />} /> */}
+            <Route path={"Updates"} element={<Updates />} />
+            <Route path={"Staff"} element={<Staff />} />
             <Route path={"*"} element={<Error />} />
-
-            {/* Dynamic Routes */}
-            <Route path={"/Curriculum/:id"} element={<SingleCurriculum />} />
-            <Route path={"/Staff/:id"} element={<SingleStaff />} />
-            <Route path={"/Update/:id"} element={<SingleUpdate />} />
-            {/* Dynamic Routes */}
           </Routes>
         </Suspense>
-        <GetInTouch />
+        {/* <Footer /> */}
       </BrowserRouter>
 
       <NavigationIcon

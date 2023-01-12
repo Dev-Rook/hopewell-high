@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Sponsors.module.scss";
 
-import SponsorData from "../Assets/Data/Sponsors.json";
+import SponsorData from "../Data/Sponsors.json";
 
 const Sponsors = () => {
   const [data, setData] = useState(SponsorData);
@@ -17,7 +17,12 @@ const Sponsors = () => {
         {data &&
           data.map((value) => {
             return (
-              <a href={value.Link} target={"_blank"} rel={"noreferrer"}  key={value.id}>
+              <a
+                href={value.Link}
+                target={"_blank"}
+                rel={"noreferrer"}
+                key={value.id}
+              >
                 <div className={Styles.Card}>
                   <img src={value.Image} alt="" className={Styles.Image} />
                   <p className={Styles.Title}>{value.Title}</p>
