@@ -113,6 +113,15 @@
       }
     }
   }
+
+  .Scroll_Indicator {
+    position: absolute;
+    bottom: 10px;
+
+    display: flex;
+
+    transform: rotate(180deg);
+  }
 }
 
 // Media Queries Start

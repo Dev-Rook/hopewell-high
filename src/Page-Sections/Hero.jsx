@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Hero.module.scss";
 
+import NavigationIcon from "@mui/icons-material/Navigation";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Autoplay, Mousewheel } from "swiper";
@@ -16,6 +18,12 @@ import "swiper/css/scrollbar";
 // import "swiper/css/effect-fade ";
 
 import HeroData from "../Data/Hero.json";
+
+// const IndicatorVariants = {
+//   y: {
+//     trs
+//   }
+// }
 
 const Hero = () => {
   const [data, setData] = useState(HeroData);
@@ -63,6 +71,13 @@ const Hero = () => {
             })}
         </Swiper>
       </div>
+      
+      <motion.span>
+        <NavigationIcon
+          className={Styles.Scroll_Indicator}
+          sx={{ color: "orange", fontSize: 20 }}
+        />
+      </motion.span>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Curricula.module.scss";
 
 import SubjectData from "../Data/Subjects.json";
@@ -20,11 +19,22 @@ const Subjects = () => {
         {data &&
           data.map((value) => {
             return (
-              <Link to={"/Curriculum/" + value.id}>
-                <div className={Styles.Card} key={value.id}>
-                  <img src={value.Icon} alt="" className={Styles.Icon} />
-                  <p className={Styles.Title}>{value.Title}</p>
-                  <p className={Styles.Description}>{value.Description}</p>
+              <Link to={"/Curricula/" + value.id} key={value.id}>
+                <div className={Styles.Card}>
+                  <div className={Styles.Image_Container}>
+                    <p className={Styles.Category}>{value?.Title}</p>
+                    <img src={value.Image} alt="" className={Styles.Image} />
+                  </div>
+                  <div className={Styles.Information_Box}>
+                    <p className={Styles.Teacher}><span className={Styles.Teacher_Label}>Teacher/s</span>: {value?.Tutors[0].Name}</p>
+                    <p className={Styles.Date}><span className={Styles.Date_Label}>Date</span>: {value?.Date}</p>
+                    <p className={Styles.Description}>
+                      {value?.Description}.....
+                    </p>
+                    <p className={Styles.Requirements}>
+                      <span className={Styles.Requirements_Label}>Requierments</span>: {value?.Requiremnts}
+                    </p>
+                  </div>
                 </div>
               </Link>
             );

@@ -1,0 +1,305 @@
+.Page {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px;
+  // gap: 100px;
+
+  justify-content: center;
+  align-items: center;
+
+  height: fit-content;
+  width: 100%;
+
+  .Information_Section {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    .Content_Container {
+      display: flex;
+      flex-direction: column;
+
+      padding: 5px;
+      gap: 30px;
+
+      justify-content: center;
+      align-items: center;
+
+      height: fit-content;
+      width: 800px;
+
+      transition: 0.5s;
+
+      .Image_Container {
+        border: 1px solid black;
+        border-radius: 50%;
+
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        height: 300px;
+        width: 300px;
+
+        .Image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: 0.5s;
+        }
+      }
+
+      .Title {
+        color: white;
+        font-family: sans-serif;
+        font-size: 50px;
+        font-weight: 200;
+        text-align: center;
+        transition: 0.5s;
+
+        text-shadow: 0px 1px 1px black;
+      }
+
+      .Description {
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        text-align: center;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .Course_Video_Section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    justify-content: center;
+    align-items: left;
+
+    gap: 20px;
+
+    padding: 5px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+
+    height: fit-content;
+    width: 100%;
+
+    .Section_Title_Container {
+      display: flex;
+      flex-direction: column;
+
+      padding: 0px;
+      gap: 10px;
+
+      justify-content: center;
+      align-items: center;
+
+      height: fit-content;
+      width: 100%;
+      .Question {
+        font-size: 18px;
+        font-weight: 100;
+        font-style: bold;
+        transition: 0.3s;
+      }
+
+      .Section_Title {
+        font-size: 50px;
+        font-weight: 100;
+        font-style: bold;
+        transition: 0.3s;
+      }
+    }
+
+    .Content_Container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+
+      position: relative;
+
+      height: 100%;
+      width: 100%;
+
+      .Card {
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid black;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        position: relative;
+
+        padding: 0px;
+        gap: 0px;
+        overflow: hidden;
+
+        height: 250px;
+        width: 100%;
+
+        transition: 0.3s;
+
+        .Preview_Container {
+          height: 100%;
+          width: 100%;
+
+          display: flex;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          .Title {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+
+            font-size: 18px;
+            font-weight: 300;
+          }
+
+          .Preview {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+          }
+        }
+
+        .Description_Container {
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+
+          height: 100%;
+          width: 100%;
+
+          position: absolute;
+
+          z-index: 3;
+          transition: 0.6s;
+          transform: translateY(100vh);
+
+          .Description {
+            color: white;
+            font-size: 14px;
+            font-weight: 100;
+            text-align: center;
+          }
+        }
+      }
+      .Card:hover {
+        transform: translateY(-5px);
+        .Preview_Container {
+          .Preview {
+            transform: scale(1.1);
+            backdrop-filter: 5px;
+          }
+        }
+        .Description_Container {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+}
+
+// Media Queries Start
+
+@media only screen and (max-width: 810px) {
+  .Page {
+    .Course_Information {
+      .Content_Container {
+        width: 100%;
+        .Title {
+          font-size: 35px;
+        }
+        .Description {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .Page {
+    .Teacher_Section {
+      .Teacher_Card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .Page {
+    .Teacher_Section {
+      .Teacher_Card {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// Media Queries End
+
+// Media Queries Start
+@media only screen and (max-width: 996px) {
+  .Page {
+    .Course_Video_Section {
+      .Section_Title_Container {
+        .Section_Title {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .Page {
+    .Course_Video_Section {
+      .Content_Container {
+        grid-template-columns: 1fr 1fr;
+        .Card {
+          height: 200px;
+          .Title {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .Page {
+    .Course_Video_Section {
+      .Content_Container {
+        .Card {
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+// Media Queries End

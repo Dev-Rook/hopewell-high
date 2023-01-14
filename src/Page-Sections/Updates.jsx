@@ -33,7 +33,7 @@ const Blog = () => {
           })}
       </div>
 
-      <Link className={Styles.Link} to={"Articles"}>
+      <Link className={Styles.Link} to={"Updates"}>
         <button className={Styles.View_More_Button}>View All</button>
       </Link>
     </div>

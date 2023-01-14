@@ -21,7 +21,7 @@ const Indroduction = () => {
           </p>
 
           <Link to={"About"}>
-            <button className={Styles.Read_More_Button}>Read More</button>
+            <button className={Styles.Read_More_Button}>Learn More</button>
           </Link>
         </div>
         <div className={Styles.Image_Container}>

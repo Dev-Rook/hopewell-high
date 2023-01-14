@@ -30,6 +30,7 @@
 
     .Content_Container {
       display: flex;
+      flex-direction: column-reverse;
 
       gap: 50px;
 
@@ -66,11 +67,13 @@
       gap: 10px;
 
       justify-content: center;
+      align-items: center;
 
       margin: auto;
 
       height: fit-content;
       width: 45%;
+      
       .Question {
         font-size: 18px;
         font-weight: 100;
@@ -89,6 +92,7 @@
         font-size: 20px;
         font-weight: 100;
         font-style: bold;
+        text-align: center;
         transition: 0.3s;
       }
 

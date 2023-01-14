@@ -1,470 +1,418 @@
 [
-    {
-        "id": 1,
+  {
+    "id": 1,
+    "Image": "",
+    "Title": "Electrical",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Electrical",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 2,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Auto Mechanic",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 3,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Building Technology",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 4,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 2,
+    "Image": "",
+    "Title": "Auto Mechanic",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Metal Technology",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 5,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Computer Repairs",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 6,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Home Economics",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 7,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 3,
+    "Image": "",
+    "Title": "Building Technology",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Clothing & Textile",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 8,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Cosmetology",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 9,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Food & Beverages",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 10,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 4,
+    "Image": "",
+    "Title": "Metal Technology",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Home & Family Management",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 11,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Call Center",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 12,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Visual Arts",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    },
-    {
-        "id": 13,
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 5,
+    "Image": "",
+    "Title": "Computer Repairs",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
         "Image": "",
-        "Title": "Music",
-        "Category": "",
-        "Start_Date": "",
-        "End_Date": "",
-        "Tutors": [
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            },
-            {
-                "Name": "",
-                "Image": "",
-                "Gender": "",
-                "Title": "",
-                "Bio": ""
-            }
-        ],
-        "Description": "Description",
-        "Requiremnts": [
-            "Requiremnt 1",
-            "Requiremnt 2"
-        ]
-    }
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 6,
+    "Image": "",
+    "Title": "Home Economics",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 7,
+    "Image": "",
+    "Title": "Clothing & Textile",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 8,
+    "Image": "",
+    "Title": "Cosmetology",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 9,
+    "Image": "",
+    "Title": "Food & Beverages",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 10,
+    "Image": "",
+    "Title": "Home & Family Management",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 11,
+    "Image": "",
+    "Title": "Call Center",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 12,
+    "Image": "",
+    "Title": "Visual Arts",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  },
+  {
+    "id": 13,
+    "Image": "",
+    "Title": "Music",
+    "Category": "Skill",
+    "Date": "5.09.2023 - 10.06.2024",
+    "Tutors": [
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      },
+      {
+        "Name": "Teacher",
+        "Image": "",
+        "Gender": "",
+        "Title": "",
+        "Bio": ""
+      }
+    ],
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odit assumenda accusamus consequuntur dicta quaerat!",
+    "Requiremnts": "You need x and y"
+  }
 ]

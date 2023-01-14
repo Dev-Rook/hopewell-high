@@ -1,12 +1,4 @@
 .Section {
-  //   background: rgb(23, 26, 32);
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba(23, 26, 32, 1) 0%,
-  //     rgba(36, 54, 55, 0.773546918767507) 82%,
-  //     rgba(36, 54, 55, 1) 100%
-  //   );
-
   display: flex;
   flex-direction: column;
 
@@ -48,6 +40,7 @@
       font-size: 50px;
       font-weight: 100;
       font-style: bold;
+      text-align: center;
       transition: 0.3s;
     }
   }
@@ -64,44 +57,89 @@
     width: 100%;
 
     .Card {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      background-color: #292b2f;
+      border: 1px solid black;
       border-radius: 5px;
-
       display: flex;
       flex-direction: column;
 
-      padding: 30px;
-      gap: 10px;
+      padding: 0px;
+      gap: 0px;
+      overflow: hidden;
 
-      justify-content: center;
-      align-items: left;
-
-      margin: auto;
-
-      position: relative;
-      cursor: pointer;
-
-      height: 250px;
+      height: fit-content;
       width: 100%;
 
-      transition: 0.3s;
+      transition: 0.5s;
 
-      .Icon {
-        height: 55px;
-        width: 55px;
+      .Image_Container {
+        height: 200px;
+        width: 100%;
+
+        display: flex;
+
+        position: relative;
+
+        .Category {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 5px;
+
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+
+          color: white;
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        .Image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
       }
 
-      .Title {
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-      }
+      .Information_Box {
+        border: 1px solid black;
 
-      .Description {
-        color: white;
-        font-size: 15px;
-        font-weight: 100;
+        display: flex;
+        flex-direction: column;
+        color: black;
+
+        padding: 5px;
+
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        height: fit-content;
+        width: 100%;
+
+        .Teacher_Label {
+          font-size: 16px;
+          color: blue;
+        }
+
+        .Date_Label {
+          font-size: 16px;
+          color: red;
+        }
+
+        .Requirements_Label {
+          font-size: 16px;
+          color: green;
+        }
+
+        .Teacher,
+        .Date,
+        .Description,
+        .Requirements {
+          font-size: 14px;
+        }
       }
     }
 
@@ -110,22 +148,6 @@
     }
   }
 
-  .View_More_Button {
-    padding: 5px 20px;
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    height: fit-content;
-    width: fit-content;
-
-    margin: auto;
-    margin-top: 20px;
-
-    font-size: 18px;
-  }
 }
 
 // Media Queries Start
@@ -138,16 +160,34 @@
     }
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
   .Section {
     .Content_Container {
       grid-template-columns: 1fr 1fr;
       .Card {
-        height: 200px;
-        .Title {
-          font-size: 12px;
+        // height: 200px;
+
+        .Information_Box {
+          .Teacher,
+          .Date,
+          .Description,
+          .Requirements {
+            font-size: 15px;
+          }
         }
       }
+    }
+  }
+}
+// @media only screen and (max-width: 600px) {
+// .Section {
+  
+// }
+// }
+@media only screen and (max-width: 550px) {
+  .Section {
+    .Content_Container {
+      grid-template-columns: 1fr;
     }
   }
 }

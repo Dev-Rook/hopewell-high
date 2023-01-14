@@ -78,7 +78,7 @@ const Navbar = () => {
         />
       </div>
 
-      <Breadcrumbs className={Styles.Navlink_Container} aria-label="breadcrumb">
+      <div className={Styles.Navlink_Container} aria-label="breadcrumb">
         <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
           {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
           Home
@@ -109,11 +109,11 @@ const Navbar = () => {
           Grades
         </Link>
 
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"Contact"}>
+        <Link onClick={scrollUp} className={Styles.Navlink} to={"Apply"}>
           {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Contact
+          Apply
         </Link>
-      </Breadcrumbs>
+      </div>
 
       <MenuIcon
         onClick={showMenu}
@@ -205,11 +205,11 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Contact"}
+            to={"Apply"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
               <CallIcon sx={{ color: "white", fontSize: 25 }} />
-              Contact
+              Apply
             </ListGroup.Item>
           </Link>
         </ListGroup>

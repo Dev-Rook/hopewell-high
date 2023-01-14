@@ -17,6 +17,7 @@
 
   .Content_Container {
     display: flex;
+    flex-direction: column-reverse;
 
     gap: 50px;
 
@@ -53,6 +54,7 @@
     gap: 10px;
 
     justify-content: center;
+    align-items: center;
 
     margin: auto;
 
@@ -76,6 +78,7 @@
       font-size: 20px;
       font-weight: 100;
       font-style: bold;
+      text-align: center;
       transition: 0.3s;
     }
 
@@ -170,7 +173,7 @@
   .Section {
     .Content_Container {
       .Image_Container {
-        height: 250px;
+        height: 150px;
       }
       .About_Container {
         .Question {

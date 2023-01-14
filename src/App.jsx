@@ -7,6 +7,7 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Navbar from "./Components/Main/Navbar";
 import Footer from "./Components/Main/Footer";
 import Fallback from "./Components/Main/Fallback";
+import Contact from "./Page-Sections/Contact";
 
 // Page import Start
 const Home = lazy(() => import("./Pages/Home"));
@@ -15,9 +16,13 @@ const Documents = lazy(() => import("./Pages/Documents"));
 const Curricula = lazy(() => import("./Pages/Curricula"));
 const Updates = lazy(() => import("./Pages/Updates"));
 const Staff = lazy(() => import("./Pages/Staff"));
+const Apply = lazy(() => import("./Pages/Apply"));
 const Error = lazy(() => import("./Pages/Error"));
-// const Fallback = lazy(() => import("./Pages/Fallback"));
 // Page Import End
+
+// Dynamic Page Imports Start
+const CurriculaSingle = lazy(() => import("./Dynamic-Pages/CurriculaSingle"));
+// Dynamic Page Imports End
 
 function App() {
   const [backToTop, setBackToTop] = useState(false);
@@ -51,10 +56,16 @@ function App() {
             <Route path={"Documents"} element={<Documents />} />
             <Route path={"Updates"} element={<Updates />} />
             <Route path={"Staff"} element={<Staff />} />
+            <Route path={"Apply"} element={<Apply />} />
             <Route path={"*"} element={<Error />} />
+
+            {/* Dynamic Routes Start */}
+            <Route path={"Curricula/:id"} element={<CurriculaSingle />} />
+            {/* Dynamic Routes End */}
           </Routes>
         </Suspense>
-        {/* <Footer /> */}
+        <Contact />
+        <Footer />
       </BrowserRouter>
 
       <NavigationIcon
