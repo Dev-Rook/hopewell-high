@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import useAxios from "../Hooks/useAxios";
 import Styles from "../Styles/Page-Section-Styles/Staff.module.scss";
 
 // Import Swiper React components
@@ -18,7 +19,8 @@ import "swiper/css/scrollbar";
 import StaffData from "../Data/Staff.json";
 
 const Staff = () => {
-  const [data, setData] = useState(StaffData);
+  const url = `https://hhs-backen-76xny.ondigitalocean.app/staffs`;
+  const { data, error, loading } = useAxios(url);
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section}>
@@ -71,29 +73,28 @@ const Staff = () => {
               },
             }}
           >
-            {data &&
-              data.map((value) => {
-                return (
-                  <SwiperSlide key={value?.id}>
-                    <Link to={""} className={Styles.Link}>
-                      <div className={Styles.Project_Card}>
-                        <div className={Styles.Text_Container}>
-                          <p className={Styles.Title}>{value?.Title}</p>
-                          <p className={Styles.Architect}>{value?.Architect}</p>
-                        </div>
-                        <div className={Styles.Diffuser}></div>
-                        <div className={Styles.Image_Container}>
-                          <img
-                            src={value.Image}
-                            alt=""
-                            className={Styles.Image}
-                          />
-                        </div>
+            {data?.map((value) => {
+              return (
+                <SwiperSlide key={value?.id}>
+                  <Link to={""} className={Styles.Link}>
+                    <div className={Styles.Project_Card}>
+                      <div className={Styles.Text_Container}>
+                        <p className={Styles.Title}>{value?.firstName}</p>
+                        <p className={Styles.Architect}>{value?.title}</p>
                       </div>
-                    </Link>
-                  </SwiperSlide>
-                );
-              })}
+                      <div className={Styles.Diffuser}></div>
+                      <div className={Styles.Image_Container}>
+                        {/* <img
+                          src={`https://hhs-backen-76xny.ondigitalocean.app${value.image.formats.medium.url}`}
+                          alt=""
+                          className={Styles.Image}
+                        /> */}
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

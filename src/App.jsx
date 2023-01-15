@@ -22,6 +22,8 @@ const Error = lazy(() => import("./Pages/Error"));
 
 // Dynamic Page Imports Start
 const CurriculaSingle = lazy(() => import("./Dynamic-Pages/CurriculaSingle"));
+const StaffSingle = lazy(() => import("./Dynamic-Pages/StaffSingle"));
+const UpdateSingle = lazy(() => import("./Dynamic-Pages/UpdateSingle"));
 // Dynamic Page Imports End
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
 
             {/* Dynamic Routes Start */}
             <Route path={"Curricula/:id"} element={<CurriculaSingle />} />
+            <Route path={"Update/:id"} element={<UpdateSingle />} />
+            <Route path={"Staff/:id"} element={<StaffSingle />} />
             {/* Dynamic Routes End */}
           </Routes>
         </Suspense>

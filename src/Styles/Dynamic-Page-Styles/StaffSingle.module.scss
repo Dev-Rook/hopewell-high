@@ -1,0 +1,102 @@
+.Page {
+  .Information_Section {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+
+    .Content_Container {
+      display: flex;
+      flex-direction: column;
+
+      padding: 5px;
+      gap: 30px;
+
+      justify-content: center;
+      align-items: center;
+
+      height: fit-content;
+      width: 800px;
+
+      transition: 0.5s;
+
+      .Image_Container {
+        border: 1px solid black;
+        border-radius: 50%;
+
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        height: 300px;
+        width: 300px;
+
+        .Image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: 0.5s;
+        }
+      }
+
+      .Teacher_Information {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        height: fit-content;
+        width: 100%;
+
+        .Title {
+          font-family: sans-serif;
+          font-size: 50px;
+          font-weight: 200;
+          text-align: center;
+          transition: 0.5s;
+
+          text-shadow: 0px 1px 1px black;
+        }
+
+        .Description {
+          font-family: sans-serif;
+          font-size: 18px;
+          font-weight: 200;
+          text-align: center;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries Start
+
+@media only screen and (max-width: 810px) {
+  .Section {
+    .Section_Title_Container {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .Section {
+    .Section_Title_Container {
+      .Title {
+        font-size: 35px;
+      }
+      .Description {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Media Queries End
