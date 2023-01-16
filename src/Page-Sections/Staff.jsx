@@ -28,7 +28,7 @@ const Staff = () => {
           <p className={Styles.Small_Text}>Management / Staff</p>
           <p className={Styles.Large_Text}>HHS Gate Keepers</p>
 
-          <Link to={"Staff"}>
+          <Link to={"/Staff"}>
             <button className={Styles.Staff_Button}>View All</button>
           </Link>
         </div>
