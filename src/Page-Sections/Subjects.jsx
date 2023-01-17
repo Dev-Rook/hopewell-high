@@ -23,14 +23,14 @@ const Subjects = () => {
               <Link to={"/Curricula/" + value.id} key={value.id}>
                 <div className={Styles.Card}>
                   <div className={Styles.Image_Container}>
-                    <p className={Styles.Category}>{value?.Title}</p>
-                    <img src={value.Image} alt="" className={Styles.Image} />
+                    <p className={Styles.Category}>{value?.title}</p>
+                    <img src={""} alt="" className={Styles.Image} />
                   </div>
                   <div className={Styles.Information_Box}>
-                    <p className={Styles.Teacher}>{value?.Tutors[0].Name}</p>
+                    <p className={Styles.Teacher}>Teacher/s: {value?.tutor[0].firstName}</p>
 
                     <p className={Styles.Description}>
-                      {value?.Description}.....
+                      {value?.description}.....
                     </p>
                   </div>
                 </div>
