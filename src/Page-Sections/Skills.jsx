@@ -29,22 +29,10 @@ const Skills = () => {
                     <img src={value.Image} alt="" className={Styles.Image} />
                   </div>
                   <div className={Styles.Information_Box}>
-                    <p className={Styles.Teacher}>
-                      <span className={Styles.Teacher_Label}>Teacher/s</span>:{" "}
-                      {value?.Tutors[0].Name}
-                    </p>
-                    <p className={Styles.Date}>
-                      <span className={Styles.Date_Label}>Date</span>:{" "}
-                      {value?.Date}
-                    </p>
+                    <p className={Styles.Teacher}>{value?.Tutors[0].Name}</p>
+
                     <p className={Styles.Description}>
                       {value?.Description}.....
-                    </p>
-                    <p className={Styles.Requirements}>
-                      <span className={Styles.Requirements_Label}>
-                        Requierments
-                      </span>
-                      : {value?.Requiremnts}
                     </p>
                   </div>
                 </div>

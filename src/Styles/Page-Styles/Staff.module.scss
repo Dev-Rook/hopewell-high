@@ -41,7 +41,7 @@
         display: flex;
         flex-direction: column;
 
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         gap: 10px;
@@ -49,6 +49,7 @@
         cursor: pointer;
 
         height: fit-content;
+        min-height: 380px;
         width: 100%;
 
         .Image_Container {
@@ -84,6 +85,8 @@
           display: flex;
           flex-direction: column;
           color: black;
+
+          padding: 5px;
 
           justify-content: space-evenly;
           align-items: flex-start;

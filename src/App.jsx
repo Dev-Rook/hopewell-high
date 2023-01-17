@@ -64,7 +64,7 @@ function App() {
             {/* Dynamic Routes Start */}
             <Route path={"Curricula/:id"} element={<CurriculaSingle />} />
             <Route path={"Update/:id"} element={<UpdateSingle />} />
-            <Route path={"Staff/:id"} element={<StaffSingle />} />
+            <Route path={"Staffer/:id"} element={<StaffSingle />} />
             {/* Dynamic Routes End */}
           </Routes>
         </Suspense>

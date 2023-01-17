@@ -1,80 +1,72 @@
 .Page {
-  .Information_Section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px;
+  // gap: 100px;
+
+  justify-content: center;
+  align-items: center;
+
+  height: fit-content;
+  width: 100%;
+
+  .Staff_Info_Section {
     display: flex;
     flex-direction: column;
 
     padding: 5px;
+    padding-top: 80px;
+    padding-top: 80px;
+    gap: 20px;
 
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
+    height: fit-content;
     width: 100%;
 
-    .Content_Container {
+    .Image_Container {
       display: flex;
-      flex-direction: column;
 
-      padding: 5px;
-      gap: 30px;
-
+      border: 1px solid black;
+      
       justify-content: center;
       align-items: center;
 
-      height: fit-content;
-      width: 800px;
+      height: 300px;
+      width: 300px;
 
-      transition: 0.5s;
+      overflow: hidden;
 
-      .Image_Container {
-        border: 1px solid black;
-        border-radius: 50%;
-
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-
-        height: 300px;
-        width: 300px;
-
-        .Image {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          transition: 0.5s;
-        }
-      }
-
-      .Teacher_Information {
-        display: flex;
-        flex-direction: column;
-
-        gap: 10px;
-
-        height: fit-content;
+      .Image {
+        height: 100%;
         width: 100%;
-
-        .Title {
-          font-family: sans-serif;
-          font-size: 50px;
-          font-weight: 200;
-          text-align: center;
-          transition: 0.5s;
-
-          text-shadow: 0px 1px 1px black;
-        }
-
-        .Description {
-          font-family: sans-serif;
-          font-size: 18px;
-          font-weight: 200;
-          text-align: center;
-          transition: 0.5s;
-        }
+        object-fit: cover;
       }
+    }
+
+    .About_Container {
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid black;
+
+      padding: 5px;
+
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      height: fit-content;
+      width: 500px;
+    }
+
+    .Qualifications_Container {
+      
     }
   }
 }
+
 
 // Media Queries Start
 

@@ -16,8 +16,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // import "swiper/css/effect-fade ";
 
-import StaffData from "../Data/Staff.json";
-
 const Staff = () => {
   const url = `https://hhs-backen-76xny.ondigitalocean.app/staffs`;
   const { data, error, loading } = useAxios(url);
@@ -76,7 +74,7 @@ const Staff = () => {
             {data?.map((value) => {
               return (
                 <SwiperSlide key={value?.id}>
-                  <Link to={""} className={Styles.Link}>
+                  <Link to={"/Staffer/" + value.id} className={Styles.Link}>
                     <div className={Styles.Project_Card}>
                       <div className={Styles.Text_Container}>
                         <p className={Styles.Title}>{value?.firstName}</p>

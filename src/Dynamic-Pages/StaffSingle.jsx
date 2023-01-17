@@ -1,5 +1,6 @@
 import React from "react";
 import { TabTitle } from "../Utilities/TabTitle";
+import PageHead from "../Components/Secondary/PageHead";
 import { useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
 import Styles from "../Styles/Dynamic-Page-Styles/StaffSingle.module.scss";
@@ -13,24 +14,32 @@ const StaffSingle = () => {
 
   return (
     <div className={Styles.Page}>
-      <div className={Styles.Information_Section}>
-        <div className={Styles.Content_Container}>
-          <div className={Styles.Image_Container}>
-            {/* <img
-              src={`https://hhs-backen-76xny.ondigitalocean.app${data.image.formats.thumbnail.url}`}
-              alt=""
-              className={Styles.Image}
-            /> */}
-          </div>
+      <PageHead Title={"Staffer"} />
 
-          <div className={Styles.Teacher_Information}>
-            <p className={Styles.Description}>
-              {data?.firstName} {data?.lastName}
-            </p>
-            <p className={Styles.Description}>{data?.title}</p>
-            <p className={Styles.Description}>{data?.bio}</p>
-          </div>
+      <div className={Styles.Staff_Info_Section}>
+        <div className={Styles.Image_Container}>
+          {/* <img src={data?.image.formats.small.url} alt="" className={Styles.Image} /> */}
         </div>
+
+        <div className={Styles.About_Container}>
+          <p className={Styles.Introduction}>
+            {data?.firstName} {data?.lastName}
+          </p>
+
+          <p className={Styles.Text}>
+            {data?.title} 
+          </p>
+
+          <p className={Styles.Text}>
+            {data?.gender} 
+          </p>
+
+          <p className={Styles.Text}>
+            {data?.bio} 
+          </p>
+        </div>
+
+        <div className={Styles.Qualifications_Container}></div>
       </div>
     </div>
   );

@@ -148,7 +148,7 @@
 
 @media only screen and (max-width: 810px) {
   .Page {
-    .Course_Information {
+    .Information_Section  {
       .Content_Container {
         width: 100%;
         .Title {
@@ -159,34 +159,7 @@
         }
       }
     }
-  }
-}
 
-@media only screen and (max-width: 670px) {
-  .Page {
-    .Teacher_Section {
-      .Teacher_Card {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .Page {
-    .Teacher_Section {
-      .Teacher_Card {
-        flex-direction: column;
-      }
-    }
-  }
-}
-
-// Media Queries End
-
-// Media Queries Start
-@media only screen and (max-width: 996px) {
-  .Page {
     .Course_Video_Section {
       .Section_Title_Container {
         .Section_Title {
@@ -196,30 +169,56 @@
     }
   }
 }
-@media only screen and (max-width: 700px) {
+
+@media only screen and (max-width: 670px) {
   .Page {
     .Course_Video_Section {
-      .Content_Container {
-        grid-template-columns: 1fr 1fr;
-        .Card {
-          height: 200px;
-          .Title {
-            font-size: 12px;
-          }
-        }
+      .Video_Box {
+        width: 100%;
       }
     }
   }
 }
+
+@media only screen and (max-width: 550px) {
+  .Page {
+    .Information_Section  {
+      .Content_Container {
+        width: 100%;
+        .Title {
+          font-size: 25px;
+        }
+        .Description {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .Teacher_Section {
+      .Teacher_Card {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+
 @media only screen and (max-width: 360px) {
   .Page {
     .Course_Video_Section {
-      .Content_Container {
-        .Card {
-          height: 150px;
+      .Section_Title_Container {
+        .Section_Title {
+          font-size: 25px;
         }
       }
+        .Video_Box {
+          height: 250px;
+        }
+      
     }
   }
 }
 // Media Queries End
+
+
+

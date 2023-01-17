@@ -21,7 +21,7 @@ const Staff = () => {
         <div className={Styles.Content_Container}>
           {data?.map((value) => {
             return (
-              <Link to={"/Staff/" + value.id} key={value.id}>
+              <Link to={"/Staffer/" + value.id} key={value.id}>
                 <div className={Styles.Card}>
                   <div className={Styles.Image_Container}>
                     <p className={Styles.Name}>

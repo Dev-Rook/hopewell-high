@@ -18,48 +18,7 @@ const CurriculaSingle = () => {
 
   return (
     <div className={Styles.Page}>
-      <PageHead Title={"Curriculum Title"} />
-
-      <div className={Styles.Information_Section}>
-        <div className={Styles.Content_Container}>
-          <div className={Styles.Image_Container}>
-            <img src={``} alt="Teacher" className={Styles.Image} />
-          </div>
-
-          <div className={Styles.Teacher_Information}>
-            <p className={Styles.Description}>
-              {data?.tutor.firstName} {data?.tutor.lastName}
-            </p>
-            <p className={Styles.Description}>{data?.tutor.title}</p>
-            <p className={Styles.Description}>{data?.bio}</p>
-          </div>
-        </div>
-      </div>
-
-      <div className={Styles.Information_Section}>
-        <div className={Styles.Content_Container}>
-          <h1 className={Styles.Title}>{}</h1>
-
-          <p className={Styles.Description}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            pariatur sunt neque molestiae alias nemo reprehenderit culpa
-            incidunt quidem laboriosam!
-          </p>
-        </div>
-      </div>
-
-      {/* <div className={Styles.Information_Section}>
-        <div className={Styles.Content_Container}>
-          <h1 className={Styles.Title}>Useful Information</h1>
-
-          <p className={Styles.Description}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            pariatur sunt neque molestiae alias nemo reprehenderit culpa
-            incidunt quidem laboriosam!
-          </p>
-        </div>
-      </div> */}
-
+      <PageHead Image={""} />
       <div className={Styles.Course_Video_Section}>
         <div className={Styles.Section_Title_Container}>
           <p className={Styles.Question}></p>
@@ -67,7 +26,8 @@ const CurriculaSingle = () => {
         </div>
 
         <div className={Styles.Video_Box}>
-          <a href={``} target={"_blank"} rel={"noreforrer"}>
+          <div className={Styles.Diffuser}></div>
+          <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
             <video src={""} className={Styles.Video}></video>
           </a>
         </div>

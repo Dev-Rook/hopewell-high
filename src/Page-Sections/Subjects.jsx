@@ -27,16 +27,10 @@ const Subjects = () => {
                     <img src={value.Image} alt="" className={Styles.Image} />
                   </div>
                   <div className={Styles.Information_Box}>
-                    <p className={Styles.Teacher}>
-                      <span className={Styles.Teacher_Label}>Teacher/s</span>:{" "}
-                      {value?.tutor[0].firstName} {value?.tutor[0].lastName}
-                    </p>
-                    <p className={Styles.Date}>
-                      <span className={Styles.Date_Label}>Date</span>:{" "}
-                      {value?.start_date} {value?.end_date}
-                    </p>
+                    <p className={Styles.Teacher}>{value?.Tutors[0].Name}</p>
+
                     <p className={Styles.Description}>
-                      {value?.description}.....
+                      {value?.Description}.....
                     </p>
                   </div>
                 </div>
