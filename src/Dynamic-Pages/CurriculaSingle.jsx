@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TabTitle } from "../Utilities/TabTitle";
 import { useNavigate } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
-import Styles from "../Styles/Dynamic-Page-Styles/Curriculum.module.scss";
+import Styles from "../Styles/Dynamic-Page-Styles/CurriculumSingle.module.scss";
 
 import PageHead from "../Components/Secondary/PageHead";
 

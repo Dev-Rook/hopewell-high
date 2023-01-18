@@ -14,7 +14,7 @@ const StaffSingle = () => {
 
   return (
     <div className={Styles.Page}>
-      <PageHead Title={"Staffer"} />
+      {/* <PageHead Title={"Staffer"} /> */}
 
       <div className={Styles.Staff_Info_Section}>
         <div className={Styles.Image_Container}>
@@ -87,7 +87,7 @@ const StaffSingle = () => {
             return (
               <div className={Styles.Item}>
                 <img src="" alt="Icon" className={Styles.Item_Icon} />.
-                <p className={Styles.Label}>Label</p>
+                <p className={Styles.Label}>{value}</p>
               </div>
             );
           })} */}

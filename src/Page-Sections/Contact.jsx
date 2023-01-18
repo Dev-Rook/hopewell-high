@@ -15,19 +15,9 @@ const Contact = () => {
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section_Title_Container}>
-        <h1
-          className={Styles.Title}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          Get In Touch?
-        </h1>
+        <h1 className={Styles.Title}>Get In Touch?</h1>
 
-        <p
-          className={Styles.Description}
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+        <p className={Styles.Description}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea
           consequuntur sunt, quo maiores dolore magnam consequatur corporis
           deleniti enim?
@@ -36,9 +26,7 @@ const Contact = () => {
         <div className="center">
           <div id="social-test">
             <ul className="social">
-              <li>
-                {/* <LinkedInIcon sx={{ fontSize: "40" }} /> */}
-              </li>
+              <li>{/* <LinkedInIcon sx={{ fontSize: "40" }} /> */}</li>
               <li>
                 <i className="fa fa-twitter" aria-hidden="true"></i>
               </li>

@@ -1,6 +1,6 @@
 .Navbar {
   display: flex;
-  background-color: rgb(46,21,47);
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
 
   position: fixed;
@@ -40,7 +40,7 @@
   }
 
   .Navlink_Container {
-    display: flex;
+    display: none;
     gap: 20px;
     padding: 5px;
     justify-content: space-evenly;
@@ -54,38 +54,40 @@
     }
   }
 
-  .MenuIcon {
-    display: none;
+  .Span {
+    display: flex;
     cursor: pointer;
-    // z-index: 100;
-    // color: white;
+    z-index: 200;
+    .HamburgerMenu {
+      color: white;
+    }
   }
 
   //   Mobile Menu Start
   .Mobile_Menu {
     display: flex;
-    flex-direction: column;
-    background-color: #202123;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
 
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
 
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 300px;
+    width: 100%;
 
     // overflow: scroll;
     z-index: 11;
     transition: 0.5s;
-    transform: translateX(100vw);
+    transform: translateY(100vh);
 
     .Mobile_Menu_Header {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-      display: flex;
+      display: none;
 
       position: relative;
 
@@ -123,32 +125,38 @@
       }
     }
 
-    .Navlink_Container {
-      display: flex;
-      flex-direction: column;
+    // .Navlink_Container {
+    //   display: flex;
+    //   flex-direction: column;
 
-      justify-content: space-evenly;
-      align-items: flex-start;
+    //   border: 1px solid black;
 
-      padding: 5px;
-      gap: 20px;
+    //   justify-content: space-evenly;
+    //   align-items: flex-start;
 
-      height: 100%;
-      width: 100%;
-    }
+    //   padding: 5px;
+    //   gap: 20px;
+
+    //   height: 100%;
+    //   width: 100%;
+    // }
     .ListGroup {
       border-radius: 0;
-      background-color: #202123;
-      margin-top: 10px;
 
       gap: 1px;
 
-      height: 100%;
-      width: 100%;
+      justify-content: space-between;
+
+      height: 60%;
+      width: 60%;
 
       .ListGroupItem {
+        background-color: rgba(0, 0, 0, 0.0);
+
         color: white;
-        background-color: #202123;
+        font-size: 30px;
+        font-weight: 500;
+
         border: none;
         // border: 1px solid rgba(255, 255, 255, .1);
 
@@ -160,35 +168,45 @@
       }
     }
 
-    .Social_Icon_Bar {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .Contact_Information_Box {
+      border-radius: 0;
+
       display: flex;
+      flex-direction: column;
 
+      gap: 20px;
       padding: 5px;
-      gap: 30px;
 
-      justify-content: space-evenly;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
 
-      height: fit-content;
-      width: 100%;
+      height: 60%;
+      width: 40%;
 
-      .Social_Container {
+      .Contact_item {
         display: flex;
         flex-direction: column;
 
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
-        .SocialIcon {
-          display: flex;
+        height: fit-content;
+        width: fit-content;
+
+        .Title {
+          color: rgb(120,48,50);
+          font-size: 20px;
+          font-style: bold;
+          text-align: left;
+
           margin: auto;
+          margin-bottom: 10px;
+          width: 100%;
         }
 
-        .Social_Title {
-          color: white;
-          font-size: 15px;
-          display: none;
+        .Text {
+          color: lightgray;
+          margin: auto;
+          font-size: 14px;
         }
       }
     }
@@ -202,7 +220,7 @@
 // Navbar End
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 1px;
 }
 
 // Media Queries Start
@@ -216,12 +234,31 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .Navbar {
+    .Mobile_Menu {
+      .ListGroup {
+        width: 100%;
+      }
+      .Contact_Information_Box {
+        display: none;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .Navbar {
     padding: 10px;
     .Mobile_Menu {
-      width: 100%;
-      z-index: 100;
+      .ListGroup {
+        height: 90%;
+
+        .ListGroupItem {
+          font-size: 25px;
+        }
+      }
     }
   }
 }

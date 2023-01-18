@@ -7,7 +7,7 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -32,7 +32,6 @@ ul {
 }
 
 body {
-  color: black;
   /* background-color: white; */
   /* background-color: #2e152f; */
   scroll-behavior: smooth;

@@ -60,6 +60,8 @@
 
     .Card {
       border: 1px solid black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: rgb(32,33,35);
 
       display: flex;
 
@@ -79,11 +81,12 @@
       transition: 0.3s ease-in-out;
 
       .Icon {
-        height: 15px;
+        height: 30px;
         margin: auto;
       }
 
       .Title {
+        color: white;
         margin: auto;
         font-size: 14px;
       }
@@ -137,10 +140,6 @@
       .Card {
         flex-direction: column;
         width: 80px;
-
-        .Icon {
-          height: 10px;
-        }
 
         .Title {
           font-size: 12px;

@@ -1,0 +1,82 @@
+.Page {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px;
+  // gap: 100px;
+
+  justify-content: center;
+  align-items: center;
+
+  height: fit-content;
+  width: 100%;
+
+  .Update_Info_Section {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    padding-top: 80px;
+    padding-top: 80px;
+    gap: 20px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+
+    .Image_Container {
+      display: flex;
+
+      border: 1px solid black;
+
+      justify-content: center;
+      align-items: center;
+
+      height: 300px;
+      width: 500px;
+
+      overflow: hidden;
+
+      .Image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .Details_Container {
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid black;
+
+      padding: 5px;
+      gap: 10px;
+
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      height: fit-content;
+      width: 500px;
+
+      .Text,
+      .Introduction {
+        margin: auto;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Page {
+    .Update_Info_Section {
+      .Details_Container,
+      .Image_Container {
+        width: 100%;
+      }
+    }
+  }
+}

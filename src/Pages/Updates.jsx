@@ -9,10 +9,11 @@ import useAxios from "../Hooks/useAxios";
 
 const Updates = () => {
   TabTitle("HHS | Updates");
-  // const [Data, setData] = useState(UpdatesData);
+  const [data, setData] = useState(UpdatesData);
 
-  const url = `https://hhs-backen-76xny.ondigitalocean.app/blogs`;
-  const { data, error, loading } = useAxios(url);
+  // const url = `https://hhs-backen-76xny.ondigitalocean.app/events`;
+  // const { data, error, loading } = useAxios(url);
+
   return (
     <div className={Styles.Page}>
       <PageHead Title={"Updates"} />
@@ -21,19 +22,21 @@ const Updates = () => {
         <div className={Styles.Content_Container}>
           {data?.map((value) => {
             return (
-              <div className={Styles.Blog_Card} key={value.id}>
-                <div className={Styles.Image_Container}>
-                  <p className={Styles.Category}>{value.category}</p>
-                  <img src={`https://hhs-backen-76xny.ondigitalocean.app${value.image.formats.medium.url}`} alt="" className={Styles.Image} />
+              <Link to={`/Update/` + value.id} key={value.id}>
+                <div className={Styles.Blog_Card}>
+                  <div className={Styles.Image_Container}>
+                    <p className={Styles.Category}>{value.Category}</p>
+                    {/* <img src={`https://hhs-backen-76xny.ondigitalocean.app${value.image.url}`} alt="" className={Styles.Image} /> */}
+                  </div>
+                  <div className={Styles.Information_Box}>
+                    <p className={Styles.Text}>{value.Title}</p>
+                    <p className={Styles.Text}>{value.Date}</p>
+                    <p className={Styles.Text}>
+                      {value.Description.slice(0, 60)}....
+                    </p>
+                  </div>
                 </div>
-                <div className={Styles.Information_Box}>
-                  <p className={Styles.Tite}>{value.title}</p>
-                  <p className={Styles.Date}>{value.date}</p>
-                  <p className={Styles.Description}>
-                    {value.description}....
-                  </p>
-                </div>
-              </div>
+              </Link>
             );
           })}
         </div>

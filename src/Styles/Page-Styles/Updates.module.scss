@@ -115,6 +115,7 @@
         width: 100%;
 
         .Image_Container {
+          border: 1px solid black;
           height: 300px;
           width: 100%;
 
@@ -148,6 +149,7 @@
         }
 
         .Information_Box {
+          border: 1px solid black;
           display: flex;
           flex-direction: column;
 
@@ -156,6 +158,11 @@
 
           height: fit-content;
           width: 100%;
+
+          .Text {
+            margin: auto;
+            margin-left: 0px;
+          }
         }
       }
     }

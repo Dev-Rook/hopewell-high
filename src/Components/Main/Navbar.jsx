@@ -21,8 +21,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-// import { Spin as Hamburger } from "hamburger-react";
-
+import Hamburger from "hamburger-react";
 
 const NavVariants = {
   hidden: {
@@ -115,42 +114,23 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <MenuIcon
-        onClick={showMenu}
-        className={Styles.MenuIcon}
-        sx={{ color: "black", fontSize: 40 }}
-      />
-
-      {/* <Hamburger
-        onClick={showMenu}
-        className={Styles.MenuIcon}
-        toggled={isOpen}
-        toggle={setOpen}
-        size={40}
-        direction="right"
-        label="Show menu"
-      /> */}
+      <span className={Styles.Span}>
+        <Hamburger
+          className={Styles.HamburgerMenu}
+          onToggle={setMenu}
+          direction="right"
+          color="white"
+          duration={0.5}
+          size={35}
+        />
+      </span>
 
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
-        <div className={Styles.Mobile_Menu_Header}>
-          <CloseIcon
-            onClick={showMenu}
-            className={Styles.CloseIcon}
-            sx={{ color: "white", fontSize: 40 }}
-          />
-          <div className={Styles.Diffuser}></div>
-          <img
-            src={`https://github.com/Dev-Rook/hopewell-high/blob/master/src/Assets/Images/DJI_0501-min-min.JPG?raw=true`}
-            alt=""
-            className={Styles.Header_Image}
-          />
-        </div>
-
         <ListGroup className={Styles.ListGroup}>
           <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <HomeIcon sx={{ color: "White", fontSize: 25 }} />
+              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Home
             </ListGroup.Item>
           </Link>
@@ -161,7 +141,7 @@ const Navbar = () => {
             to={"About"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <InfoIcon sx={{ color: "White", fontSize: 25 }} />
+              {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
               About
             </ListGroup.Item>
           </Link>
@@ -172,7 +152,7 @@ const Navbar = () => {
             to={"Curricula"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <AssignmentIcon sx={{ color: "White", fontSize: 25 }} />
+              {/* <AssignmentIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Curriculums
             </ListGroup.Item>
           </Link>
@@ -183,21 +163,25 @@ const Navbar = () => {
             to={"Documents"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <FolderIcon sx={{ color: "White", fontSize: 25 }} />
+              {/* <FolderIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Documents
             </ListGroup.Item>
           </Link>
 
-          <Link onClick={doubleFunction} className={Styles.Navlink} to={"Updates"}>
+          <Link
+            onClick={doubleFunction}
+            className={Styles.Navlink}
+            to={"Updates"}
+          >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <ArticleIcon sx={{ color: "White", fontSize: 25 }} />
+              {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Updates
             </ListGroup.Item>
           </Link>
 
           <a href={`Dog Water`} target={"_blank"} rel={"noreferrer"}>
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <GradeIcon sx={{ color: "White", fontSize: 25 }} />
+              {/* <GradeIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Grades
             </ListGroup.Item>
           </a>
@@ -208,51 +192,25 @@ const Navbar = () => {
             to={"Apply"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              <CallIcon sx={{ color: "white", fontSize: 25 }} />
+              {/* <CallIcon sx={{ color: "white", fontSize: 25 }} /> */}
               Apply
             </ListGroup.Item>
           </Link>
         </ListGroup>
 
-        <div className={Styles.Social_Icon_Bar}>
-          <div className={Styles.Social_Container}>
-            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
-              <InstagramIcon
-                className={Styles.SocialIcon}
-                sx={{ color: "White", fontSize: 20 }}
-              />
-              <p className={Styles.Social_Title}>Instagram</p>
-            </a>
+        <div className={Styles.Contact_Information_Box}>
+          <div className={Styles.Contact_item}>
+            <p className={Styles.Title}>School</p>
+            <p className={Styles.Text}>221 B Baker Street</p>
           </div>
-
-          <div className={Styles.Social_Container}>
-            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
-              <FacebookIcon
-                className={Styles.SocialIcon}
-                sx={{ color: "White", fontSize: 20 }}
-              />
-              <p className={Styles.Social_Title}>FaceBook</p>
-            </a>
+          <div className={Styles.Contact_item}>
+            <p className={Styles.Title}>Contact</p>
+            <p className={Styles.Text}>1 876 192 1680</p>
+            <p className={Styles.Text}>hhs@gmail.com</p>
           </div>
-
-          <div className={Styles.Social_Container}>
-            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
-              <TwitterIcon
-                className={Styles.SocialIcon}
-                sx={{ color: "White", fontSize: 20 }}
-              />
-              <p className={Styles.Social_Title}>Twitter</p>
-            </a>
-          </div>
-
-          <div className={Styles.Social_Container}>
-            <a href={`#`} target={"_blank"} rel={"noreferrer"}>
-              <WhatsAppIcon
-                className={Styles.SocialIcon}
-                sx={{ color: "White", fontSize: 20 }}
-              />
-              <p className={Styles.Social_Title}>WhatsApp</p>
-            </a>
+          <div className={Styles.Contact_item}>
+            <p className={Styles.Title}>Social Media</p>
+            <p className={Styles.Text}>221 B Baker Street</p>
           </div>
         </div>
       </div>

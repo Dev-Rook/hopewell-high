@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import useAxios from "../Hooks/useAxios";
 import Styles from "../Styles/Page-Section-Styles/Updates.module.scss";
 
 import UpdatesData from "../Data/Updates.json";
 
 const Blog = () => {
-  const [data, setData] = useState(UpdatesData);
+  const url = `https://hhs-backen-76xny.ondigitalocean.app/events`;
+  const { data, error, loading } = useAxios(url);
 
   return (
     <div className={Styles.Section}>
@@ -20,13 +21,13 @@ const Blog = () => {
             return (
               <div className={Styles.Blog_Card} key={value.id}>
                 <div className={Styles.Image_Container}>
-                  <p className={Styles.Category}>{value.Category}</p>
+                  <p className={Styles.Category}>{value.category}</p>
                   <img src={value.Image} alt="" className={Styles.Image} />
                 </div>
                 <div className={Styles.Information_Box}>
                   <p className={Styles.Tite}>{value?.Title}</p>
-                  <p className={Styles.Date}>{value?.Date}</p>
-                  <p className={Styles.Description}>{value?.Description.slice(0, 50)}.....</p>
+                  <p className={Styles.Date}>{value?.date}</p>
+                  <p className={Styles.Description}>{value?.description.slice(0, 80)}..</p>
                 </div>
               </div>
             );
