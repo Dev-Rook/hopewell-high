@@ -1,17 +1,121 @@
 .Footer {
   display: flex;
+  flex-direction: column;
+
+  background-color: rgba(0, 0, 0, 1);
+
+  color: white;
+
+  padding: 5px;
+  gap: 10px;
 
   justify-content: center;
   align-items: center;
 
-  color: black;
-
-  height: fit-content;
+  height: 300px;
   width: 100%;
 
-  .Link {
-    color: #783032;
-    font-style: italic;
-    cursor: pointer;
+  .Information_Section {
+    display: flex;
+
+    gap: 20px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 1000px;
+
+    .About_Box {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+
+      .Title {
+        font-size: 25px;
+      }
+    }
+
+    .Information_Box {
+      width: 60%;
+      display: flex;
+
+      gap: 20px;
+
+      .Info_Column {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        height: fit-content;
+        width: fit-content;
+
+        .Column_Tile {
+          color: rgb(120, 48, 50);
+          font-size: 20px;
+          font-style: bold;
+          text-align: left;
+
+          margin: auto;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+        .Text {
+          color: lightgray;
+          margin: auto;
+          margin-left: 0px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Footer {
+    height: fit-content;
+    .Information_Section {
+      align-items: flex-start;
+      width: 100%;
+      flex-direction: column;
+
+      .About_Box {
+        width: 60%;
+      }
+
+      .Information_Box {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Footer {
+    .Information_Section {
+      .About_Box {
+        width: 100%;
+      }
+
+      .Information_Box {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Footer {
+    .Information_Section {
+      .Information_Box {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
   }
 }
