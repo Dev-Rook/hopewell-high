@@ -9,10 +9,10 @@ import useAxios from "../Hooks/useAxios";
 
 const Updates = () => {
   TabTitle("HHS | Updates");
-  const [data, setData] = useState(UpdatesData);
+  // const [data, setData] = useState(UpdatesData);
 
-  // const url = `https://hhs-backen-76xny.ondigitalocean.app/events`;
-  // const { data, error, loading } = useAxios(url);
+  const url = `https://hhs-backen-76xny.ondigitalocean.app/events`;
+  const { data, error, loading } = useAxios(url);
 
   return (
     <div className={Styles.Page}>
@@ -26,13 +26,21 @@ const Updates = () => {
                 <div className={Styles.Blog_Card}>
                   <div className={Styles.Image_Container}>
                     <p className={Styles.Category}>{value.Category}</p>
-                    {/* <img src={`https://hhs-backen-76xny.ondigitalocean.app${value.image.url}`} alt="" className={Styles.Image} /> */}
+                    {data?.image?.url ? (
+                      <img
+                        src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
+                        alt=""
+                        className={Styles.Image}
+                      />
+                    ) : (
+                      <p>No Image</p>
+                    )}
                   </div>
                   <div className={Styles.Information_Box}>
-                    <p className={Styles.Text}>{value.Title}</p>
-                    <p className={Styles.Text}>{value.Date}</p>
+                    <p className={Styles.Text}>{value.title}</p>
+                    <p className={Styles.Text}>{value.date}</p>
                     <p className={Styles.Text}>
-                      {value.Description.slice(0, 60)}....
+                      {value.description.slice(0, 60)}....
                     </p>
                   </div>
                 </div>

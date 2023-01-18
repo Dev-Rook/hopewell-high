@@ -19,17 +19,29 @@ const Blog = () => {
         {data &&
           data.map((value) => {
             return (
-              <div className={Styles.Blog_Card} key={value.id}>
-                <div className={Styles.Image_Container}>
-                  <p className={Styles.Category}>{value.category}</p>
-                  <img src={value.Image} alt="" className={Styles.Image} />
+              <Link to={"/Update/" + value.id}>
+                <div className={Styles.Update_Card} key={value.id}>
+                  <div className={Styles.Image_Container}>
+                    <p className={Styles.Category}>{value.category}</p>
+                    {data?.image?.url ? (
+                      <img
+                        src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
+                        alt=""
+                        className={Styles.Image}
+                      />
+                    ) : (
+                      <p>No Image</p>
+                    )}
+                  </div>
+                  <div className={Styles.Information_Box}>
+                    <p className={Styles.Tite}>{value?.title}</p>
+                    <p className={Styles.Date}>{value?.date}</p>
+                    <p className={Styles.Description}>
+                      {value?.description.slice(0, 80)}..
+                    </p>
+                  </div>
                 </div>
-                <div className={Styles.Information_Box}>
-                  <p className={Styles.Tite}>{value?.Title}</p>
-                  <p className={Styles.Date}>{value?.date}</p>
-                  <p className={Styles.Description}>{value?.description.slice(0, 80)}..</p>
-                </div>
-              </div>
+              </Link>
             );
           })}
       </div>
