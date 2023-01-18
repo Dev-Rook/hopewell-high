@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Footer.module.scss";
 
 const Footer = () => {
@@ -39,7 +40,40 @@ const Footer = () => {
 
       <div className={Styles.Map_Container}></div>
 
-      <div className={Styles.Navlink_Container}></div>
+      <ul className={Styles.Navlink_Container}>
+        <li>
+          <Link to={""} className={Styles.Navlink}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to={""} className={Styles.Navlink}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to={""} className={Styles.Navlink}>
+            Curriculums
+          </Link>
+        </li>
+        <li>
+          <Link to={""} className={Styles.Navlink}>
+            Updates
+          </Link>
+        </li>
+        <li>
+          <Link to={""} className={Styles.Navlink}>
+            Documents
+          </Link>
+        </li>
+        <li>
+          <Link to={""} className={Styles.Navlink}>
+            Apply
+          </Link>
+        </li>
+      </ul>
+
+      <p className={Styles.Copyright_Tag}>© 2023 Hopewell High</p>
     </div>
   );
 };
