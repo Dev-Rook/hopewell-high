@@ -59,6 +59,8 @@
       display: flex;
       flex-direction: column;
 
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
       padding: 0px;
       gap: 0px;
       cursor: pointer;
@@ -72,7 +74,12 @@
 
         display: flex;
 
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
         position: relative;
+
+        justify-content: center;
+        align-items: center;
 
         .Category {
           background-color: rgba(0, 0, 0, 0.5);

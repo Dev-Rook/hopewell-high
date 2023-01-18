@@ -108,6 +108,8 @@
         flex-direction: column;
         cursor: pointer;
 
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
         padding: 0px;
         gap: 0px;
 
@@ -115,11 +117,13 @@
         width: 100%;
 
         .Image_Container {
-          border: 1px solid black;
           height: 300px;
           width: 100%;
 
           display: flex;
+
+          justify-content: center;
+          align-items: center ;
 
           position: relative;
 

@@ -22,7 +22,7 @@ const Blog = () => {
               <Link to={"/Update/" + value.id}>
                 <div className={Styles.Update_Card} key={value.id}>
                   <div className={Styles.Image_Container}>
-                    <p className={Styles.Category}>{value.category}</p>
+                    <p className={Styles.Category}>{value?.category}</p>
                     {data?.image?.url ? (
                       <img
                         src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
@@ -37,7 +37,7 @@ const Blog = () => {
                     <p className={Styles.Tite}>{value?.title}</p>
                     <p className={Styles.Date}>{value?.date}</p>
                     <p className={Styles.Description}>
-                      {value?.description.slice(0, 80)}..
+                      {value?.description.slice(0, 100)}..
                     </p>
                   </div>
                 </div>

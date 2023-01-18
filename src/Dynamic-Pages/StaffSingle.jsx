@@ -18,7 +18,15 @@ const StaffSingle = () => {
 
       <div className={Styles.Staff_Info_Section}>
         <div className={Styles.Image_Container}>
-          <img src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image.url}`} alt="" className={Styles.Image} />
+          {data?.image?.url ? (
+            <img
+              src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
+              alt=""
+              className={Styles.Image}
+            />
+          ) : (
+            <p>No Image</p>
+          )}
         </div>
 
         <div className={Styles.About_Container}>

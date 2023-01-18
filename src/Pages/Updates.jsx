@@ -25,7 +25,7 @@ const Updates = () => {
               <Link to={`/Update/` + value.id} key={value.id}>
                 <div className={Styles.Blog_Card}>
                   <div className={Styles.Image_Container}>
-                    <p className={Styles.Category}>{value.Category}</p>
+                    <p className={Styles.Category}>{value.category}</p>
                     {data?.image?.url ? (
                       <img
                         src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
