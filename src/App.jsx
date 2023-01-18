@@ -69,7 +69,7 @@ function App() {
           </Routes>
         </Suspense>
         <Contact />
-        <Footer />
+        <Footer scroll={scrollUp} />
       </BrowserRouter>
 
       <NavigationIcon

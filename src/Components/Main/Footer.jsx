@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Styles from "../../Styles/Component-Styles/Footer.module.scss";
 
-const Footer = () => {
+const Footer = (scrollUp) => {
   return (
     <div className={Styles.Footer}>
       <div className={Styles.Information_Section}>
@@ -42,32 +42,32 @@ const Footer = () => {
 
       <ul className={Styles.Navlink_Container}>
         <li>
-          <Link to={""} className={Styles.Navlink}>
+          <Link to={"/"} className={Styles.Navlink} onClick={scrollUp}>
             Home
           </Link>
         </li>
         <li>
-          <Link to={""} className={Styles.Navlink}>
+          <Link to={"About"} className={Styles.Navlink} onClick={scrollUp}>
             About
           </Link>
         </li>
         <li>
-          <Link to={""} className={Styles.Navlink}>
+          <Link to={"Curricula"} className={Styles.Navlink} onClick={scrollUp}>
             Curriculums
           </Link>
         </li>
         <li>
-          <Link to={""} className={Styles.Navlink}>
+          <Link to={"Updates"} className={Styles.Navlink} onClick={scrollUp}>
             Updates
           </Link>
         </li>
         <li>
-          <Link to={""} className={Styles.Navlink}>
+          <Link to={"Documents"} className={Styles.Navlink} onClick={scrollUp}>
             Documents
           </Link>
         </li>
         <li>
-          <Link to={""} className={Styles.Navlink}>
+          <Link to={"Apply"} className={Styles.Navlink} onClick={scrollUp}>
             Apply
           </Link>
         </li>
