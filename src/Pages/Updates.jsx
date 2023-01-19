@@ -26,15 +26,13 @@ const Updates = () => {
                 <div className={Styles.Blog_Card}>
                   <div className={Styles.Image_Container}>
                     <p className={Styles.Category}>{value.category}</p>
-                    {data?.image?.url ? (
+                    {value?.image?.url ? (
                       <img
-                        src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
+                        src={`https://hhs-backen-76xny.ondigitalocean.app${value?.image?.url}`}
                         alt=""
                         className={Styles.Image}
                       />
-                    ) : (
-                      <p>No Image</p>
-                    )}
+                    ) : null}
                   </div>
                   <div className={Styles.Information_Box}>
                     <p className={Styles.Text}>{value.title}</p>

@@ -1,13 +1,15 @@
 .Navbar {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.5);
+  // background-color: rgb(32,33,35);
+  background-color: rgb(46,21,47);
+  // background-color: rgba(0, 0, 0, 1);
   backdrop-filter: blur(5px);
 
   position: sticky;
   top: 0px;
   left: 0px;
 
-  padding: 5px;
+  // padding: 5px;
 
   justify-content: space-between;
   align-items: center;
@@ -18,38 +20,42 @@
   transition: 0.3s;
   z-index: 50;
 
-  .Image_Container {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
 
-    overflow: hidden;
-
+  .Left_Side {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 40px;
-    width: 40px;
-
-    .Logo {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .Navlink_Container {
-    display: none;
     gap: 20px;
     padding: 5px;
     justify-content: space-evenly;
     align-items: center;
 
-    .Navlink {
+    .Image_Container {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+  
+      overflow: hidden;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      height: 30px;
+      width: 30px;
+  
+      font-size: 30px;
+  
+      .Logo {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .Slogan {
       color: white;
-      font-size: 15px;
+      font-size: 20px;
       font-weight: 300;
+      margin: auto;
       cursor: pointer;
     }
   }
@@ -170,9 +176,9 @@
 // Media Queries Start
 @media only screen and (max-width: 996px) {
   .Navbar {
-    .Navlink_Container {
-      display: none;
-    }
+    // .Navlink_Container {
+    //   display: none;
+    // }
     .MenuIcon {
       display: flex;
     }

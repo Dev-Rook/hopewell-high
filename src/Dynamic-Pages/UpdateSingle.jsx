@@ -17,13 +17,19 @@ const UpdateSingle = () => {
 
       <div className={Styles.Update_Info_Section}>
         <div className={Styles.Image_Container}>
-          {data?.image?.url ? 
+          {data?.image?.formats?.small?.url ? (
+            <img
+              src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.formats?.small?.url}`}
+              alt=""
+              className={Styles.Image}
+            />
+          ) : (
             <img
               src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
               alt=""
               className={Styles.Image}
             />
-           : <p>No Image</p> }
+          )}
         </div>
 
         <div className={Styles.Details_Container}>

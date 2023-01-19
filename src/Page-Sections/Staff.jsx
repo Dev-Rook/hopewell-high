@@ -82,11 +82,13 @@ const Staff = () => {
                       </div>
                       <div className={Styles.Diffuser}></div>
                       <div className={Styles.Image_Container}>
-                        {/* <img
-                          src={`https://hhs-backen-76xny.ondigitalocean.app${value.image.formats.medium.url}`}
-                          alt=""
-                          className={Styles.Image}
-                        /> */}
+                        {value?.image?.url ? (
+                          <img
+                            src={`https://hhs-backen-76xny.ondigitalocean.app${value?.image?.url}`}
+                            alt=""
+                            className={Styles.Image}
+                          />
+                        ) : null}
                       </div>
                     </div>
                   </Link>

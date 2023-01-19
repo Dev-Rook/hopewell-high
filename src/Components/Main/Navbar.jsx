@@ -69,49 +69,18 @@ const Navbar = () => {
 
   return (
     <nav className={Styles.Navbar}>
-      <div className={Styles.Image_Container}>
-        <img
-          src={`https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Images/Carbon%20Claws.png?raw=true`}
-          alt=""
-          className={Styles.Logo}
-        />
-      </div>
+      <div className={Styles.Left_Side}>
+        <div className={Styles.Image_Container}>
+          <img
+            src={`https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Images/Carbon%20Claws.png?raw=true`}
+            alt=""
+            className={Styles.Logo}
+          />
+        </div>
 
-      <div className={Styles.Navlink_Container} aria-label="breadcrumb">
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"/"}>
-          {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Home
-        </Link>
-
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"About"}>
-          {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          About
-        </Link>
-
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"Curricula"}>
-          {/* <ListAltIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Curriculums
-        </Link>
-
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"Documents"}>
-          {/* <FolderIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Documents
-        </Link>
-
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"Updates"}>
-          {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Updates
-        </Link>
-
-        <Link onClick={scrollUp} className={Styles.Navlink} to={""}>
-          {/* <GradeIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Grades
-        </Link>
-
-        <Link onClick={scrollUp} className={Styles.Navlink} to={"Apply"}>
-          {/* <CallIcon sx={{ color: "White", fontSize: 25 }} /> */}
-          Apply
-        </Link>
+        <p className={Styles.Slogan}>
+          HHS
+        </p>
       </div>
 
       <span className={Styles.Span}>
