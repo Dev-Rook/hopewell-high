@@ -168,6 +168,14 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .Section {
+    .Content_Container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 @media only screen and (max-width: 360px) {
   .Section {
     .Section_Title_Container {

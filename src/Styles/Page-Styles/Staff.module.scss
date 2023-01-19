@@ -149,6 +149,17 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .Page {
+    .Staff_Card_Section {
+      .Content_Container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+
 @media only screen and (max-width: 350px) {
   .Page {
     .Staff_Card_Section {
