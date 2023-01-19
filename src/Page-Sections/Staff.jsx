@@ -8,17 +8,22 @@ import Styles from "../Styles/Page-Section-Styles/Staff.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Autoplay, Mousewheel } from "swiper";
 
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 // import "swiper/css/effect-fade ";
 
+import StaffData from "../Data/Staff"
+
 const Staff = () => {
   const url = `https://hhs-backen-76xny.ondigitalocean.app/staffs`;
   const { data, error, loading } = useAxios(url);
+  // const [data, setData] = useState(StaffData)
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section}>
@@ -38,16 +43,13 @@ const Staff = () => {
             slidesPerView={4}
             speed={2000}
             spaceBetween={0}
-            modules={[Navigation, FreeMode, Mousewheel, Autoplay]}
+            modules={[Autoplay, Navigation, FreeMode, Mousewheel]}
             autoplay={{
-              delay: 5000,
+              delay: 2500,
               disableOnInteraction: false,
             }}
             grabCursor={true}
             loop
-            pagination={{
-              dynamicBullets: true,
-            }}
             mousewheel={true}
             className={Styles.Swiper}
             breakpoints={{
@@ -77,8 +79,8 @@ const Staff = () => {
                   <Link to={"/Staffer/" + value.id} className={Styles.Link}>
                     <div className={Styles.Project_Card}>
                       <div className={Styles.Text_Container}>
-                        <p className={Styles.Title}>{value?.firstName}</p>
-                        <p className={Styles.Architect}>{value?.title}</p>
+                        <p className={Styles.Name}>{value?.firstName} {value?.lastName}</p>
+                        <p className={Styles.Title}>{value?.title}</p>
                       </div>
                       <div className={Styles.Diffuser}></div>
                       <div className={Styles.Image_Container}>

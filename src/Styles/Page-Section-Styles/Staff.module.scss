@@ -13,12 +13,14 @@
 
   overflow: hidden;
 
-  height: 100vh;
+  height: 800px;
   width: 100%;
 
   .Content_Container {
     display: flex;
     flex-direction: column;
+
+    color: white;
 
     gap: 0px;
     padding: 5px;
@@ -51,6 +53,8 @@
       background-color: rgba(0, 0, 0, 0.3);
       padding: 5px 20px;
 
+      color: white;
+
       display: flex;
       cursor: pointer;
 
@@ -66,7 +70,7 @@
 
   .Diffuser {
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -125,22 +129,16 @@
           position: absolute;
           bottom: 20px;
           left: 20px;
+          z-index: 5;
 
-          .Title {
+          .Name {
+            color: white;
             font-size: 25px;
             font-weight: 300;
             font-style: bold;
           }
-
-          .Architect {
-            color: black;
-            font-size: 15px;
-            font-weight: 300;
-            font-style: bold;
-          }
-
           .Title {
-            color: black;
+            color: white;
             font-size: 25px;
             font-weight: 300;
             font-style: bold;

@@ -22,7 +22,7 @@ ul {
 }
 
 ::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 2px;
   border-radius: 0.125rem;
 }
 
