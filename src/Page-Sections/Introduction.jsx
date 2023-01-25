@@ -10,7 +10,6 @@ const Indroduction = () => {
     <div className={Styles.Section}>
       <div className={Styles.Content_Container}>
         <div className={Styles.About_Container}>
-          <p className={Styles.Question}>- Mission Statement</p>
           <p className={Styles.Brand}>Hopewell Highschool</p>
           <p className={Styles.Description}>
             We strive to create and maintain an environment conducive to the

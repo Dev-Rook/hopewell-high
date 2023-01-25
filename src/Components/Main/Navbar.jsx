@@ -1,44 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
+// import { useScrollUp } from "../Hooks/useScrollUp";
 import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
 
-import ListGroup from "react-bootstrap/ListGroup";
+import Crest from "../../Assets/Images/Crest.png";
 
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
-import FolderIcon from "@mui/icons-material/Folder";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import ArticleIcon from "@mui/icons-material/Article";
-import GradeIcon from "@mui/icons-material/Grade";
-import CallIcon from "@mui/icons-material/Call";
-
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 
 import Hamburger from "hamburger-react";
-
-const NavVariants = {
-  hidden: {
-    y: "-100vh",
-    opacity: 0,
-  },
-
-  visible: {
-    y: 0,
-    opacity: 1,
-
-    transition: {
-      delay: 0.2,
-      duration: 1.5,
-    },
-  },
-};
+import ListGroup from "react-bootstrap/ListGroup";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -70,36 +43,56 @@ const Navbar = () => {
   return (
     <nav className={Styles.Navbar}>
       <div className={Styles.Left_Side}>
-        <div className={Styles.Image_Container}>
-          <img
-            src={`https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Images/Carbon%20Claws.png?raw=true`}
-            alt=""
-            className={Styles.Logo}
-          />
-        </div>
+        <img src={Crest} alt="" className={Styles.Logo} />
 
-        <p className={Styles.Slogan}>
-          HHS
-        </p>
+        {/* <p className={Styles.Slogan}>HHS |</p> */}
+
+        <div className={Styles.Navlink_Container}>
+          <Link to={"/"} onClick={scrollUp} className={Styles.Navlink}>
+            Home
+          </Link>
+          <Link to={"/About"} onClick={scrollUp} className={Styles.Navlink}>
+            About
+          </Link>
+          <Link to={"/Curriculas"} onClick={scrollUp} className={Styles.Navlink}>
+            Curriculas
+          </Link>
+          <Link to={"/Documents"} onClick={scrollUp} className={Styles.Navlink}>
+            Documents
+          </Link>
+          <Link to={"/Updates"} onClick={scrollUp} className={Styles.Navlink}>
+            Updates
+          </Link>
+          <Link to={"/Apply"} onClick={scrollUp} className={Styles.Navlink}>
+            Apply
+          </Link>
+        </div>
       </div>
 
-      <span className={Styles.Span}>
-        <Hamburger
-          className={Styles.HamburgerMenu}
-          onToggle={setMenu}
-          direction="right"
-          color="white"
-          duration={0.5}
-          size={35}
-        />
-      </span>
+      <div className={Styles.Right_Side}>
+        <div className={Styles.Social_Icon_Tray}>
+          <TwitterIcon />
+          <YouTubeIcon />
+          <InstagramIcon />
+        </div>
+        |{/* <BrightnessMediumIcon /> */}
+        <span className={Styles.Span}>
+          <Hamburger
+            className={Styles.HamburgerMenu}
+            onToggle={setMenu}
+            direction="right"
+            color="white"
+            duration={0.5}
+            size={35}
+          />
+        </span>
+      </div>
 
       {/* Mobile Menu Start  */}
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
         <ListGroup className={Styles.ListGroup}>
           <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <HomeIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Home
             </ListGroup.Item>
           </Link>
@@ -107,10 +100,9 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"About"}
+            to={"/About"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <InfoIcon sx={{ color: "White", fontSize: 25 }} /> */}
               About
             </ListGroup.Item>
           </Link>
@@ -118,10 +110,9 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Curricula"}
+            to={"/Curriculas"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <AssignmentIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Curriculums
             </ListGroup.Item>
           </Link>
@@ -129,10 +120,9 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Documents"}
+            to={"/Documents"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <FolderIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Documents
             </ListGroup.Item>
           </Link>
@@ -140,17 +130,15 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Updates"}
+            to={"/Updates"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <ArticleIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Updates
             </ListGroup.Item>
           </Link>
 
           <a href={`Dog Water`} target={"_blank"} rel={"noreferrer"}>
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <GradeIcon sx={{ color: "White", fontSize: 25 }} /> */}
               Grades
             </ListGroup.Item>
           </a>
@@ -158,10 +146,9 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Apply"}
+            to={"/Apply"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
-              {/* <CallIcon sx={{ color: "white", fontSize: 25 }} /> */}
               Apply
             </ListGroup.Item>
           </Link>

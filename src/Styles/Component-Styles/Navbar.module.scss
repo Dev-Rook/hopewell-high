@@ -1,25 +1,25 @@
 .Navbar {
   display: flex;
-  // background-color: rgb(32,33,35);
-  background-color: rgb(46,21,47);
-  // background-color: rgba(0, 0, 0, 1);
-  backdrop-filter: blur(5px);
 
-  position: sticky;
-  top: 0px;
-  left: 0px;
+  background-color: rgba(36, 36, 36, 1);
+  background-color: #2e152f;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: 5px;
 
-  // padding: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   justify-content: space-between;
   align-items: center;
+
+  padding: 10px;
 
   height: fit-content;
   width: 100%;
 
   transition: 0.3s;
-  z-index: 50;
-
+  z-index: 100;
 
   .Left_Side {
     display: flex;
@@ -28,29 +28,6 @@
     justify-content: space-evenly;
     align-items: center;
 
-    .Image_Container {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-  
-      overflow: hidden;
-  
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      height: 30px;
-      width: 30px;
-  
-      font-size: 30px;
-  
-      .Logo {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
     .Slogan {
       color: white;
       font-size: 20px;
@@ -58,21 +35,54 @@
       margin: auto;
       cursor: pointer;
     }
+
+    .Logo {
+      height: 30px;
+      width: 30px;
+    }
+
+    .Navlink_Container {
+      display: flex;
+      gap: 20px;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .Navlink {
+        color: white;
+        font-family: "Nunito", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.96);
+        cursor: pointer;
+      }
+    }
   }
 
-  .Span {
+  .Right_Side {
     display: flex;
-    cursor: pointer;
-    z-index: 200;
-    .HamburgerMenu {
-      color: white;
+    gap: 20px;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .Social_Icon_Tray {
+      display: flex;
+      gap: 10px;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .Span {
+      display: none;
+      z-index: 110;
     }
   }
 
   //   Mobile Menu Start
   .Mobile_Menu {
-    display: flex;
+    display: none;
     background-color: rgba(0, 0, 0, 1);
+    background-color: #2e152f;
     backdrop-filter: blur(10px);
 
     position: absolute;
@@ -101,9 +111,9 @@
       width: 60%;
 
       .ListGroupItem {
-        background-color: rgba(0, 0, 0, 0.0);
+        background-color: rgba(0, 0, 0, 0);
 
-        color: white;
+        color: gold;
         font-size: 30px;
         font-weight: 500;
 
@@ -143,7 +153,7 @@
         width: fit-content;
 
         .Title {
-          color: rgb(120,48,50);
+          color: rgb(120, 48, 50);
           font-size: 20px;
           font-style: bold;
           text-align: left;
@@ -167,19 +177,25 @@
     transform: translateY(0%);
   }
 }
-// Navbar End
 
-::-webkit-scrollbar {
-  width: 1px;
-}
-
-// Media Queries Start
 @media only screen and (max-width: 996px) {
   .Navbar {
-    // .Navlink_Container {
-    //   display: none;
-    // }
-    .MenuIcon {
+    .Left_Side {
+      .Navlink_Container {
+        display: none;
+      }
+    }
+
+    .Right_Side {
+      .Social_Icon_Tray {
+        display: none;
+      }
+      .Span {
+        display: flex;
+      }
+    }
+
+    .Mobile_Menu {
       display: flex;
     }
   }
@@ -212,4 +228,3 @@
     }
   }
 }
-// Media Queries End
