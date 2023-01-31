@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Tour.module.scss";
 
 import TourData from "../Data/Tour.json";
@@ -15,8 +13,7 @@ const Tour = () => {
       </div>
 
       <div className={Styles.Content_Container}>
-        {data &&
-          data.map((value) => {
+        {data?.slice(0, 3).map((value) => {
             return (
               <a
                 href={value.Link}

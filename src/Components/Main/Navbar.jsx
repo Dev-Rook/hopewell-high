@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import { useScrollUp } from "../Hooks/useScrollUp";
-import Styles from "../../Styles/Component-Styles/Navbar.module.scss";
+import Styles from "../../Styles/Components-Styles/Navbar.module.scss";
 
 import Crest from "../../Assets/Images/Crest.png";
 

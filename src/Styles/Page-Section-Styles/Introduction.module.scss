@@ -1,6 +1,7 @@
 .Section {
   display: flex;
   flex-direction: column;
+  color: white;
 
   position: relative;
 
@@ -12,7 +13,7 @@
   padding-bottom: 80px;
   overflow: hidden;
 
-  height: fit-content;
+  height: 100vh;
   width: 100%;
 
   .Content_Container {
@@ -32,8 +33,13 @@
       justify-content: center;
       align-items: center;
 
-      height: 400px;
-      width: 50%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      height: 200px;
+      width: 200px;
 
       overflow: hidden;
 
@@ -77,15 +83,15 @@
     .Description {
       font-size: 20px;
       font-weight: 100;
-      font-style: bold;
       text-align: center;
       transition: 0.3s;
     }
 
     .Read_More_Button {
-      border: 2px solid black;
+      border: 2px solid white;
       background-color: rgba(0, 0, 0, 0.3);
       padding: 5px 20px;
+      color: white;
 
       display: flex;
       cursor: pointer;
@@ -119,21 +125,12 @@
 @media only screen and (max-width: 1030px) {
   .Section {
     .Content_Container {
-      .Images_Container {
-        height: 600px;
-        width: 300px;
-      }
-
       .About_Container {
         .Brand {
           font-size: 40px;
         }
         .Description {
           font-size: 18px;
-        }
-
-        br {
-          display: none;
         }
       }
     }
@@ -143,13 +140,6 @@
   .Section {
     height: fit-content;
     .Content_Container {
-      flex-direction: column-reverse;
-      width: 100%;
-
-      .Image_Container {
-        height: 300px;
-        width: 100%;
-      }
       .About_Container {
         width: 100%;
         align-items: center;
@@ -161,10 +151,6 @@
           font-size: 15px;
           text-align: center;
         }
-
-        br {
-          display: none;
-        }
       }
     }
   }
@@ -172,9 +158,6 @@
 @media only screen and (max-width: 360px) {
   .Section {
     .Content_Container {
-      .Image_Container {
-        height: 150px;
-      }
       .About_Container {
         .Question {
           font-size: 12px;
@@ -182,6 +165,16 @@
         .Brand {
           font-size: 25px;
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 330px) {
+  .Section {
+    .Content_Container {
+      .Image_Container {
+        height: 200px;
+        width: 200px;
       }
     }
   }

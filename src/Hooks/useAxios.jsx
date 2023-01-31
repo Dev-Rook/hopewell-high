@@ -21,8 +21,8 @@ const useAxios = (url) => {
   }, [url]);
 
   useEffect(() => {
-    getApiData()
-  }, [getApiData])
+    getApiData();
+  }, [getApiData]);
 
   return { data, error, loading };
 };

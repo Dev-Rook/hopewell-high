@@ -2,14 +2,18 @@
   display: flex;
   flex-direction: column;
 
-  padding: 0px;
-  // gap: 100px;
+  // border: 1px solid rgba(255, 255, 255, 0.5);
+
+  // padding: 5px;
+  gap: 100px;
 
   justify-content: center;
   align-items: center;
 
   height: fit-content;
   width: 100%;
+
+  margin-bottom: 100px;
 
   .Section {
     display: flex;
@@ -28,6 +32,8 @@
     height: fit-content;
     width: 100%;
 
+    margin-top: 20px;
+
     .Content_Container {
       display: flex;
       flex-direction: column-reverse;
@@ -45,8 +51,13 @@
         justify-content: center;
         align-items: center;
 
-        height: 400px;
-        width: 50%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        height: 200px;
+        width: 200px;
 
         overflow: hidden;
 
@@ -73,7 +84,7 @@
 
       height: fit-content;
       width: 45%;
-      
+
       .Question {
         font-size: 18px;
         font-weight: 100;
@@ -133,15 +144,16 @@
     }
   }
 }
+@media only screen and (max-width: 1200px) {
+  .Page {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 1030px) {
   .Page {
     .Section {
       .Content_Container {
-        .Images_Container {
-          height: 600px;
-          width: 300px;
-        }
-  
         .About_Container {
           .Brand {
             font-size: 40px;
@@ -149,7 +161,7 @@
           .Description {
             font-size: 18px;
           }
-  
+
           br {
             display: none;
           }
@@ -165,11 +177,7 @@
       .Content_Container {
         flex-direction: column-reverse;
         width: 100%;
-  
-        .Image_Container {
-          height: 300px;
-          width: 100%;
-        }
+
         .About_Container {
           width: 100%;
           align-items: center;
@@ -181,7 +189,7 @@
             font-size: 15px;
             text-align: center;
           }
-  
+
           br {
             display: none;
           }
@@ -193,9 +201,6 @@
 @media only screen and (max-width: 360px) {
   .Section {
     .Content_Container {
-      .Image_Container {
-        height: 250px;
-      }
       .About_Container {
         .Question {
           font-size: 12px;

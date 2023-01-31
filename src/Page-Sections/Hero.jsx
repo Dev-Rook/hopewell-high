@@ -1,33 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Hero.module.scss";
 
-import NavigationIcon from "@mui/icons-material/Navigation";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode, Autoplay, Mousewheel } from "swiper";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-// import "swiper/css/effect-fade ";
-
-import HeroData from "../Data/Hero.json";
-
-// const IndicatorVariants = {
-//   y: {
-//     trs
-//   }
-// }
+const Video = "Dog Water";
+const Image = "Dog Water";
 
 const Hero = () => {
-  const [data, setData] = useState(HeroData);
-
   return (
     <div className={Styles.Section}>
       <div className={Styles.Content_Container}>
@@ -40,44 +18,8 @@ const Hero = () => {
       </div>
 
       <div className={Styles.Diffuser}></div>
-
-      <div className={Styles.Slider_Container}>
-        <Swiper
-          slidesPerView={1}
-          speed={2000}
-          spaceBetween={0}
-          modules={[Navigation, FreeMode, Mousewheel, Autoplay]}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          grabCursor={true}
-          loop
-          pagination={{
-            dynamicBullets: true,
-          }}
-          mousewheel={true}
-          className={Styles.Swiper}
-        >
-          {data &&
-            data.map((value) => {
-              return (
-                <SwiperSlide key={value?.id}>
-                  <div className={Styles.Image_Container}>
-                    <img src={value.Image} alt="" className={Styles.Image} />
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-        </Swiper>
-      </div>
-      
-      <motion.span>
-        <NavigationIcon
-          className={Styles.Scroll_Indicator}
-          sx={{ color: "orange", fontSize: 20 }}
-        />
-      </motion.span>
+      <img src={Image} alt="" className={Styles.Image} />
+      <video src={Video} className={Styles.Video}></video>
     </div>
   );
 };

@@ -2,201 +2,22 @@
   display: flex;
   flex-direction: column;
 
-  padding: 0px;
-  // gap: 100px;
+  // border: 1px solid rgba(255, 255, 255, 0.5);
+
+  // padding: 5px;
+  gap: 100px;
 
   justify-content: center;
   align-items: center;
 
   height: fit-content;
-  width: 100%;
+  width: 1200px;
 
-  .Staff_Info_Section {
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 100px;
+}
 
-    padding: 5px;
-    padding-top: 80px;
-    padding-top: 80px;
-    gap: 20px;
-
-    justify-content: center;
-    align-items: center;
-
-    height: fit-content;
+@media only screen and (max-width: 1200px) {
+  .Page {
     width: 100%;
-
-    .Image_Container {
-      display: flex;
-
-      border: 1px solid black;
-
-      justify-content: center;
-      align-items: center;
-
-      height: 300px;
-      width: 500px;
-
-      overflow: hidden;
-
-      .Image {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .About_Container {
-      display: flex;
-      flex-direction: column;
-
-      border: 1px solid black;
-
-      padding: 5px;
-      gap: 10px;
-
-      justify-content: space-evenly;
-      align-items: flex-start;
-
-      height: fit-content;
-      width: 500px;
-
-      .Text, .Introduction {
-        margin: auto;
-        margin-left: 0px;
-      }
-    }
-
-    .Qualifications_Section {
-      display: flex;
-      flex-direction: column;
-
-      justify-content: center;
-      align-items: center;
-
-      height: 100%;
-      width: 100%;
-
-      .Qualifications_Container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        grid-gap: 20px;
-
-        height: fit-content;
-        width: 500px;
-
-        .Item {
-          border: 1px solid black;
-          background-color: rgb(24,26,27);
-
-          display: flex;
-          flex-direction: column;
-
-          padding: 2.5px 10px;
-          gap: 10px;
-
-          cursor: pointer;
-
-          justify-content: center;
-          align-items: center;
-
-          height: fit-content;
-          min-height: 100px;
-          width: fit-content;
-          min-width: 100px;
-
-          margin: auto;
-
-          transition: 0.3s ease-in-out;
-
-          .Icon {
-            height: 15px;
-            margin: auto;
-          }
-
-          .Title {
-            color: white;
-            margin: auto;
-            font-size: 14px;
-          }
-        }
-
-        .Item:is(:hover) {
-          transform: translateY(-3px);
-        }
-      }
-    }
   }
 }
-
-// Media Queries Start
-
-@media only screen and (max-width: 700px) {
-  .Page {
-    .Staff_Info_Section {
-      .Qualifications_Section {
-        .Qualifications_Container {
-          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-          grid-gap: 10px;
-          .Item {
-            flex-direction: column;
-            width: 100px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .Page {
-    .Staff_Info_Section {
-      .About_Container,
-      .Image_Container {
-        width: 100%;
-      }
-
-      .Qualifications_Section {
-        .Qualifications_Container {
-          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-          width: 100%;
-
-          .Item {
-            .Icon {
-              height: 10px;
-            }
-
-            .Title {
-              font-size: 12px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 335px) {
-  .Page {
-    .Staff_Info_Section {
-      .Qualifications_Section {
-        .Qualifications_Container {
-          grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
-          width: 100%;
-
-          .Item {
-            .Icon {
-              height: 10px;
-            }
-
-            .Title {
-              font-size: 12px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Media Queries End

@@ -15,9 +15,9 @@
   overflow: hidden;
 
   height: fit-content;
-  width: 100%;
+  width: 1200px;
 
-  .Section_Title_Container {
+  .Section_Title {
     display: flex;
     flex-direction: column;
 
@@ -36,17 +36,47 @@
       transition: 0.3s;
     }
 
-    .Section_Title {
+    .Brand {
       font-size: 50px;
       font-weight: 100;
       font-style: bold;
+      text-align: center;
       transition: 0.3s;
     }
   }
 
+  .Input_Wrapper {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.5rem 0.75rem;
+    gap: 10px;
+
+    margin: auto;
+    margin-top: 20px;
+
+    width: 96%;
+    height: 40px;
+
+    .Nav_Input {
+      border-radius: 5px;
+      background-color: rgb(28,29,31);
+      padding: 2px;
+      outline: none;
+      border: none;
+      width: 100%;
+      color: white;
+    }
+  }
+
+
   .Content_Container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-gap: 20px;
 
     justify-content: space-around;
@@ -55,18 +85,23 @@
     height: 100%;
     width: 100%;
 
-    .Update_Card {
+    .Card {
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      
       display: flex;
       flex-direction: column;
 
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
       padding: 0px;
       gap: 0px;
-      cursor: pointer;
+      overflow: hidden;
 
       height: fit-content;
-      width: 100%;
+      width: 330px;
+
+      margin: auto;
+
+      transition: 0.5s;
 
       .Image_Container {
         height: 200px;
@@ -74,12 +109,7 @@
 
         display: flex;
 
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
         position: relative;
-
-        justify-content: center;
-        align-items: center;
 
         .Category {
           background-color: rgba(0, 0, 0, 0.5);
@@ -91,9 +121,11 @@
           align-items: center;
 
           position: absolute;
+          margin: auto;
           bottom: 10px;
           left: 10px;
 
+          color: white;
           font-size: 15px;
           font-weight: 300;
         }
@@ -106,81 +138,92 @@
       }
 
       .Information_Box {
+        background-color: rgb(36,36,36);
+
         display: flex;
         flex-direction: column;
+        color: white;
 
         padding: 5px;
         gap: 10px;
 
+        justify-content: space-evenly;
+        align-items: flex-start;
+
         height: fit-content;
         width: 100%;
+
+        .Teacher,
+        .Date,
+        .Description,
+        .Requirements {
+          margin: auto;
+          margin-left: 0px;
+          font-size: 14px;
+        }
       }
     }
-  }
 
-  .View_More_Button {
-    padding: 5px 20px;
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    height: fit-content;
-    width: fit-content;
-
-    margin: auto;
-    margin-top: 20px;
-
-    font-size: 18px;
+    .Card:is(:hover, :focus) {
+      transform: translateY(-5px);
+    }
   }
 }
 
 // Media Queries Start
 @media only screen and (max-width: 996px) {
   .Section {
-    .Section_Title_Container {
-      .Section_Title {
+    .Section_Title {
+      .Brand {
         font-size: 30px;
       }
     }
+
+    .Input_Wrapper {
+      width: 100%;
+    }
   }
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 712px) {
   .Section {
     .Content_Container {
       grid-template-columns: 1fr 1fr;
-      .Blog_Card {
-        .Image_Container {
-          height: 150px;
-          .Name {
-            padding: 5px;
-            font-size: 14px;
-          }
-        }
+      .Card {
+        width: 100%;
 
-        .Title {
-          font-size: 14px;
+        .Information_Box {
+          .Teacher,
+          .Date,
+          .Description,
+          .Requirements {
+            font-size: 15px;
+          }
         }
       }
     }
   }
 }
+@media only screen and (max-width: 1200px) {
+  .Section {
+    width: 100%;
 
-@media only screen and (max-width: 480px) {
+    .Input_Wrapper {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 550px) {
   .Section {
     .Content_Container {
       grid-template-columns: 1fr;
     }
   }
 }
-
 @media only screen and (max-width: 360px) {
   .Section {
-    .Section_Title_Container {
-      .Section_Title {
-        font-size: 30px;
+    .Section_Title {
+      .Brand {
+        font-size: 25px;
       }
     }
   }

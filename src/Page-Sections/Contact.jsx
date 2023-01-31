@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "../Styles/Imported Styles/SocialButtons.scss";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+import "../Styles/Imported-Styles/SocialButtons.scss";
 import Styles from "../Styles/Page-Section-Styles/Contact.module.scss";
 
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 
 const Contact = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+//   useEffect(() => {
+//     AOS.init();
+//     AOS.refresh();
+//   }, []);
 
   return (
     <div className={Styles.Section}>

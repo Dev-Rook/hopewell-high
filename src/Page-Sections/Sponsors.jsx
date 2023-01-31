@@ -17,7 +17,12 @@ const Sponsors = () => {
       <div className={Styles.Sponsor_Grid}>
         {data?.map((value) => {
           return (
-            <a href={`https://`} rel={"noreferrer"} target={"_blank"} key={value.id}>
+            <a
+              href={`https://`}
+              rel={"noreferrer"}
+              target={"_blank"}
+              key={value.id}
+            >
               <div className={Styles.Card}>
                 <img src={Crest} alt="Icon" className={Styles.Icon} />
                 <p className={Styles.Title}>{value.Title}</p>

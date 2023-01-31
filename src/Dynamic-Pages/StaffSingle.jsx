@@ -1,9 +1,14 @@
 import React from "react";
 import { TabTitle } from "../Utilities/TabTitle";
-import PageHead from "../Components/Secondary/PageHead";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
-import Styles from "../Styles/Dynamic-Page-Styles/StaffSingle.module.scss";
+import { useScrollUp } from "../Hooks/useScrollUp";
+import Styles from "../Styles/Dynamic-Page-Styles/ContentSingle.module.scss";
+
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
+import StaffGrid from "../Components/Secondary/StaffGrid";
+import { useScroll } from "framer-motion";
 
 const StaffSingle = () => {
   TabTitle("HSS | Staffer ");
@@ -12,11 +17,17 @@ const StaffSingle = () => {
   const url = `https://hhs-backen-76xny.ondigitalocean.app/staffs/${id}`;
   const { data, error, loading } = useAxios(url);
 
+  const {scrollUp} = useScrollUp
+
   return (
     <div className={Styles.Page}>
-      {/* <PageHead Title={"Staffer"} /> */}
+      <div className={Styles.Header}>
+        <Link to={"/Staff"}>
+          <ArrowBackIcon sx={{ color: "red", fontSize: 30 }} />
+        </Link>
+      </div>
 
-      <div className={Styles.Staff_Info_Section}>
+      <div className={Styles.Content_Section}>
         <div className={Styles.Image_Container}>
           <img
             src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
@@ -25,79 +36,20 @@ const StaffSingle = () => {
           />
         </div>
 
-        <div className={Styles.About_Container}>
-          <p className={Styles.Introduction}>
-            About {data?.firstName} {data?.lastName}
+        <div className={Styles.Information_Box}>
+          <p className={Styles.Text}>
+            {data?.firstName} {data?.lastName}
           </p>
           <p className={Styles.Text}>{data?.title}</p>
-          <p className={Styles.Text}>{data?.gender}</p>
           <p className={Styles.Text}>{data?.bio}</p>
         </div>
 
-        <div className={Styles.Qualifications_Section}>
-          <p className={Styles.Section_Title}>Qualifications & Awards</p>
-
-          <div className={Styles.Qualifications_Container}>
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />
-                <p className={Styles.Label}>Label</p>
-              </div>
-            </a>
-
-            {/* {data?.map((value) => {
-            return (
-              <div className={Styles.Item}>
-                <img src="" alt="Icon" className={Styles.Item_Icon} />.
-                <p className={Styles.Label}>{value}</p>
-              </div>
-            );
-          })} */}
-          </div>
+        <div className={Styles.Qualifications_Container}>
+          {/* <p className={Styles.Title}>Qualifications & Awards</p> */}
         </div>
       </div>
+
+      <StaffGrid />
     </div>
   );
 };

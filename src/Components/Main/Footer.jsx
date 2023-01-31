@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Styles from "../../Styles/Component-Styles/Footer.module.scss";
+import Styles from "../../Styles/Components-Styles/Footer.module.scss";
 
 const Footer = (scrollUp) => {
   return (

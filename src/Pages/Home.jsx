@@ -1,30 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import Styles from "../Styles/Page-Styles/Home.module.scss";
 
-import {TabTitle} from "../Utilities/TabTitle"
-
 import Hero from "../Page-Sections/Hero";
+import Indroduction from "../Page-Sections/Introduction";
 import Offer from "../Page-Sections/Offer";
-import Introduction from "../Page-Sections/Introduction";
 import Tour from "../Page-Sections/Tour";
-import Updates from "../Page-Sections/Updates";
-import Staff from "../Page-Sections/Staff";
+import UpdateSection from "../Page-Sections/UpdateSection";
+import StaffSection from "../Page-Sections/StaffSection";
 import Sponsors from "../Page-Sections/Sponsors";
+import Contact from "../Page-Sections/Contact";
+import Map from "../Page-Sections/Map";
 
-
-const Home = () => { 
-  TabTitle("HHS | Home");
+const Home = () => {
   return (
     <div className={Styles.Page}>
       <Hero />
-      <Introduction />
+      <Indroduction />
       <Offer />
       <Tour />
-      <Updates />
-      <Staff />
+      <UpdateSection />
+      <StaffSection />
       <Sponsors />
+      <Contact />
+      <Map />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

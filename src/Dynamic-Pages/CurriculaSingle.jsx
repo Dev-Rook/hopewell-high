@@ -1,37 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
 import { TabTitle } from "../Utilities/TabTitle";
-import { useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
-import Styles from "../Styles/Dynamic-Page-Styles/CurriculumSingle.module.scss";
+import Styles from "../Styles/Dynamic-Page-Styles/ContentSingle.module.scss";
 
-import PageHead from "../Components/Secondary/PageHead";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import Staff from "../Data/Staff.json";
-import Tour from "../Data/Tour.json";
+import CurriculaGrid from "../Components/Secondary/CurriculaGrid";
 
 const CurriculaSingle = () => {
-  const { id } = useNavigate();
-  TabTitle(`${id}`);
+  TabTitle("HSS | Staffer ");
+  const { id } = useParams();
 
   const url = `https://hhs-backen-76xny.ondigitalocean.app/curricula/${id}`;
   const { data, error, loading } = useAxios(url);
 
   return (
     <div className={Styles.Page}>
-      <PageHead Image={""} />
-      <div className={Styles.Course_Video_Section}>
-        <div className={Styles.Section_Title_Container}>
-          <p className={Styles.Question}></p>
-          <p className={Styles.Section_Title}>Teacher's Presentation</p>
+      <div className={Styles.Header}>
+        <Link to={"/Curriculas"}>
+          <ArrowBackIcon sx={{ color: "red", fontSize: 30 }} />
+        </Link>
+      </div>
+
+      <div className={Styles.Content_Section}>
+        <div className={Styles.Image_Container}>
+          <img
+            src={`https://hhs-backen-76xny.ondigitalocean.app${data?.image?.url}`}
+            alt=""
+            className={Styles.Image}
+          />
         </div>
 
-        <div className={Styles.Video_Box}>
-          <div className={Styles.Diffuser}></div>
-          <a href={`https://`} target={"_blank"} rel={"noreferrer"}>
-            <video src={""} className={Styles.Video}></video>
-          </a>
+        <div className={Styles.Information_Box}>
+        <p className={Styles.Text}>{data?.title}</p>
+        <p className={Styles.Text}>Teacher: {data?.tutor[0].firstName} {data?.tutor[0].lastName}</p>
+
+          <p className={Styles.Text}>
+            From: {data?.start_date} to {data?.end_date}
+          </p>
+
+          <p className={Styles.Text}>{data?.description}</p>
         </div>
       </div>
+
+      <CurriculaGrid />
     </div>
   );
 };

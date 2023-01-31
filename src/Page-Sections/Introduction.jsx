@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useScrollUp } from "../Hooks/useScrollUp";
 import Styles from "../Styles/Page-Section-Styles/Introduction.module.scss";
 
 import Crest from "../Assets/Images/Crest.png";
 
 const Indroduction = () => {
+  const {scrollUp} = useScrollUp();
   return (
     <div className={Styles.Section}>
       <div className={Styles.Content_Container}>
@@ -19,8 +20,8 @@ const Indroduction = () => {
             society.
           </p>
 
-          <Link to={"About"}>
-            <button className={Styles.Read_More_Button}>Learn More</button>
+          <Link to={"/About"}>
+            <button onClick={scrollUp} className={Styles.Read_More_Button}>Learn More</button>
           </Link>
         </div>
         <div className={Styles.Image_Container}>

@@ -1,19 +1,18 @@
+
 import React, { useState } from "react";
 import { TabTitle } from "../Utilities/TabTitle";
-import { Link } from "react-router-dom";
-import Styles from "../Styles/Page-Styles/Curriculums.module.scss";
+import Styles from "../Styles/Page-Styles/Curricula.module.scss";
 
-import PageHead from "../Components/Secondary/PageHead";
-import Skills from "../Page-Sections/Skills";
-import Subjects from "../Page-Sections/Subjects";
+import PageHead from "../Components/Main/PageHead";
+import Curriculas from "../Page-Sections/Curriculas";
+
 
 const Curricula = () => {
   TabTitle("HHS | Curriculums");
   return (
     <div className={Styles.Page}>
-      <PageHead Title={"Curriculums"} />
-      <Subjects />
-      <Skills />
+      <PageHead />
+      <Curriculas />
     </div>
   );
 };

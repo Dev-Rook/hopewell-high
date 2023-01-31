@@ -1,16 +1,14 @@
 import React from "react";
 import { TabTitle } from "../Utilities/TabTitle";
-import Styles from "../Styles/Page-Styles/Staff.module.scss";
+import Styles from "../Styles/Page-Styles/About.module.scss";
 
-import PageHead from "../Components/Secondary/PageHead";
+import PageHead from "../Components/Main/PageHead";
 
 const Apply = () => {
-  TabTitle("HHS | Apply");
-  return (
-    <div className={Styles.Page}>
-      <PageHead Title={"Apply"} />
-    </div>
-  );
+  TabTitle("HHS | About");
+  return <div className={Styles.Page}>
+    <PageHead Title={"Apply"} />
+  </div>;
 };
 
 export default Apply;
